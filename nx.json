@@ -64,25 +64,29 @@
         "babel": true,
         "style": "css",
         "linter": "eslint",
-        "bundler": "webpack"
+        "bundler": "webpack",
+        "directory": "clients"
       },
       "component": {
         "style": "css"
       },
       "library": {
         "style": "css",
-        "linter": "eslint"
+        "linter": "eslint",
+        "directory": "shared"
       }
     },
     "@nx/angular": {
       "application": {
         "linter": "eslint",
         "unitTestRunner": "jest",
-        "e2eTestRunner": "cypress"
+        "e2eTestRunner": "cypress",
+        "directory": "clients"
       },
       "library": {
         "linter": "eslint",
-        "unitTestRunner": "jest"
+        "unitTestRunner": "jest",
+        "directory": "shared"
       },
       "component": {
         "style": "css"
@@ -90,7 +94,8 @@
     },
     "@nx/spring-boot": {
       "application": {
-        "linter": "eslint"
+        "linter": "eslint",
+        "directory": "services"
       }
     },
     "@nx/angular:application": {

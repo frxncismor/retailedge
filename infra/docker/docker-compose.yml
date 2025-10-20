@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  catalog-service:
+    build:
+      context: .
+      dockerfile: Dockerfile.catalog
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - retailedge-network
+
+  orders-service:
+    build:
+      context: .
+      dockerfile: Dockerfile.orders
+    ports:
+      - "8082:8082"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - retailedge-network
+
+  users-service:
+    build:
+      context: .
+      dockerfile: Dockerfile.users
+    ports:
+      - "8083:8083"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - retailedge-network
+
+  store-angular:
+    build:
+      context: .
+      dockerfile: Dockerfile.store-angular
+    ports:
+      - "4200:80"
+    depends_on:
+      - catalog-service
+      - orders-service
+      - users-service
+    networks:
+      - retailedge-network
+
+  admin-react:
+    build:
+      context: .
+      dockerfile: Dockerfile.admin-react
+    ports:
+      - "3000:80"
+    depends_on:
+      - catalog-service
+      - orders-service
+      - users-service
+    networks:
+      - retailedge-network
+
+networks:
+  retailedge-network:
+    driver: bridge

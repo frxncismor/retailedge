@@ -1,7 +1,7 @@
 {
-  "name": "admin",
+  "name": "admin-react",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "admin/src",
+  "sourceRoot": "apps/clients/admin-react/src",
   "projectType": "application",
   "tags": [],
   "targets": {

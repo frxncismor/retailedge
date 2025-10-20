@@ -1,0 +1,397 @@
+{
+  "version": "6.0",
+  "nxVersion": "21.6.5",
+  "pathMappings": {
+    "@retailedge/shared-models": [
+      "libs/shared/models/src/index.ts"
+    ],
+    "@retailedge/shared-models/*": [
+      "libs/shared/models/src/lib/*"
+    ]
+  },
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/cypress/plugin",
+      "options": {
+        "targetName": "e2e",
+        "openTargetName": "open-cypress",
+        "componentTestingTargetName": "component-test",
+        "ciTargetName": "e2e-ci"
+      }
+    },
+    {
+      "name": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    },
+    {
+      "name": "@nx/webpack/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview",
+        "buildDepsTargetName": "build-deps",
+        "watchDepsTargetName": "watch-deps",
+        "serveStaticTargetName": "serve-static"
+      }
+    }
+  ],
+  "fileMap": {
+    "nonProjectFiles": [],
+    "projectFileMap": {
+      "store-angular": [
+        {
+          "file": "apps/clients/store-angular/project.json",
+          "hash": "1091015838197412474"
+        }
+      ],
+      "admin-react": [
+        {
+          "file": "apps/clients/admin-react/project.json",
+          "hash": "7621441979171236844"
+        }
+      ],
+      "admin-react-e2e": [
+        {
+          "file": "apps/clients/admin-react-e2e/project.json",
+          "hash": "13860568002315447251"
+        }
+      ],
+      "store-angular-e2e": [
+        {
+          "file": "apps/clients/store-angular-e2e/project.json",
+          "hash": "16200035370413954080"
+        }
+      ],
+      "shared-models": [
+        {
+          "file": "libs/shared/models/README.md",
+          "hash": "2230976068954460956"
+        },
+        {
+          "file": "libs/shared/models/eslint.config.cjs",
+          "hash": "17235945490168134871",
+          "deps": [
+            "npm:jsonc-eslint-parser"
+          ]
+        },
+        {
+          "file": "libs/shared/models/jest.config.ts",
+          "hash": "1494321795245391925"
+        },
+        {
+          "file": "libs/shared/models/package.json",
+          "hash": "16409212588495152741",
+          "deps": [
+            "npm:tslib"
+          ]
+        },
+        {
+          "file": "libs/shared/models/project.json",
+          "hash": "8407214898323392399"
+        },
+        {
+          "file": "libs/shared/models/src/index.ts",
+          "hash": "6209673531808721409"
+        },
+        {
+          "file": "libs/shared/models/src/lib/shared-models.spec.ts",
+          "hash": "1298400587117846729"
+        },
+        {
+          "file": "libs/shared/models/src/lib/shared-models.ts",
+          "hash": "12426401410806553499"
+        },
+        {
+          "file": "libs/shared/models/tsconfig.json",
+          "hash": "10148903843036702529"
+        },
+        {
+          "file": "libs/shared/models/tsconfig.lib.json",
+          "hash": "14539327243516648733"
+        },
+        {
+          "file": "libs/shared/models/tsconfig.spec.json",
+          "hash": "5394994266788668641"
+        }
+      ],
+      "catalog-service": [
+        {
+          "file": "apps/services/catalog-service/pom.xml",
+          "hash": "2732403324769194555"
+        },
+        {
+          "file": "apps/services/catalog-service/project.json",
+          "hash": "16263729275398115881"
+        },
+        {
+          "file": "apps/services/catalog-service/src/main/java/com/retailedge/catalog/CatalogServiceApplication.java",
+          "hash": "17052862271120528697"
+        },
+        {
+          "file": "apps/services/catalog-service/src/main/resources/application.yml",
+          "hash": "8837859505769813233"
+        }
+      ],
+      "users-service": [
+        {
+          "file": "apps/services/users-service/pom.xml",
+          "hash": "11865829560349754753"
+        },
+        {
+          "file": "apps/services/users-service/project.json",
+          "hash": "10694803420667490010"
+        },
+        {
+          "file": "apps/services/users-service/src/main/java/com/retailedge/users/UsersServiceApplication.java",
+          "hash": "3210063870347982596"
+        },
+        {
+          "file": "apps/services/users-service/src/main/resources/application.yml",
+          "hash": "2660520225609959511"
+        }
+      ],
+      "retailedge": [
+        {
+          "file": ".cursor/rules/000-core.mdc",
+          "hash": "9015530277785392361"
+        },
+        {
+          "file": ".cursor/rules/010-docs.mdc",
+          "hash": "15939730983904922335"
+        },
+        {
+          "file": ".cursor/rules/020-git-pr.mdc",
+          "hash": "10473429121430334071"
+        },
+        {
+          "file": ".cursor/rules/030-frontend.mdc",
+          "hash": "9689510276894670687"
+        },
+        {
+          "file": ".cursor/rules/040-backend.mdc",
+          "hash": "15807070200760463405"
+        },
+        {
+          "file": ".cursor/rules/050-devops-ci.mdc",
+          "hash": "16712810786378598613"
+        },
+        {
+          "file": ".cursor/rules/060-testing-quality.mdc",
+          "hash": "4399057384299583534"
+        },
+        {
+          "file": ".cursor/rules/070-security-observability.mdc",
+          "hash": "6008788516216651115"
+        },
+        {
+          "file": ".cursor/rules/080-cursor-behavior.mdc",
+          "hash": "6875363142589718455"
+        },
+        {
+          "file": ".cursor/rules/090-structure.mdc",
+          "hash": "8198513470794072050"
+        },
+        {
+          "file": ".eslintrc.json",
+          "hash": "13985585407899341423"
+        },
+        {
+          "file": ".gitignore",
+          "hash": "11243053277932259127"
+        },
+        {
+          "file": ".husky/pre-commit",
+          "hash": "15772567824124401214"
+        },
+        {
+          "file": ".lintstagedrc.json",
+          "hash": "7971900271210609492"
+        },
+        {
+          "file": ".npmrc",
+          "hash": "16171729606671322012"
+        },
+        {
+          "file": ".prettierignore",
+          "hash": "11046137253782220748"
+        },
+        {
+          "file": ".prettierrc",
+          "hash": "15533137388844676486"
+        },
+        {
+          "file": ".verdaccio/config.yml",
+          "hash": "300035921567345902"
+        },
+        {
+          "file": "README.md",
+          "hash": "4360405057964374502"
+        },
+        {
+          "file": "infra/docker/Dockerfile.admin-react",
+          "hash": "13001973934026657703"
+        },
+        {
+          "file": "infra/docker/Dockerfile.catalog",
+          "hash": "13800684353454440842"
+        },
+        {
+          "file": "infra/docker/Dockerfile.orders",
+          "hash": "13950442558191623788"
+        },
+        {
+          "file": "infra/docker/Dockerfile.store-angular",
+          "hash": "6436522920207561263"
+        },
+        {
+          "file": "infra/docker/Dockerfile.users",
+          "hash": "2887088837282098859"
+        },
+        {
+          "file": "infra/docker/docker-compose.yml",
+          "hash": "15119896434180549834"
+        },
+        {
+          "file": "jest.config.ts",
+          "hash": "6870352021923392442",
+          "deps": [
+            "npm:jest",
+            "npm:@nx/jest"
+          ]
+        },
+        {
+          "file": "jest.preset.js",
+          "hash": "9430166341120122740",
+          "deps": [
+            "npm:@nx/jest"
+          ]
+        },
+        {
+          "file": "nx.json",
+          "hash": "477548222885181629"
+        },
+        {
+          "file": "package-lock.json",
+          "hash": "10166052543030524037"
+        },
+        {
+          "file": "package.json",
+          "hash": "12727328178980246703",
+          "deps": [
+            "npm:@angular-devkit/build-angular",
+            "npm:@angular-devkit/core",
+            "npm:@angular-devkit/schematics",
+            "npm:@angular/cli",
+            "npm:@angular/compiler-cli",
+            "npm:@angular/language-service",
+            "npm:@babel/core",
+            "npm:@babel/preset-react",
+            "npm:@nx/angular",
+            "npm:@nx/cypress",
+            "npm:@nx/eslint",
+            "npm:@nx/eslint-plugin-nx",
+            "npm:@nx/jest",
+            "npm:@nx/js",
+            "npm:@nx/react",
+            "npm:@nx/web",
+            "npm:@nx/webpack",
+            "npm:@pmmmwh/react-refresh-webpack-plugin",
+            "npm:@schematics/angular",
+            "npm:@svgr/webpack",
+            "npm:@swc-node/register",
+            "npm:@swc/cli",
+            "npm:@swc/core",
+            "npm:@swc/helpers",
+            "npm:@testing-library/dom",
+            "npm:@testing-library/react",
+            "npm:@types/jest",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@typescript-eslint/utils",
+            "npm:angular-eslint",
+            "npm:babel-jest",
+            "npm:cypress",
+            "npm:eslint",
+            "npm:eslint-plugin-cypress",
+            "npm:eslint-plugin-import",
+            "npm:eslint-plugin-jsx-a11y",
+            "npm:eslint-plugin-react",
+            "npm:eslint-plugin-react-hooks",
+            "npm:husky",
+            "npm:jest",
+            "npm:jest-environment-jsdom",
+            "npm:jest-environment-node",
+            "npm:jest-preset-angular",
+            "npm:jest-util",
+            "npm:jsonc-eslint-parser",
+            "npm:lint-staged",
+            "npm:nx",
+            "npm:pnpm",
+            "npm:prettier",
+            "npm:react-refresh",
+            "npm:ts-jest",
+            "npm:ts-node",
+            "npm:tslib",
+            "npm:typescript",
+            "npm:verdaccio",
+            "npm:webpack-cli",
+            "npm:@angular/common",
+            "npm:@angular/compiler",
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/platform-browser",
+            "npm:@angular/platform-browser-dynamic",
+            "npm:@angular/router",
+            "npm:react",
+            "npm:react-dom",
+            "npm:react-router-dom",
+            "npm:rxjs",
+            "npm:zone.js"
+          ]
+        },
+        {
+          "file": "project.json",
+          "hash": "15306445768091271824"
+        },
+        {
+          "file": "shared-models/src/lib/shared-models.spec.ts",
+          "hash": "1298400587117846729"
+        },
+        {
+          "file": "shared-models/src/lib/shared-models.ts",
+          "hash": "12426401410806553499"
+        },
+        {
+          "file": "tsconfig.base.json",
+          "hash": "9560504983386646034"
+        },
+        {
+          "file": "workspace.json",
+          "hash": "3487587447743934365"
+        }
+      ],
+      "orders-service": [
+        {
+          "file": "apps/services/orders-service/pom.xml",
+          "hash": "15079542507934005849"
+        },
+        {
+          "file": "apps/services/orders-service/project.json",
+          "hash": "11030298427808232801"
+        },
+        {
+          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/OrdersServiceApplication.java",
+          "hash": "14314879623973762709"
+        },
+        {
+          "file": "apps/services/orders-service/src/main/resources/application.yml",
+          "hash": "5036762529159885013"
+        }
+      ]
+    }
+  },
+  "externalNodesHash": "84376370740752991"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "users-service",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/services/users-service/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "outputs": ["{workspaceRoot}/apps/services/users-service/target"],
+      "options": {
+        "command": "mvn clean package -DskipTests",
+        "cwd": "apps/services/users-service"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "mvn test",
+        "cwd": "apps/services/users-service"
+      }
+    },
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "mvn spring-boot:run",
+        "cwd": "apps/services/users-service"
+      }
+    },
+    "lint": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "mvn checkstyle:check",
+        "cwd": "apps/services/users-service"
+      }
+    }
+  },
+  "tags": ["type:service", "domain:users"]
+}

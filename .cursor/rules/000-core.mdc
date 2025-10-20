@@ -19,3 +19,24 @@ ARCHITECTURE
 QUALITY GATES
 - Every feature includes at least: unit tests, updated docs, and passing CI.
 - Keep logs structured (JSON). Never log secrets or tokens.
+
+CLEAN CODE & SOLID (GLOBAL)
+- Apply SOLID in all languages:
+  S: Single Responsibility — one reason to change per class/module.
+  O: Open/Closed — open for extension, closed for modification (prefer composition over modification).
+  L: Liskov Substitution — subclasses must be substitutable for their base types.
+  I: Interface Segregation — small, client-specific interfaces; avoid “fat” interfaces.
+  D: Dependency Inversion — depend on abstractions; inject dependencies (no new-up in controllers/services).
+
+- Clean Code heuristics:
+  - Small units: functions < ~40 lines; classes < ~300 lines; keep high cohesion.
+  - Naming: intention-revealing; avoid abbreviations; consistent casing (PascalCase types, camelCase vars).
+  - Side effects: prefer pure functions; no hidden mutations; default to const/final.
+  - Errors: fail fast; no silent catch; map to typed/structured errors (DTOs) and proper HTTP codes.
+  - Comments: explain WHY, not WHAT; delete dead code and commented blocks.
+  - Boundaries: Controllers only orchestrate; business logic lives in Services; Repositories only persistence.
+  - Testing: unit tests for public behavior; mock only external boundaries; avoid over-mocking.
+
+- Language specifics:
+  - TypeScript: strict mode, no `any` (unless justified), narrow types with guards.
+  - Java: prefer records/immutables for DTOs; use Bean Validation; avoid returning null (use Optional or empty collections).

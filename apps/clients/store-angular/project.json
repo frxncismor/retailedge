@@ -1,9 +1,9 @@
 {
-  "name": "storefront",
+  "name": "store-angular",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "retail",
-  "sourceRoot": "storefront/src",
+  "sourceRoot": "apps/clients/store-angular/src",
   "tags": [],
   "targets": {
     "build": {

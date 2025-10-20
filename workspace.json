@@ -1,4 +1,13 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "store-angular": "apps/clients/store-angular",
+    "store-angular-e2e": "apps/clients/store-angular-e2e",
+    "admin-react": "apps/clients/admin-react",
+    "admin-react-e2e": "apps/clients/admin-react-e2e",
+    "catalog-service": "apps/services/catalog-service",
+    "orders-service": "apps/services/orders-service",
+    "users-service": "apps/services/users-service",
+    "shared-models": "libs/shared/models"
+  }
 }

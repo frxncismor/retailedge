@@ -6,8 +6,14 @@ RetailEdge is an Nx monorepo with Angular storefront, React admin, and shared mo
 
 ### Frontend Applications
 
-- **storefront** (Port 4200) - Angular customer-facing application
-- **admin** (Port 3000) - React admin dashboard
+- **store-angular** (Port 4200) - Angular customer-facing application
+- **admin-react** (Port 3000) - React admin dashboard
+
+### Backend Services
+
+- **catalog-service** (Port 8081) - Product catalog management
+- **orders-service** (Port 8082) - Order processing and management
+- **users-service** (Port 8083) - User authentication and management
 
 ### Shared Libraries
 

@@ -1,0 +1,17 @@
+---
+globs: **/*
+alwaysApply: false
+---
+PROJECT STRUCTURE GUARDBANDS
+- Apps MUST live under:
+  - Frontend: apps/clients/<app-name> (Angular/React)
+  - Backend: apps/services/<service-name> (Spring Boot)
+- Shared libraries MUST live under libs/shared/<lib-name>.
+- Infra files MUST live under infra/**.
+
+ENFORCEMENT
+- When generating a new Angular app: use --directory=clients.
+- When generating a new React app: use --directory=clients.
+- When adding a new Spring service: create folder apps/services/<service-name> and a project.json wrapper with Nx run-commands for mvn (build/test/serve) similar to catalog-service.
+- Never place apps directly under apps/ root.
+- If any file is created in a wrong path, MOVE it to the correct location and update project.json automatically.

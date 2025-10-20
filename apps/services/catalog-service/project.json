@@ -1,0 +1,38 @@
+{
+  "name": "catalog-service",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/services/catalog-service/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "outputs": ["{workspaceRoot}/apps/services/catalog-service/target"],
+      "options": {
+        "command": "mvn clean package -DskipTests",
+        "cwd": "apps/services/catalog-service"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "mvn test",
+        "cwd": "apps/services/catalog-service"
+      }
+    },
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "mvn spring-boot:run",
+        "cwd": "apps/services/catalog-service"
+      }
+    },
+    "lint": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "mvn checkstyle:check",
+        "cwd": "apps/services/catalog-service"
+      }
+    }
+  },
+  "tags": ["type:service", "domain:catalog"]
+}

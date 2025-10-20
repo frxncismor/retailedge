@@ -15,9 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@retailedge/shared": ["libs/shared/src/index.ts"],
-      "@retailedge/shared-models": ["shared-models/src/index.ts"],
-      "@retailedge/shared/*": ["libs/shared/src/lib/*"]
+      "@retailedge/shared-models": ["libs/shared/models/src/index.ts"],
+      "@retailedge/shared-models/*": ["libs/shared/models/src/lib/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

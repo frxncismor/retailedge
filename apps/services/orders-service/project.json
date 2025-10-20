@@ -1,0 +1,38 @@
+{
+  "name": "orders-service",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/services/orders-service/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "outputs": ["{workspaceRoot}/apps/services/orders-service/target"],
+      "options": {
+        "command": "mvn clean package -DskipTests",
+        "cwd": "apps/services/orders-service"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "mvn test",
+        "cwd": "apps/services/orders-service"
+      }
+    },
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "mvn spring-boot:run",
+        "cwd": "apps/services/orders-service"
+      }
+    },
+    "lint": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "mvn checkstyle:check",
+        "cwd": "apps/services/orders-service"
+      }
+    }
+  },
+  "tags": ["type:service", "domain:orders"]
+}
