@@ -3,6 +3,16 @@ import { BrowserRouter } from 'react-router-dom';
 
 import App from './app';
 
+// Mock the productService to avoid fetch errors
+jest.mock('../services/productService', () => ({
+  productService: {
+    getProducts: jest.fn().mockResolvedValue([]),
+    createProduct: jest.fn(),
+    updateProduct: jest.fn(),
+    deleteProduct: jest.fn(),
+  },
+}));
+
 describe('App', () => {
   it('should render successfully', () => {
     const { baseElement } = render(
@@ -13,14 +23,12 @@ describe('App', () => {
     expect(baseElement).toBeTruthy();
   });
 
-  it('should have a greeting as the title', () => {
-    const { getAllByText } = render(
+  it('should have RetailEdge Admin as the title', () => {
+    const { getByText } = render(
       <BrowserRouter>
         <App />
       </BrowserRouter>
     );
-    expect(
-      getAllByText(new RegExp('Welcome admin', 'gi')).length > 0
-    ).toBeTruthy();
+    expect(getByText('RetailEdge Admin')).toBeTruthy();
   });
 });

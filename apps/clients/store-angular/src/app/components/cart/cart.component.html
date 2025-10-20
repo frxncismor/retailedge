@@ -1,9 +1,9 @@
-<div class="cart">
-  <h1>Shopping Cart</h1>
+    <div class="cart">
+      <h1 data-cy="cart-title">Shopping Cart</h1>
 
   <div *ngIf="cartItems.length > 0; else emptyCart">
     <div class="cart-items">
-      <div class="cart-item" *ngFor="let item of cartItems">
+      <div class="cart-item" *ngFor="let item of cartItems" data-cy="cart-item">
         <div class="item-image">
           <img
             [src]="
@@ -25,17 +25,20 @@
           </p>
         </div>
 
-        <div class="item-quantity">
-          <label>Qty:</label>
-          <input
-            type="number"
-            [value]="item.quantity"
-            (change)="updateQuantity(item.product.id, $event)"
-            min="1"
-            [max]="item.product.stock"
-            class="quantity-input"
-          />
-        </div>
+            <div class="item-quantity">
+              <label>
+              Qty:
+              <input
+                type="number"
+                [value]="item.quantity"
+                (change)="updateQuantity(item.product.id, $event)"
+                min="1"
+                [max]="item.product.stock"
+                class="quantity-input"
+                data-cy="quantity-input"
+              />
+            </label>
+            </div>
 
         <div class="item-total">
           {{
@@ -52,38 +55,38 @@
       </div>
     </div>
 
-    <div class="cart-summary">
-      <div class="summary-row">
-        <span>Subtotal:</span>
-        <span>{{
-          getSubtotal() | currency: 'USD' : 'symbol' : '1.2-2'
-        }}</span>
-      </div>
-      <div class="summary-row">
-        <span>Tax (8%):</span>
-        <span>{{ getTax() | currency: 'USD' : 'symbol' : '1.2-2' }}</span>
-      </div>
-      <div class="summary-row total">
-        <span>Total:</span>
-        <span>{{ getTotal() | currency: 'USD' : 'symbol' : '1.2-2' }}</span>
-      </div>
-    </div>
+        <div class="cart-summary">
+          <div class="summary-row">
+            <span>Subtotal:</span>
+            <span data-cy="subtotal">{{
+              getSubtotal() | currency: 'USD' : 'symbol' : '1.2-2'
+            }}</span>
+          </div>
+          <div class="summary-row">
+            <span>Tax (8%):</span>
+            <span data-cy="tax">{{ getTax() | currency: 'USD' : 'symbol' : '1.2-2' }}</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total:</span>
+            <span data-cy="total">{{ getTotal() | currency: 'USD' : 'symbol' : '1.2-2' }}</span>
+          </div>
+        </div>
 
     <div class="cart-actions">
       <button (click)="clearCart()" class="clear-cart-btn">
         Clear Cart
       </button>
-      <button [routerLink]="['/checkout']" class="checkout-btn">
+      <button [routerLink]="['/checkout']" class="checkout-btn" data-cy="checkout-btn">
         Proceed to Checkout
       </button>
     </div>
   </div>
 
   <ng-template #emptyCart>
-    <div class="empty-cart">
+    <div class="empty-cart" data-cy="empty-cart">
       <h2>Your cart is empty</h2>
       <p>Add some products to get started!</p>
-      <button [routerLink]="['/']" class="shop-btn">
+      <button [routerLink]="['/']" class="shop-btn" data-cy="shop-btn">
         Continue Shopping
       </button>
     </div>

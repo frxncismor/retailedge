@@ -12,9 +12,9 @@
         >
           Products
         </a>
-        <a routerLink="/cart" routerLinkActive="active">
-          Cart ({{ cartItemCount$ | async }})
-        </a>
+            <a routerLink="/cart" routerLinkActive="active" data-cy="cart-link">
+              Cart (<span data-cy="cart-count">{{ cartItemCount$ | async }}</span>)
+            </a>
       </nav>
     </div>
   </header>

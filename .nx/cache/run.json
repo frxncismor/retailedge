@@ -1,18 +1,18 @@
 {
   "run": {
-    "command": "nx lint store-angular --fix",
-    "startTime": "2025-10-20T21:28:03.031Z",
-    "endTime": "2025-10-20T21:28:03.765Z",
+    "command": "nx e2e store-angular-e2e",
+    "startTime": "2025-10-20T21:49:01.919Z",
+    "endTime": "2025-10-20T21:49:10.160Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "store-angular:lint",
-      "target": "lint",
-      "projectName": "store-angular",
-      "hash": "3702968950841955980",
-      "startTime": "2025-10-20T21:28:03.067Z",
-      "endTime": "2025-10-20T21:28:03.764Z",
+      "taskId": "store-angular-e2e:e2e",
+      "target": "e2e",
+      "projectName": "store-angular-e2e",
+      "hash": "10906172716321776766",
+      "startTime": "2025-10-20T21:49:01.948Z",
+      "endTime": "2025-10-20T21:49:10.159Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 1

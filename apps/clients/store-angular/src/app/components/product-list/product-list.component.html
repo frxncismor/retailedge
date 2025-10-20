@@ -8,12 +8,13 @@
         [(ngModel)]="searchQuery"
         (input)="onSearch()"
         class="search-input"
+        data-cy="search-input"
       />
     </div>
   </div>
 
   <div class="products-grid" *ngIf="products.length > 0; else noProducts">
-    <div class="product-card" *ngFor="let product of filteredProducts">
+    <div class="product-card" *ngFor="let product of filteredProducts" data-cy="product-card">
       <div class="product-image">
         <img
           [src]="'https://via.placeholder.com/300x200?text=' + product.name"
@@ -30,19 +31,21 @@
           {{ product.stock }} in stock
         </div>
         <div class="product-actions">
-          <button
-            (click)="addToCart(product)"
-            [disabled]="product.stock === 0"
-            class="add-to-cart-btn"
-          >
-            {{ product.stock === 0 ? 'Out of Stock' : 'Add to Cart' }}
-          </button>
-          <button
-            [routerLink]="['/product', product.id]"
-            class="view-details-btn"
-          >
-            View Details
-          </button>
+            <button
+              (click)="addToCart(product)"
+              [disabled]="product.stock === 0"
+              class="add-to-cart-btn"
+              data-cy="add-to-cart-btn"
+            >
+              {{ product.stock === 0 ? 'Out of Stock' : 'Add to Cart' }}
+            </button>
+            <button
+              [routerLink]="['/product', product.id]"
+              class="view-details-btn"
+              data-cy="view-details-btn"
+            >
+              View Details
+            </button>
         </div>
       </div>
     </div>

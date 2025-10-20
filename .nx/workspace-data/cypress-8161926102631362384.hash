@@ -2086,5 +2086,1034 @@
         ]
       }
     }
+  },
+  "16642399017743024151": {
+    "targets": {
+      "e2e": {
+        "command": "cypress run",
+        "options": {
+          "cwd": "apps/clients/admin-react-e2e",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"customConditions\":null}"
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "cypress"
+            ]
+          }
+        ],
+        "outputs": [
+          "{workspaceRoot}/dist/cypress/apps/clients/admin-react-e2e/videos",
+          "{workspaceRoot}/dist/cypress/apps/clients/admin-react-e2e/screenshots"
+        ],
+        "metadata": {
+          "technologies": [
+            "cypress"
+          ],
+          "description": "Runs Cypress Tests",
+          "help": {
+            "command": "npx cypress run --help",
+            "example": {
+              "args": [
+                "--dev",
+                "--headed"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          {
+            "projects": [
+              "admin"
+            ],
+            "target": "serve"
+          }
+        ],
+        "configurations": {
+          "production": {
+            "command": "cypress run --env webServerCommand=\"npx nx run admin:serve-static\""
+          }
+        }
+      },
+      "e2e-ci--src/e2e/app.cy.ts": {
+        "outputs": [
+          "{workspaceRoot}\\dist\\cypress\\apps\\clients\\admin-react-e2e\\videos\\src-e2e-app-cy-ts",
+          "{workspaceRoot}\\dist\\cypress\\apps\\clients\\admin-react-e2e\\screenshots\\src-e2e-app-cy-ts"
+        ],
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "cypress"
+            ]
+          }
+        ],
+        "cache": true,
+        "command": "cypress run --env webServerCommand=\"npx nx run admin:serve-static\" --spec src/e2e/app.cy.ts --config=\"{\\\"baseUrl\\\":\\\"http://localhost:4200\\\",\\\"e2e\\\":{\\\"videosFolder\\\":\\\"..\\\\\\\\..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\clients\\\\\\\\admin-react-e2e\\\\\\\\videos\\\\\\\\src-e2e-app-cy-ts\\\",\\\"screenshotsFolder\\\":\\\"..\\\\\\\\..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\clients\\\\\\\\admin-react-e2e\\\\\\\\screenshots\\\\\\\\src-e2e-app-cy-ts\\\"}}\"",
+        "options": {
+          "cwd": "apps/clients/admin-react-e2e",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"customConditions\":null}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "cypress"
+          ],
+          "description": "Runs Cypress Tests in src/e2e/app.cy.ts in CI",
+          "help": {
+            "command": "npx cypress run --help",
+            "example": {
+              "args": [
+                "--dev",
+                "--headed"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          {
+            "target": "serve-static",
+            "projects": [
+              "admin"
+            ]
+          }
+        ]
+      },
+      "e2e-ci": {
+        "executor": "nx:noop",
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "cypress"
+            ]
+          }
+        ],
+        "outputs": [
+          "{workspaceRoot}/dist/cypress/apps/clients/admin-react-e2e/videos",
+          "{workspaceRoot}/dist/cypress/apps/clients/admin-react-e2e/screenshots"
+        ],
+        "dependsOn": [
+          {
+            "target": "e2e-ci--src/e2e/app.cy.ts",
+            "projects": "self",
+            "params": "forward",
+            "options": "forward"
+          }
+        ],
+        "metadata": {
+          "technologies": [
+            "cypress"
+          ],
+          "description": "Runs Cypress Tests in CI",
+          "nonAtomizedTarget": "e2e",
+          "help": {
+            "command": "npx cypress run --help",
+            "example": {
+              "args": [
+                "--dev",
+                "--headed"
+              ]
+            }
+          }
+        }
+      },
+      "open-cypress": {
+        "command": "cypress open",
+        "options": {
+          "cwd": "apps/clients/admin-react-e2e",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"customConditions\":null}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "cypress"
+          ],
+          "description": "Opens Cypress",
+          "help": {
+            "command": "npx cypress open --help",
+            "example": {
+              "args": [
+                "--dev",
+                "--e2e"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "targetGroups": {
+        "E2E (CI)": [
+          "e2e-ci--src/e2e/app.cy.ts",
+          "e2e-ci"
+        ]
+      }
+    }
+  },
+  "14877847422379813044": {
+    "targets": {
+      "e2e": {
+        "command": "cypress run",
+        "options": {
+          "cwd": "apps/clients/store-angular-e2e",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"customConditions\":null}"
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "cypress"
+            ]
+          }
+        ],
+        "outputs": [
+          "{workspaceRoot}/dist/cypress/apps/clients/store-angular-e2e/videos",
+          "{workspaceRoot}/dist/cypress/apps/clients/store-angular-e2e/screenshots"
+        ],
+        "metadata": {
+          "technologies": [
+            "cypress"
+          ],
+          "description": "Runs Cypress Tests",
+          "help": {
+            "command": "npx cypress run --help",
+            "example": {
+              "args": [
+                "--dev",
+                "--headed"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          {
+            "projects": [
+              "storefront"
+            ],
+            "target": "serve"
+          }
+        ],
+        "configurations": {
+          "production": {
+            "command": "cypress run --env webServerCommand=\"npx nx run storefront:serve-static\""
+          }
+        }
+      },
+      "e2e-ci--src/e2e/app.cy.ts": {
+        "outputs": [
+          "{workspaceRoot}\\dist\\cypress\\apps\\clients\\store-angular-e2e\\videos\\src-e2e-app-cy-ts",
+          "{workspaceRoot}\\dist\\cypress\\apps\\clients\\store-angular-e2e\\screenshots\\src-e2e-app-cy-ts"
+        ],
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "cypress"
+            ]
+          }
+        ],
+        "cache": true,
+        "command": "cypress run --env webServerCommand=\"npx nx run storefront:serve-static\" --spec src/e2e/app.cy.ts --config=\"{\\\"baseUrl\\\":\\\"http://localhost:4200\\\",\\\"e2e\\\":{\\\"videosFolder\\\":\\\"..\\\\\\\\..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\clients\\\\\\\\store-angular-e2e\\\\\\\\videos\\\\\\\\src-e2e-app-cy-ts\\\",\\\"screenshotsFolder\\\":\\\"..\\\\\\\\..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\clients\\\\\\\\store-angular-e2e\\\\\\\\screenshots\\\\\\\\src-e2e-app-cy-ts\\\"}}\"",
+        "options": {
+          "cwd": "apps/clients/store-angular-e2e",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"customConditions\":null}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "cypress"
+          ],
+          "description": "Runs Cypress Tests in src/e2e/app.cy.ts in CI",
+          "help": {
+            "command": "npx cypress run --help",
+            "example": {
+              "args": [
+                "--dev",
+                "--headed"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          {
+            "target": "serve-static",
+            "projects": [
+              "storefront"
+            ]
+          }
+        ]
+      },
+      "e2e-ci--src/e2e/cart-checkout.cy.ts": {
+        "outputs": [
+          "{workspaceRoot}\\dist\\cypress\\apps\\clients\\store-angular-e2e\\videos\\src-e2e-cart-checkout-cy-ts",
+          "{workspaceRoot}\\dist\\cypress\\apps\\clients\\store-angular-e2e\\screenshots\\src-e2e-cart-checkout-cy-ts"
+        ],
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "cypress"
+            ]
+          }
+        ],
+        "cache": true,
+        "command": "cypress run --env webServerCommand=\"npx nx run storefront:serve-static\" --spec src/e2e/cart-checkout.cy.ts --config=\"{\\\"baseUrl\\\":\\\"http://localhost:4200\\\",\\\"e2e\\\":{\\\"videosFolder\\\":\\\"..\\\\\\\\..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\clients\\\\\\\\store-angular-e2e\\\\\\\\videos\\\\\\\\src-e2e-cart-checkout-cy-ts\\\",\\\"screenshotsFolder\\\":\\\"..\\\\\\\\..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\clients\\\\\\\\store-angular-e2e\\\\\\\\screenshots\\\\\\\\src-e2e-cart-checkout-cy-ts\\\"}}\"",
+        "options": {
+          "cwd": "apps/clients/store-angular-e2e",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"customConditions\":null}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "cypress"
+          ],
+          "description": "Runs Cypress Tests in src/e2e/cart-checkout.cy.ts in CI",
+          "help": {
+            "command": "npx cypress run --help",
+            "example": {
+              "args": [
+                "--dev",
+                "--headed"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          {
+            "target": "serve-static",
+            "projects": [
+              "storefront"
+            ]
+          }
+        ]
+      },
+      "e2e-ci": {
+        "executor": "nx:noop",
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "cypress"
+            ]
+          }
+        ],
+        "outputs": [
+          "{workspaceRoot}/dist/cypress/apps/clients/store-angular-e2e/videos",
+          "{workspaceRoot}/dist/cypress/apps/clients/store-angular-e2e/screenshots"
+        ],
+        "dependsOn": [
+          {
+            "target": "e2e-ci--src/e2e/app.cy.ts",
+            "projects": "self",
+            "params": "forward",
+            "options": "forward"
+          },
+          {
+            "target": "e2e-ci--src/e2e/cart-checkout.cy.ts",
+            "projects": "self",
+            "params": "forward",
+            "options": "forward"
+          }
+        ],
+        "metadata": {
+          "technologies": [
+            "cypress"
+          ],
+          "description": "Runs Cypress Tests in CI",
+          "nonAtomizedTarget": "e2e",
+          "help": {
+            "command": "npx cypress run --help",
+            "example": {
+              "args": [
+                "--dev",
+                "--headed"
+              ]
+            }
+          }
+        }
+      },
+      "open-cypress": {
+        "command": "cypress open",
+        "options": {
+          "cwd": "apps/clients/store-angular-e2e",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"customConditions\":null}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "cypress"
+          ],
+          "description": "Opens Cypress",
+          "help": {
+            "command": "npx cypress open --help",
+            "example": {
+              "args": [
+                "--dev",
+                "--e2e"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "targetGroups": {
+        "E2E (CI)": [
+          "e2e-ci--src/e2e/app.cy.ts",
+          "e2e-ci--src/e2e/cart-checkout.cy.ts",
+          "e2e-ci"
+        ]
+      }
+    }
+  },
+  "16154833753917090054": {
+    "targets": {
+      "e2e": {
+        "command": "cypress run",
+        "options": {
+          "cwd": "apps/clients/admin-react-e2e",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"customConditions\":null}"
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "cypress"
+            ]
+          }
+        ],
+        "outputs": [
+          "{workspaceRoot}/dist/cypress/apps/clients/admin-react-e2e/videos",
+          "{workspaceRoot}/dist/cypress/apps/clients/admin-react-e2e/screenshots"
+        ],
+        "metadata": {
+          "technologies": [
+            "cypress"
+          ],
+          "description": "Runs Cypress Tests",
+          "help": {
+            "command": "npx cypress run --help",
+            "example": {
+              "args": [
+                "--dev",
+                "--headed"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          {
+            "projects": [
+              "admin"
+            ],
+            "target": "serve"
+          }
+        ],
+        "configurations": {
+          "production": {
+            "command": "cypress run --env webServerCommand=\"npx nx run admin:serve-static\""
+          }
+        }
+      },
+      "e2e-ci--src/e2e/app.cy.ts": {
+        "outputs": [
+          "{workspaceRoot}\\dist\\cypress\\apps\\clients\\admin-react-e2e\\videos\\src-e2e-app-cy-ts",
+          "{workspaceRoot}\\dist\\cypress\\apps\\clients\\admin-react-e2e\\screenshots\\src-e2e-app-cy-ts"
+        ],
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "cypress"
+            ]
+          }
+        ],
+        "cache": true,
+        "command": "cypress run --env webServerCommand=\"npx nx run admin:serve-static\" --spec src/e2e/app.cy.ts --config=\"{\\\"baseUrl\\\":\\\"http://localhost:4200\\\",\\\"e2e\\\":{\\\"videosFolder\\\":\\\"..\\\\\\\\..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\clients\\\\\\\\admin-react-e2e\\\\\\\\videos\\\\\\\\src-e2e-app-cy-ts\\\",\\\"screenshotsFolder\\\":\\\"..\\\\\\\\..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\clients\\\\\\\\admin-react-e2e\\\\\\\\screenshots\\\\\\\\src-e2e-app-cy-ts\\\"}}\"",
+        "options": {
+          "cwd": "apps/clients/admin-react-e2e",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"customConditions\":null}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "cypress"
+          ],
+          "description": "Runs Cypress Tests in src/e2e/app.cy.ts in CI",
+          "help": {
+            "command": "npx cypress run --help",
+            "example": {
+              "args": [
+                "--dev",
+                "--headed"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          {
+            "target": "serve-static",
+            "projects": [
+              "admin"
+            ]
+          }
+        ]
+      },
+      "e2e-ci": {
+        "executor": "nx:noop",
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "cypress"
+            ]
+          }
+        ],
+        "outputs": [
+          "{workspaceRoot}/dist/cypress/apps/clients/admin-react-e2e/videos",
+          "{workspaceRoot}/dist/cypress/apps/clients/admin-react-e2e/screenshots"
+        ],
+        "dependsOn": [
+          {
+            "target": "e2e-ci--src/e2e/app.cy.ts",
+            "projects": "self",
+            "params": "forward",
+            "options": "forward"
+          }
+        ],
+        "metadata": {
+          "technologies": [
+            "cypress"
+          ],
+          "description": "Runs Cypress Tests in CI",
+          "nonAtomizedTarget": "e2e",
+          "help": {
+            "command": "npx cypress run --help",
+            "example": {
+              "args": [
+                "--dev",
+                "--headed"
+              ]
+            }
+          }
+        }
+      },
+      "open-cypress": {
+        "command": "cypress open",
+        "options": {
+          "cwd": "apps/clients/admin-react-e2e",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"customConditions\":null}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "cypress"
+          ],
+          "description": "Opens Cypress",
+          "help": {
+            "command": "npx cypress open --help",
+            "example": {
+              "args": [
+                "--dev",
+                "--e2e"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "targetGroups": {
+        "E2E (CI)": [
+          "e2e-ci--src/e2e/app.cy.ts",
+          "e2e-ci"
+        ]
+      }
+    }
+  },
+  "11518760293589250660": {
+    "targets": {
+      "e2e": {
+        "command": "cypress run",
+        "options": {
+          "cwd": "apps/clients/store-angular-e2e",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"customConditions\":null}"
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "cypress"
+            ]
+          }
+        ],
+        "outputs": [
+          "{workspaceRoot}/dist/cypress/apps/clients/store-angular-e2e/videos",
+          "{workspaceRoot}/dist/cypress/apps/clients/store-angular-e2e/screenshots"
+        ],
+        "metadata": {
+          "technologies": [
+            "cypress"
+          ],
+          "description": "Runs Cypress Tests",
+          "help": {
+            "command": "npx cypress run --help",
+            "example": {
+              "args": [
+                "--dev",
+                "--headed"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          {
+            "projects": [
+              "storefront"
+            ],
+            "target": "serve"
+          }
+        ],
+        "configurations": {
+          "production": {
+            "command": "cypress run --env webServerCommand=\"npx nx run storefront:serve-static\""
+          }
+        }
+      },
+      "e2e-ci--src/e2e/app.cy.ts": {
+        "outputs": [
+          "{workspaceRoot}\\dist\\cypress\\apps\\clients\\store-angular-e2e\\videos\\src-e2e-app-cy-ts",
+          "{workspaceRoot}\\dist\\cypress\\apps\\clients\\store-angular-e2e\\screenshots\\src-e2e-app-cy-ts"
+        ],
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "cypress"
+            ]
+          }
+        ],
+        "cache": true,
+        "command": "cypress run --env webServerCommand=\"npx nx run storefront:serve-static\" --spec src/e2e/app.cy.ts --config=\"{\\\"baseUrl\\\":\\\"http://localhost:4200\\\",\\\"e2e\\\":{\\\"videosFolder\\\":\\\"..\\\\\\\\..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\clients\\\\\\\\store-angular-e2e\\\\\\\\videos\\\\\\\\src-e2e-app-cy-ts\\\",\\\"screenshotsFolder\\\":\\\"..\\\\\\\\..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\clients\\\\\\\\store-angular-e2e\\\\\\\\screenshots\\\\\\\\src-e2e-app-cy-ts\\\"}}\"",
+        "options": {
+          "cwd": "apps/clients/store-angular-e2e",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"customConditions\":null}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "cypress"
+          ],
+          "description": "Runs Cypress Tests in src/e2e/app.cy.ts in CI",
+          "help": {
+            "command": "npx cypress run --help",
+            "example": {
+              "args": [
+                "--dev",
+                "--headed"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          {
+            "target": "serve-static",
+            "projects": [
+              "storefront"
+            ]
+          }
+        ]
+      },
+      "e2e-ci--src/e2e/cart-checkout.cy.ts": {
+        "outputs": [
+          "{workspaceRoot}\\dist\\cypress\\apps\\clients\\store-angular-e2e\\videos\\src-e2e-cart-checkout-cy-ts",
+          "{workspaceRoot}\\dist\\cypress\\apps\\clients\\store-angular-e2e\\screenshots\\src-e2e-cart-checkout-cy-ts"
+        ],
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "cypress"
+            ]
+          }
+        ],
+        "cache": true,
+        "command": "cypress run --env webServerCommand=\"npx nx run storefront:serve-static\" --spec src/e2e/cart-checkout.cy.ts --config=\"{\\\"baseUrl\\\":\\\"http://localhost:4200\\\",\\\"e2e\\\":{\\\"videosFolder\\\":\\\"..\\\\\\\\..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\clients\\\\\\\\store-angular-e2e\\\\\\\\videos\\\\\\\\src-e2e-cart-checkout-cy-ts\\\",\\\"screenshotsFolder\\\":\\\"..\\\\\\\\..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\clients\\\\\\\\store-angular-e2e\\\\\\\\screenshots\\\\\\\\src-e2e-cart-checkout-cy-ts\\\"}}\"",
+        "options": {
+          "cwd": "apps/clients/store-angular-e2e",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"customConditions\":null}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "cypress"
+          ],
+          "description": "Runs Cypress Tests in src/e2e/cart-checkout.cy.ts in CI",
+          "help": {
+            "command": "npx cypress run --help",
+            "example": {
+              "args": [
+                "--dev",
+                "--headed"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          {
+            "target": "serve-static",
+            "projects": [
+              "storefront"
+            ]
+          }
+        ]
+      },
+      "e2e-ci": {
+        "executor": "nx:noop",
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "cypress"
+            ]
+          }
+        ],
+        "outputs": [
+          "{workspaceRoot}/dist/cypress/apps/clients/store-angular-e2e/videos",
+          "{workspaceRoot}/dist/cypress/apps/clients/store-angular-e2e/screenshots"
+        ],
+        "dependsOn": [
+          {
+            "target": "e2e-ci--src/e2e/app.cy.ts",
+            "projects": "self",
+            "params": "forward",
+            "options": "forward"
+          },
+          {
+            "target": "e2e-ci--src/e2e/cart-checkout.cy.ts",
+            "projects": "self",
+            "params": "forward",
+            "options": "forward"
+          }
+        ],
+        "metadata": {
+          "technologies": [
+            "cypress"
+          ],
+          "description": "Runs Cypress Tests in CI",
+          "nonAtomizedTarget": "e2e",
+          "help": {
+            "command": "npx cypress run --help",
+            "example": {
+              "args": [
+                "--dev",
+                "--headed"
+              ]
+            }
+          }
+        }
+      },
+      "open-cypress": {
+        "command": "cypress open",
+        "options": {
+          "cwd": "apps/clients/store-angular-e2e",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"customConditions\":null}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "cypress"
+          ],
+          "description": "Opens Cypress",
+          "help": {
+            "command": "npx cypress open --help",
+            "example": {
+              "args": [
+                "--dev",
+                "--e2e"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "targetGroups": {
+        "E2E (CI)": [
+          "e2e-ci--src/e2e/app.cy.ts",
+          "e2e-ci--src/e2e/cart-checkout.cy.ts",
+          "e2e-ci"
+        ]
+      }
+    }
+  },
+  "3216576582177644356": {
+    "targets": {
+      "e2e": {
+        "command": "cypress run",
+        "options": {
+          "cwd": "apps/clients/store-angular-e2e",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"customConditions\":null}"
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "cypress"
+            ]
+          }
+        ],
+        "outputs": [
+          "{workspaceRoot}/dist/cypress/apps/clients/store-angular-e2e/videos",
+          "{workspaceRoot}/dist/cypress/apps/clients/store-angular-e2e/screenshots"
+        ],
+        "metadata": {
+          "technologies": [
+            "cypress"
+          ],
+          "description": "Runs Cypress Tests",
+          "help": {
+            "command": "npx cypress run --help",
+            "example": {
+              "args": [
+                "--dev",
+                "--headed"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          {
+            "projects": [
+              "store-angular"
+            ],
+            "target": "serve"
+          }
+        ],
+        "configurations": {
+          "production": {
+            "command": "cypress run --env webServerCommand=\"npx nx run store-angular:serve-static\""
+          }
+        }
+      },
+      "e2e-ci--src/e2e/app.cy.ts": {
+        "outputs": [
+          "{workspaceRoot}\\dist\\cypress\\apps\\clients\\store-angular-e2e\\videos\\src-e2e-app-cy-ts",
+          "{workspaceRoot}\\dist\\cypress\\apps\\clients\\store-angular-e2e\\screenshots\\src-e2e-app-cy-ts"
+        ],
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "cypress"
+            ]
+          }
+        ],
+        "cache": true,
+        "command": "cypress run --env webServerCommand=\"npx nx run store-angular:serve-static\" --spec src/e2e/app.cy.ts --config=\"{\\\"baseUrl\\\":\\\"http://localhost:4200\\\",\\\"e2e\\\":{\\\"videosFolder\\\":\\\"..\\\\\\\\..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\clients\\\\\\\\store-angular-e2e\\\\\\\\videos\\\\\\\\src-e2e-app-cy-ts\\\",\\\"screenshotsFolder\\\":\\\"..\\\\\\\\..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\clients\\\\\\\\store-angular-e2e\\\\\\\\screenshots\\\\\\\\src-e2e-app-cy-ts\\\"}}\"",
+        "options": {
+          "cwd": "apps/clients/store-angular-e2e",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"customConditions\":null}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "cypress"
+          ],
+          "description": "Runs Cypress Tests in src/e2e/app.cy.ts in CI",
+          "help": {
+            "command": "npx cypress run --help",
+            "example": {
+              "args": [
+                "--dev",
+                "--headed"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          {
+            "target": "serve-static",
+            "projects": [
+              "store-angular"
+            ]
+          }
+        ]
+      },
+      "e2e-ci--src/e2e/cart-checkout.cy.ts": {
+        "outputs": [
+          "{workspaceRoot}\\dist\\cypress\\apps\\clients\\store-angular-e2e\\videos\\src-e2e-cart-checkout-cy-ts",
+          "{workspaceRoot}\\dist\\cypress\\apps\\clients\\store-angular-e2e\\screenshots\\src-e2e-cart-checkout-cy-ts"
+        ],
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "cypress"
+            ]
+          }
+        ],
+        "cache": true,
+        "command": "cypress run --env webServerCommand=\"npx nx run store-angular:serve-static\" --spec src/e2e/cart-checkout.cy.ts --config=\"{\\\"baseUrl\\\":\\\"http://localhost:4200\\\",\\\"e2e\\\":{\\\"videosFolder\\\":\\\"..\\\\\\\\..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\clients\\\\\\\\store-angular-e2e\\\\\\\\videos\\\\\\\\src-e2e-cart-checkout-cy-ts\\\",\\\"screenshotsFolder\\\":\\\"..\\\\\\\\..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\clients\\\\\\\\store-angular-e2e\\\\\\\\screenshots\\\\\\\\src-e2e-cart-checkout-cy-ts\\\"}}\"",
+        "options": {
+          "cwd": "apps/clients/store-angular-e2e",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"customConditions\":null}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "cypress"
+          ],
+          "description": "Runs Cypress Tests in src/e2e/cart-checkout.cy.ts in CI",
+          "help": {
+            "command": "npx cypress run --help",
+            "example": {
+              "args": [
+                "--dev",
+                "--headed"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          {
+            "target": "serve-static",
+            "projects": [
+              "store-angular"
+            ]
+          }
+        ]
+      },
+      "e2e-ci": {
+        "executor": "nx:noop",
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "cypress"
+            ]
+          }
+        ],
+        "outputs": [
+          "{workspaceRoot}/dist/cypress/apps/clients/store-angular-e2e/videos",
+          "{workspaceRoot}/dist/cypress/apps/clients/store-angular-e2e/screenshots"
+        ],
+        "dependsOn": [
+          {
+            "target": "e2e-ci--src/e2e/app.cy.ts",
+            "projects": "self",
+            "params": "forward",
+            "options": "forward"
+          },
+          {
+            "target": "e2e-ci--src/e2e/cart-checkout.cy.ts",
+            "projects": "self",
+            "params": "forward",
+            "options": "forward"
+          }
+        ],
+        "metadata": {
+          "technologies": [
+            "cypress"
+          ],
+          "description": "Runs Cypress Tests in CI",
+          "nonAtomizedTarget": "e2e",
+          "help": {
+            "command": "npx cypress run --help",
+            "example": {
+              "args": [
+                "--dev",
+                "--headed"
+              ]
+            }
+          }
+        }
+      },
+      "open-cypress": {
+        "command": "cypress open",
+        "options": {
+          "cwd": "apps/clients/store-angular-e2e",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"customConditions\":null}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "cypress"
+          ],
+          "description": "Opens Cypress",
+          "help": {
+            "command": "npx cypress open --help",
+            "example": {
+              "args": [
+                "--dev",
+                "--e2e"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "targetGroups": {
+        "E2E (CI)": [
+          "e2e-ci--src/e2e/app.cy.ts",
+          "e2e-ci--src/e2e/cart-checkout.cy.ts",
+          "e2e-ci"
+        ]
+      }
+    }
   }
 }

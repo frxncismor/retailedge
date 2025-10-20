@@ -1,5 +1,14 @@
 {
   "externalNodes": {
+    "npm:@adobe/css-tools": {
+      "type": "npm",
+      "name": "npm:@adobe/css-tools",
+      "data": {
+        "version": "4.4.4",
+        "packageName": "@adobe/css-tools",
+        "hash": "sha512-Elp+iwUx5rN5+Y8xLt5/GRoG20WGoDCQ/1Fb+1LiGtvwbDavuSk0jhD/eZdckHAuzcDzccnkv+rEjyWfRx18gg=="
+      }
+    },
     "npm:@algolia/abtesting": {
       "type": "npm",
       "name": "npm:@algolia/abtesting",
@@ -8136,6 +8145,33 @@
         "hash": "sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg=="
       }
     },
+    "npm:@testing-library/jest-dom": {
+      "type": "npm",
+      "name": "npm:@testing-library/jest-dom",
+      "data": {
+        "version": "6.9.1",
+        "packageName": "@testing-library/jest-dom",
+        "hash": "sha512-zIcONa+hVtVSSep9UT3jZ5rizo2BsxgyDYU7WFD5eICBE7no3881HGeb/QkGfsJs6JTkY1aQhT7rIPC7e+0nnA=="
+      }
+    },
+    "npm:dom-accessibility-api@0.6.3": {
+      "type": "npm",
+      "name": "npm:dom-accessibility-api@0.6.3",
+      "data": {
+        "version": "0.6.3",
+        "packageName": "dom-accessibility-api",
+        "hash": "sha512-7ZgogeTnjuHbo+ct10G9Ffp0mif17idi0IyWNVA/wcwcm7NPOD/WEHVP3n7n3MhXqxoIYm8d6MuZohYWIZ4T3w=="
+      }
+    },
+    "npm:dom-accessibility-api": {
+      "type": "npm",
+      "name": "npm:dom-accessibility-api",
+      "data": {
+        "version": "0.5.16",
+        "packageName": "dom-accessibility-api",
+        "hash": "sha512-X7BJ2yElsnOJ30pZF4uIIDfBEVgF4XEBxL9Bxhy6dnrm5hkzqmsWHGTiHqRiITNhMyFLyAiWndIJP7Z1NTteDg=="
+      }
+    },
     "npm:@testing-library/react": {
       "type": "npm",
       "name": "npm:@testing-library/react",
@@ -11385,6 +11421,15 @@
         "hash": "sha512-tRpdppF7TRazZrjJ6v3stzv93qxRcSsFmW6cX0Zm2NVKpxE1WV1HblnghVv9TreireHkqI/VDEsfolRF1p6y7Q=="
       }
     },
+    "npm:css.escape": {
+      "type": "npm",
+      "name": "npm:css.escape",
+      "data": {
+        "version": "1.5.1",
+        "packageName": "css.escape",
+        "hash": "sha512-YUifsXXuknHlUsmlgyY0PKzgPOr7/FjCePfHNt0jxm83wHZi44VDMQ7/fGNkjY3/jV1MC+1CmZbaHzugyeRtpg=="
+      }
+    },
     "npm:cssesc": {
       "type": "npm",
       "name": "npm:cssesc",
@@ -11950,15 +11995,6 @@
         "version": "2.1.0",
         "packageName": "doctrine",
         "hash": "sha512-35mSku4ZXK0vfCuHEDAwt55dg2jNajHZ1odvF+8SSr82EsZY4QmXfuWso8oEd8zRhVObSN18aM0CjSdoBX7zIw=="
-      }
-    },
-    "npm:dom-accessibility-api": {
-      "type": "npm",
-      "name": "npm:dom-accessibility-api",
-      "data": {
-        "version": "0.5.16",
-        "packageName": "dom-accessibility-api",
-        "hash": "sha512-X7BJ2yElsnOJ30pZF4uIIDfBEVgF4XEBxL9Bxhy6dnrm5hkzqmsWHGTiHqRiITNhMyFLyAiWndIJP7Z1NTteDg=="
       }
     },
     "npm:dom-serializer": {
@@ -15516,6 +15552,15 @@
         "hash": "sha512-VP79XUPxV2CigYP3jWwAUFSku2aKqBH7uTAapFWCBqutsbmDo96KY5o8uh6U+/YSIn5OxJnXp73beVkpqMIGhA=="
       }
     },
+    "npm:min-indent": {
+      "type": "npm",
+      "name": "npm:min-indent",
+      "data": {
+        "version": "1.0.1",
+        "packageName": "min-indent",
+        "hash": "sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg=="
+      }
+    },
     "npm:mini-svg-data-uri": {
       "type": "npm",
       "name": "npm:mini-svg-data-uri",
@@ -17424,6 +17469,15 @@
         "hash": "sha512-/vxpCXddiX8NGfGO/mTafwjq4aFa/71pvamip0++IQk3zG8cbCj0fifNPrjjF1XMXUne91jL9OoxmdykoEtifQ=="
       }
     },
+    "npm:redent": {
+      "type": "npm",
+      "name": "npm:redent",
+      "data": {
+        "version": "3.0.0",
+        "packageName": "redent",
+        "hash": "sha512-6tDA8g98We0zd0GvVeMT9arEOnTw9qM03L9cJXaCjrip1OO764RDBLBfrB4cwzNGDj5OA5ioymC9GkizgWJDUg=="
+      }
+    },
     "npm:reflect-metadata": {
       "type": "npm",
       "name": "npm:reflect-metadata",
@@ -18565,6 +18619,15 @@
         "version": "2.0.0",
         "packageName": "strip-final-newline",
         "hash": "sha512-BrpvfNAE3dcvq7ll3xVumzjKjZQ5tI1sEUIKr3Uoks0XUl45St3FlatVqef9prk4jRDzhW6WZg+3bk93y6pLjA=="
+      }
+    },
+    "npm:strip-indent": {
+      "type": "npm",
+      "name": "npm:strip-indent",
+      "data": {
+        "version": "3.0.0",
+        "packageName": "strip-indent",
+        "hash": "sha512-laJTa3Jb+VQpaC6DseHhF7dXVqHTfJPCRDaEbid/drOhgitgYku/letMUqOXFoWV0zIIUbjpdH2t+tYj4bQMRQ=="
       }
     },
     "npm:strip-json-comments": {
@@ -32049,6 +32112,36 @@
     {
       "source": "npm:pretty-format@27.5.1",
       "target": "npm:react-is@17.0.2",
+      "type": "static"
+    },
+    {
+      "source": "npm:@testing-library/jest-dom",
+      "target": "npm:@adobe/css-tools",
+      "type": "static"
+    },
+    {
+      "source": "npm:@testing-library/jest-dom",
+      "target": "npm:aria-query",
+      "type": "static"
+    },
+    {
+      "source": "npm:@testing-library/jest-dom",
+      "target": "npm:css.escape",
+      "type": "static"
+    },
+    {
+      "source": "npm:@testing-library/jest-dom",
+      "target": "npm:dom-accessibility-api@0.6.3",
+      "type": "static"
+    },
+    {
+      "source": "npm:@testing-library/jest-dom",
+      "target": "npm:picocolors",
+      "type": "static"
+    },
+    {
+      "source": "npm:@testing-library/jest-dom",
+      "target": "npm:redent",
       "type": "static"
     },
     {
@@ -48292,6 +48385,16 @@
       "type": "static"
     },
     {
+      "source": "npm:redent",
+      "target": "npm:indent-string",
+      "type": "static"
+    },
+    {
+      "source": "npm:redent",
+      "target": "npm:strip-indent",
+      "type": "static"
+    },
+    {
       "source": "npm:reflect.getprototypeof",
       "target": "npm:call-bind",
       "type": "static"
@@ -50759,6 +50862,11 @@
     {
       "source": "npm:strip-dirs",
       "target": "npm:is-plain-obj@1.1.0",
+      "type": "static"
+    },
+    {
+      "source": "npm:strip-indent",
+      "target": "npm:min-indent",
       "type": "static"
     },
     {

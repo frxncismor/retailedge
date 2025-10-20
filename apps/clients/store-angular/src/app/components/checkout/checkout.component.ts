@@ -46,6 +46,7 @@ export class CheckoutComponent implements OnInit {
 
     this.isProcessing = true;
 
+    // Simulate order creation API call
     setTimeout(() => {
       console.log('Order placed:', {
         shipping: this.shippingInfo,
@@ -55,7 +56,19 @@ export class CheckoutComponent implements OnInit {
 
       this.cartService.clearCart();
       this.isProcessing = false;
-      alert('Order placed successfully!');
+
+      // Show success message
+      const successMessage = document.createElement('div');
+      successMessage.setAttribute('data-cy', 'order-success');
+      successMessage.textContent = 'Order placed successfully!';
+      successMessage.style.cssText =
+        'position: fixed; top: 20px; right: 20px; background: #4CAF50; color: white; padding: 15px; border-radius: 5px; z-index: 1000;';
+      document.body.appendChild(successMessage);
+
+      // Remove message after 3 seconds
+      setTimeout(() => {
+        document.body.removeChild(successMessage);
+      }, 3000);
     }, 2000);
   }
 

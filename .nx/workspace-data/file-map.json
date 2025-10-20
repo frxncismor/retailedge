@@ -45,172 +45,6 @@
   ],
   "fileMap": {
     "projectFileMap": {
-      "admin-react": [
-        {
-          "file": "apps/clients/admin-react/.babelrc",
-          "hash": "13020124393823981135"
-        },
-        {
-          "file": "apps/clients/admin-react/README.md",
-          "hash": "8591504459750651431"
-        },
-        {
-          "file": "apps/clients/admin-react/eslint.config.cjs",
-          "hash": "7765412819901055759"
-        },
-        {
-          "file": "apps/clients/admin-react/jest.config.ts",
-          "hash": "16493715133539382559"
-        },
-        {
-          "file": "apps/clients/admin-react/project.json",
-          "hash": "7621441979171236844"
-        },
-        {
-          "file": "apps/clients/admin-react/src/app/app.css",
-          "hash": "7210604008682705910"
-        },
-        {
-          "file": "apps/clients/admin-react/src/app/app.module.css",
-          "hash": "8887387885984320532"
-        },
-        {
-          "file": "apps/clients/admin-react/src/app/app.spec.tsx",
-          "hash": "9104204865553395901",
-          "deps": [
-            "npm:@testing-library/react",
-            "npm:react-router-dom"
-          ]
-        },
-        {
-          "file": "apps/clients/admin-react/src/app/app.tsx",
-          "hash": "7256549100844076108",
-          "deps": [
-            "npm:react-router-dom"
-          ]
-        },
-        {
-          "file": "apps/clients/admin-react/src/app/nx-welcome.tsx",
-          "hash": "2348102959109701629"
-        },
-        {
-          "file": "apps/clients/admin-react/src/assets/.gitkeep",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/clients/admin-react/src/components/ProductForm.tsx",
-          "hash": "11779977197557501770",
-          "deps": [
-            "npm:react",
-            "api-types"
-          ]
-        },
-        {
-          "file": "apps/clients/admin-react/src/components/ProductList.tsx",
-          "hash": "916164672780608819",
-          "deps": [
-            "npm:react",
-            "api-types"
-          ]
-        },
-        {
-          "file": "apps/clients/admin-react/src/config/environment.ts",
-          "hash": "7182105215715496099"
-        },
-        {
-          "file": "apps/clients/admin-react/src/favicon.ico",
-          "hash": "9303420814833116677"
-        },
-        {
-          "file": "apps/clients/admin-react/src/index.html",
-          "hash": "17433327128656101005"
-        },
-        {
-          "file": "apps/clients/admin-react/src/main.tsx",
-          "hash": "763379880219152615",
-          "deps": [
-            "npm:react",
-            "npm:react-dom",
-            "npm:react-router-dom"
-          ]
-        },
-        {
-          "file": "apps/clients/admin-react/src/services/productService.ts",
-          "hash": "5482401959661997833",
-          "deps": [
-            "api-types"
-          ]
-        },
-        {
-          "file": "apps/clients/admin-react/src/styles.css",
-          "hash": "5195668842064076916"
-        },
-        {
-          "file": "apps/clients/admin-react/tsconfig.app.json",
-          "hash": "16481674911259912109"
-        },
-        {
-          "file": "apps/clients/admin-react/tsconfig.json",
-          "hash": "17849894785030224090"
-        },
-        {
-          "file": "apps/clients/admin-react/tsconfig.spec.json",
-          "hash": "11537943481495421274"
-        },
-        {
-          "file": "apps/clients/admin-react/webpack.config.js",
-          "hash": "3540819410315055514",
-          "deps": [
-            "npm:@nx/webpack",
-            "npm:@nx/react"
-          ]
-        }
-      ],
-      "store-angular-e2e": [
-        {
-          "file": "apps/clients/store-angular-e2e/cypress.config.ts",
-          "hash": "14765036182597628777",
-          "deps": [
-            "npm:@nx/cypress",
-            "npm:cypress"
-          ]
-        },
-        {
-          "file": "apps/clients/store-angular-e2e/eslint.config.cjs",
-          "hash": "4263490289607977354",
-          "deps": [
-            "npm:eslint-plugin-cypress"
-          ]
-        },
-        {
-          "file": "apps/clients/store-angular-e2e/project.json",
-          "hash": "16200035370413954080"
-        },
-        {
-          "file": "apps/clients/store-angular-e2e/src/e2e/app.cy.ts",
-          "hash": "11594042802154747999"
-        },
-        {
-          "file": "apps/clients/store-angular-e2e/src/fixtures/example.json",
-          "hash": "11785586596216172004"
-        },
-        {
-          "file": "apps/clients/store-angular-e2e/src/support/app.po.ts",
-          "hash": "11157016311132186162"
-        },
-        {
-          "file": "apps/clients/store-angular-e2e/src/support/commands.ts",
-          "hash": "6408592624158157338"
-        },
-        {
-          "file": "apps/clients/store-angular-e2e/src/support/e2e.ts",
-          "hash": "1054106023200826784"
-        },
-        {
-          "file": "apps/clients/store-angular-e2e/tsconfig.json",
-          "hash": "10369170571470523349"
-        }
-      ],
       "store-angular": [
         {
           "file": "apps/clients/store-angular/README.md",
@@ -238,7 +72,7 @@
         },
         {
           "file": "apps/clients/store-angular/src/app/app.component.html",
-          "hash": "17515184229917741103"
+          "hash": "10368158627598678918"
         },
         {
           "file": "apps/clients/store-angular/src/app/app.component.ts",
@@ -294,7 +128,7 @@
         },
         {
           "file": "apps/clients/store-angular/src/app/components/cart/cart.component.html",
-          "hash": "2129796889078410198"
+          "hash": "12705513723108449012"
         },
         {
           "file": "apps/clients/store-angular/src/app/components/cart/cart.component.ts",
@@ -312,11 +146,11 @@
         },
         {
           "file": "apps/clients/store-angular/src/app/components/checkout/checkout.component.html",
-          "hash": "104060913843222604"
+          "hash": "14757414650743650182"
         },
         {
           "file": "apps/clients/store-angular/src/app/components/checkout/checkout.component.ts",
-          "hash": "17401366898452627349",
+          "hash": "2654816913661569744",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
@@ -330,7 +164,7 @@
         },
         {
           "file": "apps/clients/store-angular/src/app/components/product-detail/product-detail.component.html",
-          "hash": "2349177906573260703"
+          "hash": "1418267188579182958"
         },
         {
           "file": "apps/clients/store-angular/src/app/components/product-detail/product-detail.component.ts",
@@ -349,7 +183,7 @@
         },
         {
           "file": "apps/clients/store-angular/src/app/components/product-list/product-list.component.html",
-          "hash": "15509597433950029221"
+          "hash": "8047011552998189116"
         },
         {
           "file": "apps/clients/store-angular/src/app/components/product-list/product-list.component.ts",
@@ -376,6 +210,15 @@
           "deps": [
             "npm:@angular/core",
             "npm:rxjs",
+            "api-types"
+          ]
+        },
+        {
+          "file": "apps/clients/store-angular/src/app/services/product.service.spec.ts",
+          "hash": "8060196437177207140",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
             "api-types"
           ]
         },
@@ -428,123 +271,11 @@
         },
         {
           "file": "apps/clients/store-angular/tsconfig.json",
-          "hash": "7386288786540745595"
+          "hash": "11092145589780976651"
         },
         {
           "file": "apps/clients/store-angular/tsconfig.spec.json",
           "hash": "8035605792114225662"
-        }
-      ],
-      "api-types": [
-        {
-          "file": "libs/shared/api-types/README.md",
-          "hash": "13863317375422069313"
-        },
-        {
-          "file": "libs/shared/api-types/catalog.ts",
-          "hash": "5039338691929273248"
-        },
-        {
-          "file": "libs/shared/api-types/index.ts",
-          "hash": "16958287156914805102"
-        },
-        {
-          "file": "libs/shared/api-types/jest.config.ts",
-          "hash": "7530013103163279990"
-        },
-        {
-          "file": "libs/shared/api-types/orders.ts",
-          "hash": "4049526494558182095"
-        },
-        {
-          "file": "libs/shared/api-types/project.json",
-          "hash": "517420985678446185"
-        },
-        {
-          "file": "libs/shared/api-types/tsconfig.json",
-          "hash": "12317247662016690596"
-        },
-        {
-          "file": "libs/shared/api-types/tsconfig.lib.json",
-          "hash": "3140360898420372808"
-        },
-        {
-          "file": "libs/shared/api-types/tsconfig.spec.json",
-          "hash": "7505761804020530291"
-        },
-        {
-          "file": "libs/shared/api-types/users.ts",
-          "hash": "5672646262360914996"
-        }
-      ],
-      "orders-service": [
-        {
-          "file": "apps/services/orders-service/Dockerfile",
-          "hash": "8246203936322798916"
-        },
-        {
-          "file": "apps/services/orders-service/README.md",
-          "hash": "4850864629771658629"
-        },
-        {
-          "file": "apps/services/orders-service/pom.xml",
-          "hash": "12950361434393153166"
-        },
-        {
-          "file": "apps/services/orders-service/project.json",
-          "hash": "11030298427808232801"
-        },
-        {
-          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/OrdersServiceApplication.java",
-          "hash": "14314879623973762709"
-        },
-        {
-          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/controller/OrderController.java",
-          "hash": "10099464946943076987"
-        },
-        {
-          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/dto/OrderItemRequest.java",
-          "hash": "2334048258164552320"
-        },
-        {
-          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/dto/OrderItemResponse.java",
-          "hash": "2130623346254217433"
-        },
-        {
-          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/dto/OrderRequest.java",
-          "hash": "14647523460112499937"
-        },
-        {
-          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/dto/OrderResponse.java",
-          "hash": "16175842438201039017"
-        },
-        {
-          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/entity/Order.java",
-          "hash": "17714586988404992916"
-        },
-        {
-          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/entity/OrderItem.java",
-          "hash": "16652596616186679060"
-        },
-        {
-          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/entity/OrderStatus.java",
-          "hash": "11757027292026814628"
-        },
-        {
-          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/repository/OrderRepository.java",
-          "hash": "4004132794220175652"
-        },
-        {
-          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/service/OrderService.java",
-          "hash": "3773815967602078118"
-        },
-        {
-          "file": "apps/services/orders-service/src/main/resources/application.yml",
-          "hash": "523992729964434549"
-        },
-        {
-          "file": "apps/services/orders-service/src/test/java/com/retailedge/orders/service/OrderServiceTest.java",
-          "hash": "9600538578481387210"
         }
       ],
       "retailedge": [
@@ -706,7 +437,7 @@
         },
         {
           "file": "jest.preset.js",
-          "hash": "9430166341120122740",
+          "hash": "10254262414973230956",
           "deps": [
             "npm:@nx/jest"
           ]
@@ -717,11 +448,11 @@
         },
         {
           "file": "package-lock.json",
-          "hash": "1463854856899252335"
+          "hash": "4930118561334034081"
         },
         {
           "file": "package.json",
-          "hash": "2244882707255787300",
+          "hash": "13576498779914403712",
           "deps": [
             "npm:@angular-devkit/build-angular",
             "npm:@angular-devkit/core",
@@ -748,6 +479,7 @@
             "npm:@swc/core",
             "npm:@swc/helpers",
             "npm:@testing-library/dom",
+            "npm:@testing-library/jest-dom",
             "npm:@testing-library/react",
             "npm:@types/jest",
             "npm:@types/node",
@@ -817,177 +549,6 @@
           "hash": "2895591556017958930"
         }
       ],
-      "admin-react-e2e": [
-        {
-          "file": "apps/clients/admin-react-e2e/cypress.config.ts",
-          "hash": "12677464254381520945",
-          "deps": [
-            "npm:@nx/cypress",
-            "npm:cypress"
-          ]
-        },
-        {
-          "file": "apps/clients/admin-react-e2e/eslint.config.cjs",
-          "hash": "4263490289607977354",
-          "deps": [
-            "npm:eslint-plugin-cypress"
-          ]
-        },
-        {
-          "file": "apps/clients/admin-react-e2e/project.json",
-          "hash": "13860568002315447251"
-        },
-        {
-          "file": "apps/clients/admin-react-e2e/src/e2e/app.cy.ts",
-          "hash": "13195148276539214705"
-        },
-        {
-          "file": "apps/clients/admin-react-e2e/src/fixtures/example.json",
-          "hash": "11785586596216172004"
-        },
-        {
-          "file": "apps/clients/admin-react-e2e/src/support/app.po.ts",
-          "hash": "11157016311132186162"
-        },
-        {
-          "file": "apps/clients/admin-react-e2e/src/support/commands.ts",
-          "hash": "6408592624158157338"
-        },
-        {
-          "file": "apps/clients/admin-react-e2e/src/support/e2e.ts",
-          "hash": "1054106023200826784"
-        },
-        {
-          "file": "apps/clients/admin-react-e2e/tsconfig.json",
-          "hash": "4966899981699294432"
-        }
-      ],
-      "shared-models": [
-        {
-          "file": "libs/shared/models/README.md",
-          "hash": "13800743491458574293"
-        },
-        {
-          "file": "libs/shared/models/eslint.config.cjs",
-          "hash": "17235945490168134871",
-          "deps": [
-            "npm:jsonc-eslint-parser"
-          ]
-        },
-        {
-          "file": "libs/shared/models/jest.config.ts",
-          "hash": "1494321795245391925"
-        },
-        {
-          "file": "libs/shared/models/package.json",
-          "hash": "16409212588495152741",
-          "deps": [
-            "npm:tslib"
-          ]
-        },
-        {
-          "file": "libs/shared/models/project.json",
-          "hash": "8407214898323392399"
-        },
-        {
-          "file": "libs/shared/models/src/index.ts",
-          "hash": "6209673531808721409"
-        },
-        {
-          "file": "libs/shared/models/src/lib/shared-models.spec.ts",
-          "hash": "1298400587117846729"
-        },
-        {
-          "file": "libs/shared/models/src/lib/shared-models.ts",
-          "hash": "12426401410806553499"
-        },
-        {
-          "file": "libs/shared/models/tsconfig.json",
-          "hash": "10148903843036702529"
-        },
-        {
-          "file": "libs/shared/models/tsconfig.lib.json",
-          "hash": "14539327243516648733"
-        },
-        {
-          "file": "libs/shared/models/tsconfig.spec.json",
-          "hash": "5394994266788668641"
-        }
-      ],
-      "catalog-service": [
-        {
-          "file": "apps/services/catalog-service/.mvn/wrapper/MavenWrapperDownloader.java",
-          "hash": "9951560507754787165"
-        },
-        {
-          "file": "apps/services/catalog-service/.mvn/wrapper/maven-wrapper.properties",
-          "hash": "17347536771632203265"
-        },
-        {
-          "file": "apps/services/catalog-service/Dockerfile",
-          "hash": "4621022899393965406"
-        },
-        {
-          "file": "apps/services/catalog-service/README.md",
-          "hash": "6411572339251468667"
-        },
-        {
-          "file": "apps/services/catalog-service/mvnw",
-          "hash": "7302403123120539304"
-        },
-        {
-          "file": "apps/services/catalog-service/mvnw.cmd",
-          "hash": "652895478035349634"
-        },
-        {
-          "file": "apps/services/catalog-service/pom.xml",
-          "hash": "9484517185440954007"
-        },
-        {
-          "file": "apps/services/catalog-service/project.json",
-          "hash": "16263729275398115881"
-        },
-        {
-          "file": "apps/services/catalog-service/src/main/java/com/retailedge/catalog/CatalogServiceApplication.java",
-          "hash": "17052862271120528697"
-        },
-        {
-          "file": "apps/services/catalog-service/src/main/java/com/retailedge/catalog/controller/ProductController.java",
-          "hash": "5656359568484173940"
-        },
-        {
-          "file": "apps/services/catalog-service/src/main/java/com/retailedge/catalog/dto/ProductRequest.java",
-          "hash": "5839358087446497360"
-        },
-        {
-          "file": "apps/services/catalog-service/src/main/java/com/retailedge/catalog/dto/ProductResponse.java",
-          "hash": "4619175061159105843"
-        },
-        {
-          "file": "apps/services/catalog-service/src/main/java/com/retailedge/catalog/entity/Product.java",
-          "hash": "15366658502878224151"
-        },
-        {
-          "file": "apps/services/catalog-service/src/main/java/com/retailedge/catalog/repository/ProductRepository.java",
-          "hash": "9802781170460192062"
-        },
-        {
-          "file": "apps/services/catalog-service/src/main/java/com/retailedge/catalog/service/ProductService.java",
-          "hash": "9563453413939913946"
-        },
-        {
-          "file": "apps/services/catalog-service/src/main/resources/application.yml",
-          "hash": "4669725710725287134"
-        },
-        {
-          "file": "apps/services/catalog-service/src/test/java/com/retailedge/catalog/controller/ProductControllerTest.java",
-          "hash": "10347450353881398697"
-        },
-        {
-          "file": "apps/services/catalog-service/src/test/java/com/retailedge/catalog/service/ProductServiceTest.java",
-          "hash": "13230632521524483163"
-        }
-      ],
       "users-service": [
         {
           "file": "apps/services/users-service/Dockerfile",
@@ -1041,9 +602,491 @@
           "file": "apps/services/users-service/src/test/java/com/retailedge/users/service/CustomerServiceTest.java",
           "hash": "4562307823633191064"
         }
+      ],
+      "store-angular-e2e": [
+        {
+          "file": "apps/clients/store-angular-e2e/cypress.config.ts",
+          "hash": "8604896585740905098",
+          "deps": [
+            "npm:@nx/cypress",
+            "npm:cypress"
+          ]
+        },
+        {
+          "file": "apps/clients/store-angular-e2e/eslint.config.cjs",
+          "hash": "4263490289607977354",
+          "deps": [
+            "npm:eslint-plugin-cypress"
+          ]
+        },
+        {
+          "file": "apps/clients/store-angular-e2e/project.json",
+          "hash": "16200035370413954080"
+        },
+        {
+          "file": "apps/clients/store-angular-e2e/src/e2e/app.cy.ts",
+          "hash": "11594042802154747999"
+        },
+        {
+          "file": "apps/clients/store-angular-e2e/src/e2e/cart-checkout.cy.ts",
+          "hash": "11233400915589356378"
+        },
+        {
+          "file": "apps/clients/store-angular-e2e/src/fixtures/example.json",
+          "hash": "11785586596216172004"
+        },
+        {
+          "file": "apps/clients/store-angular-e2e/src/support/app.po.ts",
+          "hash": "11157016311132186162"
+        },
+        {
+          "file": "apps/clients/store-angular-e2e/src/support/commands.ts",
+          "hash": "6408592624158157338"
+        },
+        {
+          "file": "apps/clients/store-angular-e2e/src/support/e2e.ts",
+          "hash": "1054106023200826784"
+        },
+        {
+          "file": "apps/clients/store-angular-e2e/tsconfig.json",
+          "hash": "10369170571470523349"
+        }
+      ],
+      "admin-react-e2e": [
+        {
+          "file": "apps/clients/admin-react-e2e/cypress.config.ts",
+          "hash": "12677464254381520945",
+          "deps": [
+            "npm:@nx/cypress",
+            "npm:cypress"
+          ]
+        },
+        {
+          "file": "apps/clients/admin-react-e2e/eslint.config.cjs",
+          "hash": "4263490289607977354",
+          "deps": [
+            "npm:eslint-plugin-cypress"
+          ]
+        },
+        {
+          "file": "apps/clients/admin-react-e2e/project.json",
+          "hash": "13860568002315447251"
+        },
+        {
+          "file": "apps/clients/admin-react-e2e/src/e2e/app.cy.ts",
+          "hash": "13195148276539214705"
+        },
+        {
+          "file": "apps/clients/admin-react-e2e/src/fixtures/example.json",
+          "hash": "11785586596216172004"
+        },
+        {
+          "file": "apps/clients/admin-react-e2e/src/support/app.po.ts",
+          "hash": "11157016311132186162"
+        },
+        {
+          "file": "apps/clients/admin-react-e2e/src/support/commands.ts",
+          "hash": "6408592624158157338"
+        },
+        {
+          "file": "apps/clients/admin-react-e2e/src/support/e2e.ts",
+          "hash": "1054106023200826784"
+        },
+        {
+          "file": "apps/clients/admin-react-e2e/tsconfig.json",
+          "hash": "4966899981699294432"
+        }
+      ],
+      "catalog-service": [
+        {
+          "file": "apps/services/catalog-service/.mvn/wrapper/MavenWrapperDownloader.java",
+          "hash": "9951560507754787165"
+        },
+        {
+          "file": "apps/services/catalog-service/.mvn/wrapper/maven-wrapper.properties",
+          "hash": "17347536771632203265"
+        },
+        {
+          "file": "apps/services/catalog-service/Dockerfile",
+          "hash": "4621022899393965406"
+        },
+        {
+          "file": "apps/services/catalog-service/README.md",
+          "hash": "6411572339251468667"
+        },
+        {
+          "file": "apps/services/catalog-service/mvnw",
+          "hash": "7302403123120539304"
+        },
+        {
+          "file": "apps/services/catalog-service/mvnw.cmd",
+          "hash": "652895478035349634"
+        },
+        {
+          "file": "apps/services/catalog-service/pom.xml",
+          "hash": "9056167070159764018"
+        },
+        {
+          "file": "apps/services/catalog-service/project.json",
+          "hash": "16263729275398115881"
+        },
+        {
+          "file": "apps/services/catalog-service/src/main/java/com/retailedge/catalog/CatalogServiceApplication.java",
+          "hash": "17052862271120528697"
+        },
+        {
+          "file": "apps/services/catalog-service/src/main/java/com/retailedge/catalog/controller/ProductController.java",
+          "hash": "5656359568484173940"
+        },
+        {
+          "file": "apps/services/catalog-service/src/main/java/com/retailedge/catalog/dto/ProductRequest.java",
+          "hash": "5839358087446497360"
+        },
+        {
+          "file": "apps/services/catalog-service/src/main/java/com/retailedge/catalog/dto/ProductResponse.java",
+          "hash": "4619175061159105843"
+        },
+        {
+          "file": "apps/services/catalog-service/src/main/java/com/retailedge/catalog/entity/Product.java",
+          "hash": "15366658502878224151"
+        },
+        {
+          "file": "apps/services/catalog-service/src/main/java/com/retailedge/catalog/repository/ProductRepository.java",
+          "hash": "9802781170460192062"
+        },
+        {
+          "file": "apps/services/catalog-service/src/main/java/com/retailedge/catalog/service/ProductService.java",
+          "hash": "9563453413939913946"
+        },
+        {
+          "file": "apps/services/catalog-service/src/main/resources/application.yml",
+          "hash": "4669725710725287134"
+        },
+        {
+          "file": "apps/services/catalog-service/src/test/java/com/retailedge/catalog/CatalogServiceApplicationTests.java",
+          "hash": "15181957471350739914"
+        },
+        {
+          "file": "apps/services/catalog-service/src/test/java/com/retailedge/catalog/controller/ProductControllerTest.java",
+          "hash": "10347450353881398697"
+        },
+        {
+          "file": "apps/services/catalog-service/src/test/java/com/retailedge/catalog/integration/ProductControllerIntegrationTest.java",
+          "hash": "11460546798755509318"
+        },
+        {
+          "file": "apps/services/catalog-service/src/test/java/com/retailedge/catalog/service/ProductServiceTest.java",
+          "hash": "13230632521524483163"
+        },
+        {
+          "file": "apps/services/catalog-service/src/test/resources/application-test.yml",
+          "hash": "950289396875996359"
+        }
+      ],
+      "orders-service": [
+        {
+          "file": "apps/services/orders-service/Dockerfile",
+          "hash": "8246203936322798916"
+        },
+        {
+          "file": "apps/services/orders-service/README.md",
+          "hash": "4850864629771658629"
+        },
+        {
+          "file": "apps/services/orders-service/pom.xml",
+          "hash": "12950361434393153166"
+        },
+        {
+          "file": "apps/services/orders-service/project.json",
+          "hash": "11030298427808232801"
+        },
+        {
+          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/OrdersServiceApplication.java",
+          "hash": "14314879623973762709"
+        },
+        {
+          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/controller/OrderController.java",
+          "hash": "10099464946943076987"
+        },
+        {
+          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/dto/OrderItemRequest.java",
+          "hash": "2334048258164552320"
+        },
+        {
+          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/dto/OrderItemResponse.java",
+          "hash": "2130623346254217433"
+        },
+        {
+          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/dto/OrderRequest.java",
+          "hash": "14647523460112499937"
+        },
+        {
+          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/dto/OrderResponse.java",
+          "hash": "16175842438201039017"
+        },
+        {
+          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/entity/Order.java",
+          "hash": "17714586988404992916"
+        },
+        {
+          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/entity/OrderItem.java",
+          "hash": "16652596616186679060"
+        },
+        {
+          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/entity/OrderStatus.java",
+          "hash": "11757027292026814628"
+        },
+        {
+          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/repository/OrderRepository.java",
+          "hash": "4004132794220175652"
+        },
+        {
+          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/service/OrderService.java",
+          "hash": "3773815967602078118"
+        },
+        {
+          "file": "apps/services/orders-service/src/main/resources/application.yml",
+          "hash": "523992729964434549"
+        },
+        {
+          "file": "apps/services/orders-service/src/test/java/com/retailedge/orders/service/OrderServiceTest.java",
+          "hash": "9600538578481387210"
+        }
+      ],
+      "admin-react": [
+        {
+          "file": "apps/clients/admin-react/.babelrc",
+          "hash": "13020124393823981135"
+        },
+        {
+          "file": "apps/clients/admin-react/README.md",
+          "hash": "8591504459750651431"
+        },
+        {
+          "file": "apps/clients/admin-react/eslint.config.cjs",
+          "hash": "7765412819901055759"
+        },
+        {
+          "file": "apps/clients/admin-react/jest.config.ts",
+          "hash": "6582272945272305215"
+        },
+        {
+          "file": "apps/clients/admin-react/project.json",
+          "hash": "10758874588403146542"
+        },
+        {
+          "file": "apps/clients/admin-react/src/app/app.css",
+          "hash": "7210604008682705910"
+        },
+        {
+          "file": "apps/clients/admin-react/src/app/app.module.css",
+          "hash": "8887387885984320532"
+        },
+        {
+          "file": "apps/clients/admin-react/src/app/app.spec.tsx",
+          "hash": "7519537234292229581",
+          "deps": [
+            "npm:@testing-library/react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "apps/clients/admin-react/src/app/app.tsx",
+          "hash": "7256549100844076108",
+          "deps": [
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "apps/clients/admin-react/src/app/nx-welcome.tsx",
+          "hash": "2348102959109701629"
+        },
+        {
+          "file": "apps/clients/admin-react/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/clients/admin-react/src/components/ProductForm.tsx",
+          "hash": "11779977197557501770",
+          "deps": [
+            "npm:react",
+            "api-types"
+          ]
+        },
+        {
+          "file": "apps/clients/admin-react/src/components/ProductList.test.tsx",
+          "hash": "12312986452532859708",
+          "deps": [
+            "npm:react",
+            "npm:@testing-library/react",
+            "npm:@testing-library/jest-dom",
+            "api-types"
+          ]
+        },
+        {
+          "file": "apps/clients/admin-react/src/components/ProductList.tsx",
+          "hash": "916164672780608819",
+          "deps": [
+            "npm:react",
+            "api-types"
+          ]
+        },
+        {
+          "file": "apps/clients/admin-react/src/config/environment.ts",
+          "hash": "7182105215715496099"
+        },
+        {
+          "file": "apps/clients/admin-react/src/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/clients/admin-react/src/index.html",
+          "hash": "17433327128656101005"
+        },
+        {
+          "file": "apps/clients/admin-react/src/main.tsx",
+          "hash": "763379880219152615",
+          "deps": [
+            "npm:react",
+            "npm:react-dom",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "apps/clients/admin-react/src/services/productService.ts",
+          "hash": "5482401959661997833",
+          "deps": [
+            "api-types"
+          ]
+        },
+        {
+          "file": "apps/clients/admin-react/src/styles.css",
+          "hash": "5195668842064076916"
+        },
+        {
+          "file": "apps/clients/admin-react/src/test-setup.ts",
+          "hash": "11678417526531543973",
+          "deps": [
+            "npm:@testing-library/jest-dom"
+          ]
+        },
+        {
+          "file": "apps/clients/admin-react/tsconfig.app.json",
+          "hash": "16481674911259912109"
+        },
+        {
+          "file": "apps/clients/admin-react/tsconfig.json",
+          "hash": "17849894785030224090"
+        },
+        {
+          "file": "apps/clients/admin-react/tsconfig.spec.json",
+          "hash": "11537943481495421274"
+        },
+        {
+          "file": "apps/clients/admin-react/webpack.config.js",
+          "hash": "3540819410315055514",
+          "deps": [
+            "npm:@nx/webpack",
+            "npm:@nx/react"
+          ]
+        }
+      ],
+      "api-types": [
+        {
+          "file": "libs/shared/api-types/README.md",
+          "hash": "12440284959869393808"
+        },
+        {
+          "file": "libs/shared/api-types/catalog.ts",
+          "hash": "17541522539315496941"
+        },
+        {
+          "file": "libs/shared/api-types/index.ts",
+          "hash": "12038284792564588828"
+        },
+        {
+          "file": "libs/shared/api-types/jest.config.ts",
+          "hash": "385882269370925399"
+        },
+        {
+          "file": "libs/shared/api-types/orders.ts",
+          "hash": "2343079730032910172"
+        },
+        {
+          "file": "libs/shared/api-types/project.json",
+          "hash": "11008915858454987659"
+        },
+        {
+          "file": "libs/shared/api-types/tsconfig.json",
+          "hash": "10476766682036976811"
+        },
+        {
+          "file": "libs/shared/api-types/tsconfig.lib.json",
+          "hash": "6236403039999261606"
+        },
+        {
+          "file": "libs/shared/api-types/tsconfig.spec.json",
+          "hash": "1386445446847582243"
+        },
+        {
+          "file": "libs/shared/api-types/users.ts",
+          "hash": "16104417064612970913"
+        }
+      ],
+      "shared-models": [
+        {
+          "file": "libs/shared/models/README.md",
+          "hash": "13800743491458574293"
+        },
+        {
+          "file": "libs/shared/models/eslint.config.cjs",
+          "hash": "17235945490168134871",
+          "deps": [
+            "npm:jsonc-eslint-parser"
+          ]
+        },
+        {
+          "file": "libs/shared/models/jest.config.ts",
+          "hash": "1494321795245391925"
+        },
+        {
+          "file": "libs/shared/models/package.json",
+          "hash": "16409212588495152741",
+          "deps": [
+            "npm:tslib"
+          ]
+        },
+        {
+          "file": "libs/shared/models/project.json",
+          "hash": "8407214898323392399"
+        },
+        {
+          "file": "libs/shared/models/src/index.ts",
+          "hash": "6209673531808721409"
+        },
+        {
+          "file": "libs/shared/models/src/lib/shared-models.spec.ts",
+          "hash": "1298400587117846729"
+        },
+        {
+          "file": "libs/shared/models/src/lib/shared-models.ts",
+          "hash": "12426401410806553499"
+        },
+        {
+          "file": "libs/shared/models/tsconfig.json",
+          "hash": "10148903843036702529"
+        },
+        {
+          "file": "libs/shared/models/tsconfig.lib.json",
+          "hash": "14539327243516648733"
+        },
+        {
+          "file": "libs/shared/models/tsconfig.spec.json",
+          "hash": "5394994266788668641"
+        }
       ]
     },
     "nonProjectFiles": []
   },
-  "externalNodesHash": "13321615861155831017"
+  "externalNodesHash": "9575815931780136846"
 }

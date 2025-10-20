@@ -1,4 +1,4 @@
-<div class="product-detail" *ngIf="product; else loading">
+    <div class="product-detail" *ngIf="product; else loading" data-cy="product-detail">
   <div class="product-container">
     <div class="product-image">
       <img
@@ -7,18 +7,18 @@
       />
     </div>
 
-    <div class="product-info">
-      <h1>{{ product.name }}</h1>
-      <div class="product-sku">SKU: {{ product.sku }}</div>
-      <p class="product-description">{{ product.description }}</p>
+        <div class="product-info">
+          <h1 data-cy="product-name">{{ product.name }}</h1>
+          <div class="product-sku">SKU: {{ product.sku }}</div>
+          <p class="product-description">{{ product.description }}</p>
 
-      <div class="product-price">
-        {{ product.price | currency: 'USD' : 'symbol' : '1.2-2' }}
-      </div>
+          <div class="product-price" data-cy="product-price">
+            {{ product.price | currency: 'USD' : 'symbol' : '1.2-2' }}
+          </div>
 
-      <div class="product-stock" [class.low-stock]="product.stock < 10">
-        {{ product.stock }} in stock
-      </div>
+          <div class="product-stock" [class.low-stock]="product.stock < 10" data-cy="product-stock">
+            {{ product.stock }} in stock
+          </div>
 
       <div class="quantity-selector">
         <label for="quantity">Quantity:</label>
@@ -29,6 +29,7 @@
           [max]="product.stock"
           min="1"
           class="quantity-input"
+          data-cy="quantity-input"
         />
       </div>
 
@@ -37,10 +38,11 @@
           (click)="addToCart()"
           [disabled]="product.stock === 0 || quantity > product.stock"
           class="add-to-cart-btn"
+          data-cy="add-to-cart-btn"
         >
           {{ product.stock === 0 ? 'Out of Stock' : 'Add to Cart' }}
         </button>
-        <button (click)="goBack()" class="back-btn">
+        <button (click)="goBack()" class="back-btn" data-cy="back-btn">
           Back to Products
         </button>
       </div>
