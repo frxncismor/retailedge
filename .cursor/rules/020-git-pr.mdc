@@ -1,0 +1,18 @@
+---
+globs: .github/**, .husky/**, **/commitlint*.{js,cjs,ts}, .editorconfig, .lintstagedrc*, .prettierrc*, .eslintrc*
+alwaysApply: false
+---
+GIT & PR CONVENTIONS
+- Use Conventional Commits:
+  feat: new feature
+  fix: bug fix
+  docs: docs only
+  test: tests only
+  refactor: code change w/o behavior change
+  chore: tooling/infra
+- Branch names: feature/<short-desc>, fix/<short-desc>, chore/<short-desc>.
+- PRs must be small and focused (<400 LOC changed when possible). Include:
+  - Summary (what/why)
+  - Screenshots for UI changes
+  - Checklist: tests + docs updated, breaking changes called out
+- Do not merge if CI is red. Resolve CodeQL/Dependabot alerts proactively.

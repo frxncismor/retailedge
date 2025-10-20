@@ -1,0 +1,11 @@
+PASS shared-models shared-models/src/lib/shared-models.spec.ts
+  shared-models
+    √ should export Product interface (2 ms)
+    √ should export Order interface (1 ms)
+    √ should export Customer interface
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        1.448 s
+Ran all test suites.

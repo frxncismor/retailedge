@@ -1,0 +1,14 @@
+---
+globs: apps/services/**
+alwaysApply: false
+---
+BACKEND STANDARDS (SPRING BOOT)
+- Layers: Controller → Service → Repository. No business logic in controllers.
+- Use DTOs for requests/responses; never expose JPA entities directly.
+- Validation: Bean Validation (@Valid) on inputs; return 400 with error payload on invalid data.
+- Persistence: Use Postgres. Transactions for write operations that span multiple repositories.
+- OpenAPI: Expose /v3/api-docs and Swagger UI; annotate endpoints and DTOs.
+- Observability: Enable Actuator /health and basic info. Use structured JSON logs.
+- Security: CORS only for required origins; never log credentials or tokens. Use 401/403 properly.
+- Error handling: Global @ControllerAdvice for consistent error responses (code, message, details).
+- Migrations: Prefer Flyway for DB schema evolution.

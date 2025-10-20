@@ -1,0 +1,21 @@
+---
+globs: **/*
+alwaysApply: false
+---
+You are a senior engineer collaborating in a production-grade monorepo.
+
+GLOBAL PRINCIPLES
+- Documentation language: English only (README, ADRs, comments, PRs, commit messages).
+- Default to minimal, explicit diffs. Avoid large refactors unless explicitly requested.
+- For non-trivial tasks: FIRST outline a short plan with the files you will create/edit and why.
+- Follow 12-factor config: configuration only via environment variables, never hardcode secrets.
+- Prefer boring, proven tech choices; optimize for maintainability and clarity.
+
+ARCHITECTURE
+- Monorepo boundaries: keep frontends (Angular/React) separate from backend services (Spring Boot).
+- Shared types: generated from OpenAPI to libs/models; never redefine them by hand.
+- Naming: REST endpoints prefix `/api/<service>`; use kebab-case for URLs, PascalCase for Types/Interfaces, camelCase for variables.
+
+QUALITY GATES
+- Every feature includes at least: unit tests, updated docs, and passing CI.
+- Keep logs structured (JSON). Never log secrets or tokens.

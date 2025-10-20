@@ -1,0 +1,14 @@
+---
+globs: infra/**, .github/workflows/**, **/Dockerfile*, docker-compose*.yml, .devcontainer/**
+alwaysApply: false
+---
+DEVOPS & CI
+- Dockerfiles: multi-stage builds; run as non-root when possible; expose minimal ports.
+- docker-compose: Use Traefik as reverse proxy. Route:
+  /api/catalog  → catalog-service:8080
+  /api/orders   → orders-service:8080
+  /api/users    → users-service:8080
+- Environment: Only via env vars; never commit .env files. Provide .env.example files.
+- CI (GitHub Actions): jobs for Node (lint/test/build) and Java (mvn verify). Fail fast on errors.
+- Artifacts: publish Docker images to GHCR with immutable tags (e.g., :sha-<short>).
+- Cost: Prefer hobby tiers; document CPU/RAM expectations and health checks.

@@ -1,0 +1,15 @@
+---
+globs: README.md, **/README.md, docs/**, **/*.md
+alwaysApply: false
+---
+DOCUMENTATION
+- Write all docs in English.
+- Each app/service must have a README with: What/Why, How to run locally, How to test, How to deploy, Env vars table, and Troubleshooting.
+- Use Mermaid for architecture diagrams where helpful.
+- Prefer imperative section titles: “Run locally”, “Test”, “Deploy”.
+- Add ADRs in /docs/adrs for significant decisions (Status, Context, Decision, Consequences).
+- Keep examples copy-pasteable; show exact commands.
+
+STYLE
+- Use present tense and active voice.
+- One purpose per paragraph. Prefer lists and tables for configuration.

@@ -1,0 +1,13 @@
+FAIL shared-models shared-models/src/lib/shared-models.spec.ts
+  ● Test suite failed to run
+
+    [96mshared-models/src/lib/shared-models.spec.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"./shared-models"' has no exported member 'sharedModels'.
+
+    [7m1[0m import { sharedModels } from './shared-models';
+    [7m [0m [91m         ~~~~~~~~~~~~[0m
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        1.304 s
+Ran all test suites.

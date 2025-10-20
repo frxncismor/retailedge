@@ -1,0 +1,10 @@
+---
+globs: **/*.spec.ts, **/*.test.ts, **/cypress/**, **/playwright/**
+alwaysApply: false
+---
+TESTING & QUALITY GATES
+- Unit tests mandatory for new logic. Aim for ~70–80% line coverage in changed code.
+- E2E tests cover the “happy path” for checkout.
+- Lint and type-check must pass before merging.
+- Add CodeQL and Dependabot; treat alerts as blocking until triaged.
+- Snapshots (React) used sparingly; prefer behavior assertions.

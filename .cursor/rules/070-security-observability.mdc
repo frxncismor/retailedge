@@ -1,0 +1,9 @@
+---
+globs: **/*
+alwaysApply: false
+---
+SECURITY & OBSERVABILITY
+- Never commit secrets. Use secrets managers/CI secrets.
+- Log with structured JSON and correlation IDs (x-request-id). No PII or tokens in logs.
+- Handle timeouts and retries for downstream calls. Return meaningful 5xx with correlation id.
+- Provide rate limiting or at least document expectations for public endpoints.

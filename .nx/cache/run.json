@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx test shared-models",
+    "startTime": "2025-10-20T19:45:29.884Z",
+    "endTime": "2025-10-20T19:45:33.631Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "shared-models:test",
+      "target": "test",
+      "projectName": "shared-models",
+      "hash": "4945587707302531654",
+      "startTime": "2025-10-20T19:45:29.907Z",
+      "endTime": "2025-10-20T19:45:33.626Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+---
+globs: **/*
+alwaysApply: false
+---
+CURSOR BEHAVIOR
+- Before making large changes, output a concise plan (files, functions, impact).
+- Prefer minimal diffs; preserve existing style and patterns.
+- When editing multiple files, list each file path and the exact changes.
+- If a spec is ambiguous, propose a reasonable default and proceed (do not stall).
+- All auto-generated docs and comments must be in English.

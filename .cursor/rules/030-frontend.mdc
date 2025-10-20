@@ -1,0 +1,17 @@
+---
+globs: apps/clients/**, apps/store-angular/**, apps/admin-react/**, libs/ui/**, libs/shared/**
+alwaysApply: false
+---
+FRONTEND STANDARDS
+- Language: TypeScript. Avoid 'any'. Enable strict mode.
+- Angular: Prefer standalone components. Use HttpClient for APIs. Keep services stateless.
+- React: Functional components + hooks. Use React Router. Keep state local; avoid global state unless necessary.
+- Accessibility: Provide labels/aria-* for interactive controls; ensure keyboard navigation.
+- Performance: Code-split routes; lazy-load heavy features.
+- API calls: Use a single base URL from env. Handle errors with typed results; show user-friendly messages.
+- Styling: Keep CSS simple (SCSS or utility-first). No inline styles except tiny cases.
+
+TESTING
+- Angular: unit tests with TestBed/HttpTestingController for services.
+- React: Jest + Testing Library; test behavior, not implementation details.
+- E2E: Cypress flows for critical paths (browse products -> add to cart -> checkout).
