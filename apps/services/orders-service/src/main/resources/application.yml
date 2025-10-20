@@ -16,7 +16,6 @@ spring:
     properties:
       hibernate:
         default_schema: public
-  # H2 console disabled - using Supabase PostgreSQL
 
 management:
   endpoints:
