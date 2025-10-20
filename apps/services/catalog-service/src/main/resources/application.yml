@@ -11,8 +11,11 @@ spring:
     password: ${SPRING_DATASOURCE_PASSWORD:retailedge123}
   jpa:
     hibernate:
-      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:create-drop}
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:update}
     show-sql: ${SPRING_JPA_SHOW_SQL:true}
+    properties:
+      hibernate:
+        default_schema: public
   # H2 console disabled - using Supabase PostgreSQL
 
 management:

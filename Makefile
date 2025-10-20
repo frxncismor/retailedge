@@ -52,8 +52,6 @@ logs-users: ## Show logs for users service
 logs-traefik: ## Show logs for Traefik
 	docker-compose logs -f traefik
 
-# PostgreSQL logs removed - using Supabase
-
 # Restart services
 restart: ## Restart all services
 	@echo "Restarting RetailEdge stack..."
