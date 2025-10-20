@@ -6,307 +6,373 @@
 [![Docker Build](https://github.com/paco_/retailedge/actions/workflows/ci.yml/badge.svg?label=Docker%20Build)](https://github.com/paco_/retailedge/actions/workflows/ci.yml)
 [![Security Scan](https://github.com/paco_/retailedge/actions/workflows/ci.yml/badge.svg?label=Security%20Scan)](https://github.com/paco_/retailedge/actions/workflows/ci.yml)
 
-RetailEdge is an Nx monorepo with Angular storefront, React admin, and Spring Boot microservices for a retail e-commerce platform.
+## Problem
 
-## 🏗️ Architecture
+Modern e-commerce platforms face several challenges:
+
+- **Monolithic Complexity**: Large, tightly-coupled applications that are difficult to maintain and scale
+- **Technology Lock-in**: Single technology stack limits team flexibility and hiring options
+- **Deployment Bottlenecks**: All-or-nothing deployments create high-risk release cycles
+- **Team Coordination**: Multiple teams working on the same codebase creates merge conflicts and coordination overhead
+- **Testing Complexity**: End-to-end testing becomes increasingly difficult as applications grow
+- **Cost Management**: Inefficient resource utilization leads to unnecessary infrastructure costs
+
+## Solution
+
+RetailEdge addresses these challenges with a **modern microservices architecture** built on proven technologies:
+
+- **Domain-Driven Design (DDD-lite)**: Clear service boundaries aligned with business domains
+- **Technology Diversity**: Angular for customer-facing apps, React for admin tools, Spring Boot for APIs
+- **Independent Deployments**: Each service can be deployed independently without affecting others
+- **Comprehensive Testing**: Unit, integration, and E2E tests at every layer
+- **Cost Optimization**: Containerized services with efficient resource utilization
+- **Developer Experience**: Nx monorepo with shared tooling and consistent development workflows
+
+## Architecture
 
 ```mermaid
 graph TB
-    subgraph "Frontend Applications"
-        A[Store Angular<br/>Port 4200]
-        B[Admin React<br/>Port 3000]
+    subgraph "Client Layer"
+        A[Angular Storefront<br/>Port 4200<br/>Customer Experience]
+        B[React Admin<br/>Port 3000<br/>Business Operations]
     end
 
-    subgraph "Backend Services"
-        C[Catalog Service<br/>Port 8081]
-        D[Orders Service<br/>Port 8082]
-        E[Users Service<br/>Port 8083]
+    subgraph "API Gateway"
+        C[Traefik<br/>Port 8080<br/>Load Balancer & SSL]
     end
 
-    subgraph "Shared Libraries"
-        F[Shared Models<br/>TypeScript Types]
+    subgraph "Microservices Layer"
+        D[Catalog Service<br/>Port 8081<br/>Product Management]
+        E[Orders Service<br/>Port 8082<br/>Order Processing]
+        F[Users Service<br/>Port 8083<br/>Authentication]
+    end
+
+    subgraph "Data Layer"
+        G[PostgreSQL<br/>Port 5432<br/>Primary Database]
+        H[Supabase<br/>Managed PostgreSQL<br/>Production Database]
     end
 
     subgraph "Infrastructure"
-        G[Docker Compose]
-        H[Traefik Proxy]
+        I[Docker Compose<br/>Local Development]
+        J[GitHub Actions<br/>CI/CD Pipeline]
+        K[GitHub Container Registry<br/>Docker Images]
     end
 
     A --> C
-    A --> D
-    A --> E
     B --> C
-    B --> D
-    B --> E
-    A --> F
-    B --> F
+    C --> D
+    C --> E
     C --> F
-    D --> F
-    E --> F
-    G --> A
-    G --> B
-    G --> C
-    G --> D
-    G --> E
-    H --> A
-    H --> B
+    D --> G
+    E --> G
+    F --> G
+    D --> H
+    E --> H
+    F --> H
+    I --> A
+    I --> B
+    I --> D
+    I --> E
+    I --> F
+    J --> K
+    K --> I
 ```
 
-### Frontend Applications
+### Service Responsibilities
 
-- **store-angular** (Port 4200) - Angular customer-facing application
-- **admin-react** (Port 3000) - React admin dashboard
+| Service                | Domain              | Responsibilities                                               |
+| ---------------------- | ------------------- | -------------------------------------------------------------- |
+| **Catalog Service**    | Product Management  | Product CRUD, inventory tracking, search, categories           |
+| **Orders Service**     | Order Processing    | Order creation, payment processing, order history, fulfillment |
+| **Users Service**      | Identity & Access   | User authentication, authorization, profile management         |
+| **Angular Storefront** | Customer Experience | Product browsing, shopping cart, checkout, user account        |
+| **React Admin**        | Business Operations | Product management, order monitoring, user administration      |
 
-### Backend Services
-
-- **catalog-service** (Port 8081) - Product catalog management
-- **orders-service** (Port 8082) - Order processing and management
-- **users-service** (Port 8083) - User authentication and management
-
-### Shared Libraries
-
-- **shared-models** - TypeScript interfaces and types shared across applications
-
-### Infrastructure
-
-- **Docker** - Service containerization with multi-stage builds
-- **Docker Compose** - Complete stack orchestration
-- **Traefik** - Reverse proxy with automatic service discovery
-- **PostgreSQL** - Primary database for all services
-- **CI/CD** - GitHub Actions for automation with comprehensive testing and security scanning
-
-## 🚀 Available Commands
-
-```bash
-# Install dependencies
-npm install
-# or with pnpm
-pnpm install
-
-# Run all tests
-npm run test
-
-# Run specific project tests
-npm run test:storefront
-npm run test:admin
-npm run test:shared-models
-
-# Run e2e tests
-npm run test:e2e
-
-# Run linting
-npm run lint
-
-# Format code
-npm run format
-
-# Build all applications
-npm run build
-
-# Build specific projects
-npm run build:store-angular
-npm run build:admin-react
-npm run build:shared-models
-npm run build:catalog-service
-npm run build:orders-service
-npm run build:users-service
-
-# Serve applications
-npm run serve:store-angular  # Angular app on port 4200
-npm run serve:admin-react    # React app on port 3000
-npm run serve:catalog-service # Spring Boot on port 8081
-npm run serve:orders-service  # Spring Boot on port 8082
-npm run serve:users-service   # Spring Boot on port 8083
-
-# Docker commands
-npm run docker:build    # Build all Docker images
-npm run docker:up       # Start all services with Docker
-npm run docker:down     # Stop all services
-npm run docker:logs     # View logs
-npm run docker:test     # Test all endpoints
-npm run docker:status   # Check service status
-```
-
-## 📁 Project Structure
-
-```
-retailedge/
-├── .cursor/
-│   └── rules/                      # Cursor rules
-├── .github/workflows/
-│   └── ci.yml                      # CI/CD workflows
-├── apps/
-│   ├── clients/                    # Frontend applications
-│   │   ├── store-angular/          # Angular customer app
-│   │   │   ├── project.json
-│   │   │   └── src/...
-│   │   ├── store-angular-e2e/      # E2E tests for store-angular
-│   │   ├── admin-react/            # React admin app
-│   │   │   ├── project.json
-│   │   │   └── src/...
-│   │   └── admin-react-e2e/        # E2E tests for admin-react
-│   └── services/                   # Backend services
-│       ├── catalog-service/        # Spring Boot
-│       │   ├── project.json        # Nx wrapper for mvn
-│       │   ├── pom.xml
-│       │   └── src/main/java/...
-│       ├── orders-service/
-│       │   ├── project.json
-│       │   ├── pom.xml
-│       │   └── src/main/java/...
-│       └── users-service/
-│           ├── project.json
-│           ├── pom.xml
-│           └── src/main/java/...
-├── infra/
-│   └── docker/
-│       └── init-db.sql             # Database initialization
-├── docker-compose.yml              # Complete stack orchestration
-├── Makefile                        # Docker management commands
-├── libs/
-│   └── shared/
-│       └── models/                 # Shared TypeScript types
-│           ├── project.json
-│           └── src/index.ts
-├── docs/
-│   └── adrs/                       # Architecture Decision Records
-├── nx.json                         # Nx configuration
-├── package.json
-├── tsconfig.base.json
-└── README.md
-```
-
-## 🛠️ Technologies
-
-- **Nx** - Monorepo management
-- **Angular** - Customer-facing frontend
-- **React** - Admin dashboard frontend
-- **Spring Boot** - Backend microservices
-- **TypeScript** - Type-safe development
-- **Jest** - Unit testing
-- **Cypress** - E2E testing
-- **ESLint** - Code linting
-- **Prettier** - Code formatting
-- **pnpm** - Package management
-- **Docker** - Containerization with multi-stage builds
-- **Docker Compose** - Stack orchestration
-- **Traefik** - Reverse proxy and load balancing
-- **PostgreSQL** - Database
-
-## 🚀 Quick Start
+## Run locally
 
 ### Prerequisites
 
-- Node.js 18+
-- Java 17+
-- Maven 3.6+
-- Docker 20.10+
-- Docker Compose 2.0+
-- Make (optional, for Makefile commands)
+- **Node.js 20+** with pnpm
+- **Java 17+** with Maven 3.6+
+- **Docker 20.10+** with Docker Compose 2.0+
+- **Git** for version control
 
-### Installation
+### Quick Start
 
 ```bash
-# Clone the repository
-git clone <repository-url>
+# Clone and setup
+git clone https://github.com/paco_/retailedge.git
 cd retailedge
+pnpm install
 
-# Install dependencies
-npm install
+# Start all services with Docker
+make up
+# or
+docker-compose up -d
 
-# Start all services
-npm run serve
+# Verify services are running
+make test
+# or
+curl http://localhost/api/catalog/actuator/health
 ```
 
 ### Individual Services
 
 ```bash
 # Frontend applications
-npm run serve:store-angular  # http://localhost:4200
-npm run serve:admin-react    # http://localhost:3000
+pnpm run serve:store-angular  # http://localhost:4200
+pnpm run serve:admin-react    # http://localhost:3000
 
 # Backend services
-npm run serve:catalog-service # http://localhost:8081
-npm run serve:orders-service  # http://localhost:8082
-npm run serve:users-service   # http://localhost:8083
+pnpm run serve:catalog-service # http://localhost:8081
+pnpm run serve:orders-service  # http://localhost:8082
+pnpm run serve:users-service   # http://localhost:8083
 ```
 
-### Docker (Recommended)
+### Environment Variables
+
+| Variable                 | Description                  | Default                                       | Required |
+| ------------------------ | ---------------------------- | --------------------------------------------- | -------- |
+| `DATABASE_URL`           | PostgreSQL connection string | `jdbc:postgresql://localhost:5432/retailedge` | Yes      |
+| `API_BASE_URL`           | Frontend API base URL        | `http://localhost`                            | Yes      |
+| `JWT_SECRET`             | JWT signing secret           | `your-secret-key`                             | Yes      |
+| `SPRING_PROFILES_ACTIVE` | Spring profile               | `dev`                                         | No       |
+
+## Deploy cheaply
+
+### Option 1: Railway (Recommended for MVP)
 
 ```bash
-# Using Make (recommended)
-make up          # Start all services
-make logs        # View logs
-make test        # Test endpoints
-make down        # Stop services
+# Install Railway CLI
+npm install -g @railway/cli
 
-# Using npm scripts
-npm run docker:build    # Build images
-npm run docker:up       # Start services
-npm run docker:test     # Test endpoints
-npm run docker:down     # Stop services
-
-# Using Docker Compose directly
-docker-compose up -d    # Start all services
-docker-compose logs -f  # View logs
-docker-compose down     # Stop services
+# Login and deploy
+railway login
+railway init
+railway up
 ```
 
-### Service Endpoints
+**Cost**: ~$5-20/month for small applications
 
-- **Traefik Dashboard**: http://localhost:8080
-- **Catalog API**: http://localhost/api/catalog
-- **Orders API**: http://localhost/api/orders
-- **Users API**: http://localhost/api/users
-- **API Documentation**: http://localhost/api/{service}/swagger-ui.html
+### Option 2: DigitalOcean App Platform
 
-## 🔄 CI/CD Pipeline
+```yaml
+# .do/app.yaml
+name: retailedge
+services:
+  - name: store-angular
+    source_dir: apps/clients/store-angular
+    github:
+      repo: paco_/retailedge
+      branch: main
+    run_command: nginx -g "daemon off;"
+    http_port: 80
+    instance_count: 1
+    instance_size_slug: basic-xxs
+```
 
-The project includes a comprehensive GitHub Actions workflow that runs on every push and pull request:
+**Cost**: ~$12-25/month for basic setup
 
-### Pipeline Stages
+### Option 3: Self-hosted VPS
 
-1. **Node.js Lint** - ESLint and Prettier checks for frontend code
-2. **Node.js Test** - Unit and E2E tests for Angular and React applications
-3. **Node.js Build** - Production builds for frontend applications
-4. **Java Lint** - Maven compile checks for backend services
-5. **Java Test** - Unit and integration tests for Spring Boot services
-6. **Java Build** - JAR artifact generation for backend services
-7. **Docker Build & Push** - Multi-architecture Docker images to GHCR
-8. **Security Scan** - Trivy vulnerability scanning
+```bash
+# Deploy to any VPS (DigitalOcean, Linode, etc.)
+git clone https://github.com/paco_/retailedge.git
+cd retailedge
+docker-compose -f docker-compose.prod.yml up -d
+```
 
-### Features
+**Cost**: ~$5-10/month for basic VPS
 
-- **Caching**: pnpm and Maven dependencies are cached for faster builds
-- **Parallel Jobs**: Frontend and backend jobs run in parallel
-- **Artifact Upload**: Build artifacts are preserved for deployment
-- **Security**: Automated vulnerability scanning with Trivy
-- **Multi-arch**: Docker images support multiple architectures
-- **GHCR Integration**: Images are automatically pushed to GitHub Container Registry
+### Option 4: AWS/GCP/Azure (Production)
 
-### Docker Images
+- Use managed services (RDS, ECS, Cloud Run)
+- Implement auto-scaling and load balancing
+- Add monitoring and logging
 
-All services are automatically built and pushed to GHCR:
+**Cost**: ~$50-200/month depending on traffic
 
-- `ghcr.io/paco_/retailedge/catalog-service:latest`
-- `ghcr.io/paco_/retailedge/orders-service:latest`
-- `ghcr.io/paco_/retailedge/users-service:latest`
-- `ghcr.io/paco_/retailedge/store-angular:latest`
-- `ghcr.io/paco_/retailedge/admin-react:latest`
+## Code Review Guidelines
 
-## 📚 Documentation
+### DDD-lite Structure
 
-Each application and service has its own README with detailed instructions:
+Review these domain boundaries and responsibilities:
 
-- [Store Angular](./apps/clients/store-angular/README.md) - Customer-facing application
-- [Admin React](./apps/clients/admin-react/README.md) - Admin dashboard
-- [Catalog Service](./apps/services/catalog-service/README.md) - Product management
-- [Orders Service](./apps/services/orders-service/README.md) - Order processing
-- [Users Service](./apps/services/users-service/README.md) - User management
-- [Shared Models](./libs/shared/models/README.md) - Shared TypeScript types
-- [Docker Setup](./DOCKER.md) - Complete Docker and containerization guide
+```typescript
+// ✅ Good: Clear domain separation
+apps/services/catalog-service/
+├── src/main/java/com/retailedge/catalog/
+│   ├── entity/Product.java           // Domain entities
+│   ├── repository/ProductRepository.java // Data access
+│   ├── service/ProductService.java   // Business logic
+│   └── controller/ProductController.java // API layer
 
-## 📋 Architecture Decision Records
+// ❌ Avoid: Cross-domain dependencies
+// catalog-service should not import orders-service classes
+```
 
-- [ADR-0001: Monorepo Architecture](./docs/adrs/0001-monorepo-architecture.md)
-- [ADR-0002: Technology Stack](./docs/adrs/0002-technology-stack.md)
+**Review Checklist:**
+
+- [ ] Each service has a single, well-defined domain
+- [ ] No direct dependencies between service packages
+- [ ] Business logic is in service classes, not controllers
+- [ ] Entities represent domain concepts, not database tables
+
+### Configuration Separation
+
+Ensure proper environment-based configuration:
+
+```yaml
+# ✅ Good: Environment-specific configs
+src/main/resources/
+├── application.yml          # Default config
+├── application-dev.yml      # Development overrides
+├── application-prod.yml     # Production overrides
+└── application-test.yml     # Test overrides
+```
+
+**Review Checklist:**
+
+- [ ] No hardcoded secrets or URLs
+- [ ] Environment variables used for sensitive data
+- [ ] Different profiles for dev/test/prod
+- [ ] Configuration externalized from code
+
+### Logging Standards
+
+Verify structured logging implementation:
+
+```java
+// ✅ Good: Structured logging with context
+log.info("Product created successfully",
+    Map.of(
+        "productId", product.getId(),
+        "userId", getCurrentUserId(),
+        "action", "CREATE_PRODUCT"
+    ));
+
+// ❌ Avoid: Unstructured logs
+log.info("Product created");
+```
+
+**Review Checklist:**
+
+- [ ] JSON structured logs in production
+- [ ] Correlation IDs for request tracing
+- [ ] No sensitive data in logs (passwords, tokens)
+- [ ] Appropriate log levels (DEBUG, INFO, WARN, ERROR)
+- [ ] Contextual information included
+
+### Health Checks
+
+Ensure comprehensive health monitoring:
+
+```java
+// ✅ Good: Custom health indicators
+@Component
+public class DatabaseHealthIndicator implements HealthIndicator {
+    @Override
+    public Health health() {
+        // Check database connectivity
+        return Health.up()
+            .withDetail("database", "PostgreSQL")
+            .withDetail("status", "Connected")
+            .build();
+    }
+}
+```
+
+**Review Checklist:**
+
+- [ ] Health endpoints return proper HTTP status codes
+- [ ] Database connectivity checks
+- [ ] External service dependency checks
+- [ ] Memory and disk usage monitoring
+- [ ] Custom business logic health indicators
+
+### Security Review
+
+```java
+// ✅ Good: Proper authentication
+@PreAuthorize("hasRole('ADMIN')")
+@PostMapping("/products")
+public ResponseEntity<Product> createProduct(@Valid @RequestBody ProductRequest request) {
+    // Implementation
+}
+
+// ✅ Good: Input validation
+public class ProductRequest {
+    @NotBlank(message = "Product name is required")
+    @Size(max = 100, message = "Name must be less than 100 characters")
+    private String name;
+}
+```
+
+**Review Checklist:**
+
+- [ ] Authentication required for protected endpoints
+- [ ] Input validation on all request DTOs
+- [ ] SQL injection prevention (JPA/Hibernate)
+- [ ] CORS configuration for frontend
+- [ ] Rate limiting on public endpoints
+
+## Development Commands
+
+```bash
+# Install dependencies
+pnpm install
+
+# Run all tests
+pnpm run test
+
+# Run linting and formatting
+pnpm run lint
+pnpm run format
+
+# Build all applications
+pnpm run build
+
+# Start individual services
+pnpm run serve:store-angular  # http://localhost:4200
+pnpm run serve:admin-react    # http://localhost:3000
+pnpm run serve:catalog-service # http://localhost:8081
+
+# Docker management
+make up          # Start all services
+make down        # Stop all services
+make logs        # View logs
+make test        # Test endpoints
+```
+
+## Project Structure
+
+```
+retailedge/
+├── apps/
+│   ├── clients/                    # Frontend applications
+│   │   ├── store-angular/          # Angular customer app
+│   │   └── admin-react/            # React admin app
+│   └── services/                   # Backend microservices
+│       ├── catalog-service/        # Product management
+│       ├── orders-service/         # Order processing
+│       └── users-service/          # Authentication
+├── libs/shared/                    # Shared TypeScript types
+├── .github/workflows/              # CI/CD pipelines
+├── docker-compose.yml              # Local development stack
+└── Makefile                        # Development commands
+```
+
+## Technologies
+
+- **Frontend**: Angular 20, React 19, TypeScript 5.9
+- **Backend**: Spring Boot 3.2, Java 17, Maven
+- **Database**: PostgreSQL 15, Supabase (managed)
+- **Infrastructure**: Docker, Traefik, Nginx
+- **Testing**: Jest, Cypress, JUnit 5
+- **CI/CD**: GitHub Actions, GitHub Container Registry
+- **Monorepo**: Nx with pnpm
+
+## Documentation
+
+- [Docker Setup](./DOCKER.md) - Complete containerization guide
+- [Architecture Decision Records](./docs/adrs/) - Technical decisions and rationale
