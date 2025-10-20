@@ -126,12 +126,28 @@
       ],
       "catalog-service": [
         {
+          "file": "apps/services/catalog-service/.mvn/wrapper/MavenWrapperDownloader.java",
+          "hash": "9951560507754787165"
+        },
+        {
+          "file": "apps/services/catalog-service/.mvn/wrapper/maven-wrapper.properties",
+          "hash": "17347536771632203265"
+        },
+        {
           "file": "apps/services/catalog-service/README.md",
           "hash": "6411572339251468667"
         },
         {
+          "file": "apps/services/catalog-service/mvnw",
+          "hash": "7302403123120539304"
+        },
+        {
+          "file": "apps/services/catalog-service/mvnw.cmd",
+          "hash": "652895478035349634"
+        },
+        {
           "file": "apps/services/catalog-service/pom.xml",
-          "hash": "2732403324769194555"
+          "hash": "7962186202609205230"
         },
         {
           "file": "apps/services/catalog-service/project.json",
@@ -142,8 +158,40 @@
           "hash": "17052862271120528697"
         },
         {
+          "file": "apps/services/catalog-service/src/main/java/com/retailedge/catalog/controller/ProductController.java",
+          "hash": "5656359568484173940"
+        },
+        {
+          "file": "apps/services/catalog-service/src/main/java/com/retailedge/catalog/dto/ProductRequest.java",
+          "hash": "5839358087446497360"
+        },
+        {
+          "file": "apps/services/catalog-service/src/main/java/com/retailedge/catalog/dto/ProductResponse.java",
+          "hash": "4619175061159105843"
+        },
+        {
+          "file": "apps/services/catalog-service/src/main/java/com/retailedge/catalog/entity/Product.java",
+          "hash": "15366658502878224151"
+        },
+        {
+          "file": "apps/services/catalog-service/src/main/java/com/retailedge/catalog/repository/ProductRepository.java",
+          "hash": "9802781170460192062"
+        },
+        {
+          "file": "apps/services/catalog-service/src/main/java/com/retailedge/catalog/service/ProductService.java",
+          "hash": "9563453413939913946"
+        },
+        {
           "file": "apps/services/catalog-service/src/main/resources/application.yml",
-          "hash": "8837859505769813233"
+          "hash": "10608116151952485130"
+        },
+        {
+          "file": "apps/services/catalog-service/src/test/java/com/retailedge/catalog/controller/ProductControllerTest.java",
+          "hash": "10347450353881398697"
+        },
+        {
+          "file": "apps/services/catalog-service/src/test/java/com/retailedge/catalog/service/ProductServiceTest.java",
+          "hash": "13230632521524483163"
         }
       ],
       "users-service": [
@@ -153,7 +201,7 @@
         },
         {
           "file": "apps/services/users-service/pom.xml",
-          "hash": "11865829560349754753"
+          "hash": "14447193772381421197"
         },
         {
           "file": "apps/services/users-service/project.json",
@@ -164,8 +212,36 @@
           "hash": "3210063870347982596"
         },
         {
+          "file": "apps/services/users-service/src/main/java/com/retailedge/users/controller/CustomerController.java",
+          "hash": "12698074877147661517"
+        },
+        {
+          "file": "apps/services/users-service/src/main/java/com/retailedge/users/dto/CustomerRequest.java",
+          "hash": "10444830543111892075"
+        },
+        {
+          "file": "apps/services/users-service/src/main/java/com/retailedge/users/dto/CustomerResponse.java",
+          "hash": "3300313253231530941"
+        },
+        {
+          "file": "apps/services/users-service/src/main/java/com/retailedge/users/entity/Customer.java",
+          "hash": "11214476708697193711"
+        },
+        {
+          "file": "apps/services/users-service/src/main/java/com/retailedge/users/repository/CustomerRepository.java",
+          "hash": "13061193223538670746"
+        },
+        {
+          "file": "apps/services/users-service/src/main/java/com/retailedge/users/service/CustomerService.java",
+          "hash": "14743882108877659260"
+        },
+        {
           "file": "apps/services/users-service/src/main/resources/application.yml",
-          "hash": "2660520225609959511"
+          "hash": "10883649342418745371"
+        },
+        {
+          "file": "apps/services/users-service/src/test/java/com/retailedge/users/service/CustomerServiceTest.java",
+          "hash": "4562307823633191064"
         }
       ],
       "retailedge": [
@@ -404,7 +480,7 @@
         },
         {
           "file": "apps/services/orders-service/pom.xml",
-          "hash": "15079542507934005849"
+          "hash": "24905256077863124"
         },
         {
           "file": "apps/services/orders-service/project.json",
@@ -415,8 +491,52 @@
           "hash": "14314879623973762709"
         },
         {
+          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/controller/OrderController.java",
+          "hash": "10099464946943076987"
+        },
+        {
+          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/dto/OrderItemRequest.java",
+          "hash": "2334048258164552320"
+        },
+        {
+          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/dto/OrderItemResponse.java",
+          "hash": "2130623346254217433"
+        },
+        {
+          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/dto/OrderRequest.java",
+          "hash": "14647523460112499937"
+        },
+        {
+          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/dto/OrderResponse.java",
+          "hash": "16175842438201039017"
+        },
+        {
+          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/entity/Order.java",
+          "hash": "17714586988404992916"
+        },
+        {
+          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/entity/OrderItem.java",
+          "hash": "16652596616186679060"
+        },
+        {
+          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/entity/OrderStatus.java",
+          "hash": "11757027292026814628"
+        },
+        {
+          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/repository/OrderRepository.java",
+          "hash": "4004132794220175652"
+        },
+        {
+          "file": "apps/services/orders-service/src/main/java/com/retailedge/orders/service/OrderService.java",
+          "hash": "3773815967602078118"
+        },
+        {
           "file": "apps/services/orders-service/src/main/resources/application.yml",
-          "hash": "5036762529159885013"
+          "hash": "16587149600816947756"
+        },
+        {
+          "file": "apps/services/orders-service/src/test/java/com/retailedge/orders/service/OrderServiceTest.java",
+          "hash": "9600538578481387210"
         }
       ]
     }

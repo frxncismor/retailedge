@@ -1,27 +1,33 @@
 server:
-  port: 8083
+  port: ${SERVER_PORT:8083}
 
 spring:
   application:
-    name: users-service
+    name: ${SPRING_APPLICATION_NAME:users-service}
   datasource:
-    url: jdbc:h2:mem:testdb
-    driver-class-name: org.h2.Driver
-    username: sa
-    password: password
+    url: ${SPRING_DATASOURCE_URL:jdbc:h2:mem:testdb}
+    driver-class-name: ${SPRING_DATASOURCE_DRIVER:org.h2.Driver}
+    username: ${SPRING_DATASOURCE_USERNAME:sa}
+    password: ${SPRING_DATASOURCE_PASSWORD:password}
   jpa:
     hibernate:
-      ddl-auto: create-drop
-    show-sql: true
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:create-drop}
+    show-sql: ${SPRING_JPA_SHOW_SQL:true}
   h2:
     console:
-      enabled: true
+      enabled: ${SPRING_H2_CONSOLE_ENABLED:true}
 
 management:
   endpoints:
     web:
       exposure:
-        include: health,info,metrics
+        include: ${MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE:health,info,metrics,openapi}
   endpoint:
     health:
-      show-details: always
+      show-details: ${MANAGEMENT_ENDPOINT_HEALTH_SHOW_DETAILS:always}
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
