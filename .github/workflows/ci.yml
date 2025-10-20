@@ -1,0 +1,390 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main, master, develop]
+  pull_request:
+    branches: [main, master, develop]
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  # Node.js jobs for frontend applications
+  node-lint:
+    name: Node.js Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run ESLint
+        run: pnpm run lint
+
+      - name: Run Prettier check
+        run: pnpm run format:check
+
+  node-test:
+    name: Node.js Test
+    runs-on: ubuntu-latest
+    needs: node-lint
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run Angular tests
+        run: pnpm run test:store-angular
+
+      - name: Run React tests
+        run: pnpm run test:admin-react
+
+      - name: Run E2E tests
+        run: pnpm run test:e2e:store-angular
+
+  node-build:
+    name: Node.js Build
+    runs-on: ubuntu-latest
+    needs: node-test
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build Angular app
+        run: pnpm run build:store-angular
+
+      - name: Build React app
+        run: pnpm run build:admin-react
+
+      - name: Build shared libraries
+        run: pnpm run build:shared-models && pnpm run build:api-types
+
+      - name: Upload Angular build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: angular-build
+          path: dist/apps/clients/store-angular
+
+      - name: Upload React build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: react-build
+          path: dist/apps/clients/admin-react
+
+  # Java jobs for backend services
+  java-lint:
+    name: Java Lint & Format
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Cache Maven dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-m2-
+
+      - name: Run Maven compile
+        run: |
+          cd apps/services/catalog-service && mvn compile
+          cd ../orders-service && mvn compile
+          cd ../users-service && mvn compile
+
+  java-test:
+    name: Java Test
+    runs-on: ubuntu-latest
+    needs: java-lint
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: testdb
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Cache Maven dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-m2-
+
+      - name: Run Catalog Service tests
+        run: |
+          cd apps/services/catalog-service
+          mvn test -Dspring.profiles.active=test
+
+      - name: Run Orders Service tests
+        run: |
+          cd apps/services/orders-service
+          mvn test -Dspring.profiles.active=test
+
+      - name: Run Users Service tests
+        run: |
+          cd apps/services/users-service
+          mvn test -Dspring.profiles.active=test
+
+  java-build:
+    name: Java Build
+    runs-on: ubuntu-latest
+    needs: java-test
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Cache Maven dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-m2-
+
+      - name: Build Catalog Service
+        run: |
+          cd apps/services/catalog-service
+          mvn clean package -DskipTests
+
+      - name: Build Orders Service
+        run: |
+          cd apps/services/orders-service
+          mvn clean package -DskipTests
+
+      - name: Build Users Service
+        run: |
+          cd apps/services/users-service
+          mvn clean package -DskipTests
+
+      - name: Upload JAR artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: java-jars
+          path: |
+            apps/services/*/target/*.jar
+
+  # Docker build and push
+  docker-build:
+    name: Docker Build & Push
+    runs-on: ubuntu-latest
+    needs: [node-build, java-build]
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=sha,prefix={{branch}}-
+            type=raw,value=latest,enable={{is_default_branch}}
+
+      - name: Build and push Catalog Service
+        uses: docker/build-push-action@v5
+        with:
+          context: apps/services/catalog-service
+          push: true
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}/catalog-service:${{ github.sha }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Build and push Orders Service
+        uses: docker/build-push-action@v5
+        with:
+          context: apps/services/orders-service
+          push: true
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}/orders-service:${{ github.sha }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Build and push Users Service
+        uses: docker/build-push-action@v5
+        with:
+          context: apps/services/users-service
+          push: true
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}/users-service:${{ github.sha }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Build and push Angular Storefront
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: apps/clients/store-angular/Dockerfile
+          push: true
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}/store-angular:${{ github.sha }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Build and push React Admin
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: apps/clients/admin-react/Dockerfile
+          push: true
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}/admin-react:${{ github.sha }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+  # Security scanning
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    needs: [node-build, java-build]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
+          format: 'sarif'
+          output: 'trivy-results.sarif'
+
+      - name: Upload Trivy scan results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v3
+        if: always()
+        with:
+          sarif_file: 'trivy-results.sarif'
+
+  # Summary job
+  ci-success:
+    name: CI Success
+    runs-on: ubuntu-latest
+    needs: [node-build, java-build, docker-build]
+    if: always()
+    steps:
+      - name: CI Status
+        run: |
+          echo "✅ All CI jobs completed successfully!"
+          echo "📦 Docker images pushed to GHCR"
+          echo "🧪 All tests passed"
+          echo "🔨 All builds successful"

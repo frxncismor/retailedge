@@ -10,7 +10,6 @@
           "targetGroups": {
             "E2E (CI)": [
               "e2e-ci--src/e2e/app.cy.ts",
-              "e2e-ci--src/e2e/cart-checkout.cy.ts",
               "e2e-ci"
             ]
           }
@@ -56,14 +55,14 @@
             "dependsOn": [
               {
                 "projects": [
-                  "store-angular"
+                  "storefront"
                 ],
                 "target": "serve"
               }
             ],
             "configurations": {
               "production": {
-                "command": "cypress run --env webServerCommand=\"npx nx run store-angular:serve-static\""
+                "command": "cypress run --env webServerCommand=\"npx nx run storefront:serve-static\""
               }
             },
             "executor": "nx:run-commands",
@@ -89,7 +88,7 @@
               "env": {
                 "TS_NODE_COMPILER_OPTIONS": "{\"customConditions\":null}"
               },
-              "command": "cypress run --env webServerCommand=\"npx nx run store-angular:serve-static\" --spec src/e2e/app.cy.ts --config=\"{\\\"baseUrl\\\":\\\"http://localhost:4200\\\",\\\"e2e\\\":{\\\"videosFolder\\\":\\\"..\\\\\\\\..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\clients\\\\\\\\store-angular-e2e\\\\\\\\videos\\\\\\\\src-e2e-app-cy-ts\\\",\\\"screenshotsFolder\\\":\\\"..\\\\\\\\..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\clients\\\\\\\\store-angular-e2e\\\\\\\\screenshots\\\\\\\\src-e2e-app-cy-ts\\\"}}\""
+              "command": "cypress run --env webServerCommand=\"npx nx run storefront:serve-static\" --spec src/e2e/app.cy.ts --config=\"{\\\"baseUrl\\\":\\\"http://localhost:4200\\\",\\\"e2e\\\":{\\\"videosFolder\\\":\\\"..\\\\\\\\..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\clients\\\\\\\\store-angular-e2e\\\\\\\\videos\\\\\\\\src-e2e-app-cy-ts\\\",\\\"screenshotsFolder\\\":\\\"..\\\\\\\\..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\clients\\\\\\\\store-angular-e2e\\\\\\\\screenshots\\\\\\\\src-e2e-app-cy-ts\\\"}}\""
             },
             "metadata": {
               "technologies": [
@@ -110,56 +109,7 @@
               {
                 "target": "serve-static",
                 "projects": [
-                  "store-angular"
-                ]
-              }
-            ],
-            "executor": "nx:run-commands",
-            "configurations": {},
-            "parallelism": true
-          },
-          "e2e-ci--src/e2e/cart-checkout.cy.ts": {
-            "outputs": [
-              "{workspaceRoot}\\dist\\cypress\\apps\\clients\\store-angular-e2e\\videos\\src-e2e-cart-checkout-cy-ts",
-              "{workspaceRoot}\\dist\\cypress\\apps\\clients\\store-angular-e2e\\screenshots\\src-e2e-cart-checkout-cy-ts"
-            ],
-            "inputs": [
-              "default",
-              "^production",
-              {
-                "externalDependencies": [
-                  "cypress"
-                ]
-              }
-            ],
-            "cache": true,
-            "options": {
-              "cwd": "apps/clients/store-angular-e2e",
-              "env": {
-                "TS_NODE_COMPILER_OPTIONS": "{\"customConditions\":null}"
-              },
-              "command": "cypress run --env webServerCommand=\"npx nx run store-angular:serve-static\" --spec src/e2e/cart-checkout.cy.ts --config=\"{\\\"baseUrl\\\":\\\"http://localhost:4200\\\",\\\"e2e\\\":{\\\"videosFolder\\\":\\\"..\\\\\\\\..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\clients\\\\\\\\store-angular-e2e\\\\\\\\videos\\\\\\\\src-e2e-cart-checkout-cy-ts\\\",\\\"screenshotsFolder\\\":\\\"..\\\\\\\\..\\\\\\\\..\\\\\\\\dist\\\\\\\\cypress\\\\\\\\apps\\\\\\\\clients\\\\\\\\store-angular-e2e\\\\\\\\screenshots\\\\\\\\src-e2e-cart-checkout-cy-ts\\\"}}\""
-            },
-            "metadata": {
-              "technologies": [
-                "cypress"
-              ],
-              "description": "Runs Cypress Tests in src/e2e/cart-checkout.cy.ts in CI",
-              "help": {
-                "command": "npx cypress run --help",
-                "example": {
-                  "args": [
-                    "--dev",
-                    "--headed"
-                  ]
-                }
-              }
-            },
-            "dependsOn": [
-              {
-                "target": "serve-static",
-                "projects": [
-                  "store-angular"
+                  "storefront"
                 ]
               }
             ],
@@ -186,12 +136,6 @@
             "dependsOn": [
               {
                 "target": "e2e-ci--src/e2e/app.cy.ts",
-                "projects": "self",
-                "params": "forward",
-                "options": "forward"
-              },
-              {
-                "target": "e2e-ci--src/e2e/cart-checkout.cy.ts",
                 "projects": "self",
                 "params": "forward",
                 "options": "forward"
@@ -21188,11 +21132,6 @@
       {
         "source": "admin-react",
         "target": "api-types",
-        "type": "static"
-      },
-      {
-        "source": "admin-react",
-        "target": "npm:@testing-library/jest-dom",
         "type": "static"
       },
       {
@@ -50913,5 +50852,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1760996944447
+  "computedAt": 1760997242096
 }

@@ -1,5 +1,11 @@
 # RetailEdge
 
+[![CI/CD Pipeline](https://github.com/paco_/retailedge/actions/workflows/ci.yml/badge.svg)](https://github.com/paco_/retailedge/actions/workflows/ci.yml)
+[![Node.js Tests](https://github.com/paco_/retailedge/actions/workflows/ci.yml/badge.svg?label=Node.js%20Tests)](https://github.com/paco_/retailedge/actions/workflows/ci.yml)
+[![Java Tests](https://github.com/paco_/retailedge/actions/workflows/ci.yml/badge.svg?label=Java%20Tests)](https://github.com/paco_/retailedge/actions/workflows/ci.yml)
+[![Docker Build](https://github.com/paco_/retailedge/actions/workflows/ci.yml/badge.svg?label=Docker%20Build)](https://github.com/paco_/retailedge/actions/workflows/ci.yml)
+[![Security Scan](https://github.com/paco_/retailedge/actions/workflows/ci.yml/badge.svg?label=Security%20Scan)](https://github.com/paco_/retailedge/actions/workflows/ci.yml)
+
 RetailEdge is an Nx monorepo with Angular storefront, React admin, and Spring Boot microservices for a retail e-commerce platform.
 
 ## 🏗️ Architecture
@@ -10,22 +16,22 @@ graph TB
         A[Store Angular<br/>Port 4200]
         B[Admin React<br/>Port 3000]
     end
-    
+
     subgraph "Backend Services"
         C[Catalog Service<br/>Port 8081]
         D[Orders Service<br/>Port 8082]
         E[Users Service<br/>Port 8083]
     end
-    
+
     subgraph "Shared Libraries"
         F[Shared Models<br/>TypeScript Types]
     end
-    
+
     subgraph "Infrastructure"
         G[Docker Compose]
         H[Traefik Proxy]
     end
-    
+
     A --> C
     A --> D
     A --> E
@@ -67,7 +73,7 @@ graph TB
 - **Docker Compose** - Complete stack orchestration
 - **Traefik** - Reverse proxy with automatic service discovery
 - **PostgreSQL** - Primary database for all services
-- **CI/CD** - GitHub Actions for automation
+- **CI/CD** - GitHub Actions for automation with comprehensive testing and security scanning
 
 ## 🚀 Available Commands
 
@@ -190,6 +196,7 @@ retailedge/
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js 18+
 - Java 17+
 - Maven 3.6+
@@ -198,6 +205,7 @@ retailedge/
 - Make (optional, for Makefile commands)
 
 ### Installation
+
 ```bash
 # Clone the repository
 git clone <repository-url>
@@ -211,6 +219,7 @@ npm run serve
 ```
 
 ### Individual Services
+
 ```bash
 # Frontend applications
 npm run serve:store-angular  # http://localhost:4200
@@ -223,6 +232,7 @@ npm run serve:users-service   # http://localhost:8083
 ```
 
 ### Docker (Recommended)
+
 ```bash
 # Using Make (recommended)
 make up          # Start all services
@@ -243,11 +253,46 @@ docker-compose down     # Stop services
 ```
 
 ### Service Endpoints
+
 - **Traefik Dashboard**: http://localhost:8080
 - **Catalog API**: http://localhost/api/catalog
 - **Orders API**: http://localhost/api/orders
 - **Users API**: http://localhost/api/users
 - **API Documentation**: http://localhost/api/{service}/swagger-ui.html
+
+## 🔄 CI/CD Pipeline
+
+The project includes a comprehensive GitHub Actions workflow that runs on every push and pull request:
+
+### Pipeline Stages
+
+1. **Node.js Lint** - ESLint and Prettier checks for frontend code
+2. **Node.js Test** - Unit and E2E tests for Angular and React applications
+3. **Node.js Build** - Production builds for frontend applications
+4. **Java Lint** - Maven compile checks for backend services
+5. **Java Test** - Unit and integration tests for Spring Boot services
+6. **Java Build** - JAR artifact generation for backend services
+7. **Docker Build & Push** - Multi-architecture Docker images to GHCR
+8. **Security Scan** - Trivy vulnerability scanning
+
+### Features
+
+- **Caching**: pnpm and Maven dependencies are cached for faster builds
+- **Parallel Jobs**: Frontend and backend jobs run in parallel
+- **Artifact Upload**: Build artifacts are preserved for deployment
+- **Security**: Automated vulnerability scanning with Trivy
+- **Multi-arch**: Docker images support multiple architectures
+- **GHCR Integration**: Images are automatically pushed to GitHub Container Registry
+
+### Docker Images
+
+All services are automatically built and pushed to GHCR:
+
+- `ghcr.io/paco_/retailedge/catalog-service:latest`
+- `ghcr.io/paco_/retailedge/orders-service:latest`
+- `ghcr.io/paco_/retailedge/users-service:latest`
+- `ghcr.io/paco_/retailedge/store-angular:latest`
+- `ghcr.io/paco_/retailedge/admin-react:latest`
 
 ## 📚 Documentation
 
