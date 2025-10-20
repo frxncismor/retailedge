@@ -52,8 +52,7 @@ logs-users: ## Show logs for users service
 logs-traefik: ## Show logs for Traefik
 	docker-compose logs -f traefik
 
-logs-postgres: ## Show logs for PostgreSQL
-	docker-compose logs -f postgres
+# PostgreSQL logs removed - using Supabase
 
 # Restart services
 restart: ## Restart all services
@@ -88,14 +87,17 @@ test: ## Test all API endpoints
 	@echo "Testing Users Service..."
 	@curl -s http://localhost/api/users/actuator/health | jq . || echo "Users service not ready"
 
-# Database operations
-db-shell: ## Connect to PostgreSQL shell
-	docker-compose exec postgres psql -U retailedge -d retailedge
+# Database operations (using Supabase)
+db-shell: ## Connect to Supabase PostgreSQL shell
+	@echo "Use Supabase MCP or connect directly to:"
+	@echo "Host: db.vltlsiukzjmutgkeffxt.supabase.co"
+	@echo "Port: 5432"
+	@echo "Database: postgres"
+	@echo "Username: postgres"
+	@echo "Password: retailedge123"
 
-db-backup: ## Backup database
-	@echo "Creating database backup..."
-	docker-compose exec postgres pg_dump -U retailedge retailedge > backup_$(shell date +%Y%m%d_%H%M%S).sql
-	@echo "Backup created: backup_$(shell date +%Y%m%d_%H%M%S).sql"
+db-backup: ## Backup Supabase database
+	@echo "Use Supabase MCP to backup database or connect directly"
 
 # Development helpers
 dev-build: ## Build only changed services
@@ -108,8 +110,7 @@ dev-logs: ## Follow logs for development
 # Health checks
 health: ## Check health of all services
 	@echo "Checking service health..."
-	@echo "PostgreSQL:"
-	@docker-compose exec postgres pg_isready -U retailedge || echo "PostgreSQL not ready"
+	@echo "Supabase PostgreSQL: Connected via MCP"
 	@echo "Traefik:"
 	@curl -s http://localhost:8080/api/rawdata | jq . || echo "Traefik not ready"
 	@echo "Services:"

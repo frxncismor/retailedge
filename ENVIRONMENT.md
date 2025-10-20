@@ -2,6 +2,15 @@
 
 This document explains how to configure environment variables for the RetailEdge project.
 
+## Database Provider
+
+**RetailEdge uses Supabase as the managed PostgreSQL provider.** All database operations are performed through JDBC connections with SSL enabled.
+
+- **Host**: `db.vltlsiukzjmutgkeffxt.supabase.co`
+- **Port**: `5432`
+- **Database**: `postgres`
+- **SSL**: Required (`sslmode=require`)
+
 ## Environment Files
 
 ### `env.example`
@@ -14,7 +23,7 @@ cp env.example .env
 
 ### `docker.env`
 
-Environment variables specifically for Docker Compose. This file is used by `docker-compose.yml` to configure all services.
+Environment variables specifically for Docker Compose. This file is used by `docker-compose.yml` to configure all services with Supabase connection.
 
 ## Environment Variables
 

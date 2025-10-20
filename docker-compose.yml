@@ -1,27 +1,6 @@
 version: '3.8'
 
 services:
-  # PostgreSQL Database
-  postgres:
-    image: postgres:15-alpine
-    container_name: retailedge-postgres
-    environment:
-      POSTGRES_DB: retailedge
-      POSTGRES_USER: retailedge
-      POSTGRES_PASSWORD: retailedge123
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-      - ./infra/docker/init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
-    ports:
-      - "5432:5432"
-    networks:
-      - retailedge-network
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U retailedge -d retailedge"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-
   # Traefik Reverse Proxy
   traefik:
     image: traefik:v2.10
@@ -59,9 +38,7 @@ services:
       SPRING_APPLICATION_NAME: catalog-service
     networks:
       - retailedge-network
-    depends_on:
-      postgres:
-        condition: service_healthy
+    # No database dependency - using Supabase
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.catalog.rule=PathPrefix(`/api/catalog`)"
@@ -83,9 +60,7 @@ services:
       SPRING_APPLICATION_NAME: orders-service
     networks:
       - retailedge-network
-    depends_on:
-      postgres:
-        condition: service_healthy
+    # No database dependency - using Supabase
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.orders.rule=PathPrefix(`/api/orders`)"
@@ -107,9 +82,7 @@ services:
       SPRING_APPLICATION_NAME: users-service
     networks:
       - retailedge-network
-    depends_on:
-      postgres:
-        condition: service_healthy
+    # No database dependency - using Supabase
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.users.rule=PathPrefix(`/api/users`)"
@@ -117,9 +90,6 @@ services:
       - "traefik.http.services.users.loadbalancer.server.port=8083"
       - "traefik.http.middlewares.users-stripprefix.stripprefix.prefixes=/api/users"
       - "traefik.http.routers.users.middlewares=users-stripprefix"
-
-volumes:
-  postgres_data:
 
 networks:
   retailedge-network:

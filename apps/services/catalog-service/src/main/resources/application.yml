@@ -5,17 +5,15 @@ spring:
   application:
     name: ${SPRING_APPLICATION_NAME:catalog-service}
   datasource:
-    url: ${SPRING_DATASOURCE_URL:jdbc:h2:mem:testdb}
-    driver-class-name: ${SPRING_DATASOURCE_DRIVER:org.h2.Driver}
-    username: ${SPRING_DATASOURCE_USERNAME:sa}
-    password: ${SPRING_DATASOURCE_PASSWORD:password}
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://db.vltlsiukzjmutgkeffxt.supabase.co:5432/postgres?sslmode=require}
+    driver-class-name: ${SPRING_DATASOURCE_DRIVER:org.postgresql.Driver}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:retailedge123}
   jpa:
     hibernate:
       ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:create-drop}
     show-sql: ${SPRING_JPA_SHOW_SQL:true}
-  h2:
-    console:
-      enabled: ${SPRING_H2_CONSOLE_ENABLED:true}
+  # H2 console disabled - using Supabase PostgreSQL
 
 management:
   endpoints:
