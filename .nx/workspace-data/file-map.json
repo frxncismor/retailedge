@@ -42,11 +42,19 @@
     "projectFileMap": {
       "store-angular": [
         {
+          "file": "apps/clients/store-angular/README.md",
+          "hash": "12898318223591751918"
+        },
+        {
           "file": "apps/clients/store-angular/project.json",
           "hash": "1091015838197412474"
         }
       ],
       "admin-react": [
+        {
+          "file": "apps/clients/admin-react/README.md",
+          "hash": "8591504459750651431"
+        },
         {
           "file": "apps/clients/admin-react/project.json",
           "hash": "7621441979171236844"
@@ -67,7 +75,7 @@
       "shared-models": [
         {
           "file": "libs/shared/models/README.md",
-          "hash": "2230976068954460956"
+          "hash": "13800743491458574293"
         },
         {
           "file": "libs/shared/models/eslint.config.cjs",
@@ -118,6 +126,10 @@
       ],
       "catalog-service": [
         {
+          "file": "apps/services/catalog-service/README.md",
+          "hash": "6411572339251468667"
+        },
+        {
           "file": "apps/services/catalog-service/pom.xml",
           "hash": "2732403324769194555"
         },
@@ -135,6 +147,10 @@
         }
       ],
       "users-service": [
+        {
+          "file": "apps/services/users-service/README.md",
+          "hash": "13938584206147429573"
+        },
         {
           "file": "apps/services/users-service/pom.xml",
           "hash": "11865829560349754753"
@@ -227,7 +243,15 @@
         },
         {
           "file": "README.md",
-          "hash": "4360405057964374502"
+          "hash": "2778733012140569245"
+        },
+        {
+          "file": "docs/adrs/0001-monorepo-architecture.md",
+          "hash": "17060148377424548614"
+        },
+        {
+          "file": "docs/adrs/0002-technology-stack.md",
+          "hash": "959731970176558881"
         },
         {
           "file": "infra/docker/Dockerfile.admin-react",
@@ -374,6 +398,10 @@
         }
       ],
       "orders-service": [
+        {
+          "file": "apps/services/orders-service/README.md",
+          "hash": "4850864629771658629"
+        },
         {
           "file": "apps/services/orders-service/pom.xml",
           "hash": "15079542507934005849"

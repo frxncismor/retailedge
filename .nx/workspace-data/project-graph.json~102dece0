@@ -1,449 +1,17 @@
 {
   "nodes": {
-    "store-angular-e2e": {
-      "name": "store-angular-e2e",
-      "type": "e2e",
-      "data": {
-        "root": "apps/clients/store-angular-e2e",
-        "name": "store-angular-e2e",
-        "$schema": "../node_modules/nx/schemas/project-schema.json",
-        "projectType": "application",
-        "sourceRoot": "apps/clients/store-angular-e2e/src",
-        "tags": [],
-        "implicitDependencies": [
-          "store-angular"
-        ],
-        "targets": {}
-      }
-    },
-    "catalog-service": {
-      "name": "catalog-service",
-      "type": "app",
-      "data": {
-        "root": "apps/services/catalog-service",
-        "name": "catalog-service",
-        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "apps/services/catalog-service/src",
-        "projectType": "application",
-        "tags": [
-          "type:service",
-          "domain:catalog"
-        ],
-        "targets": {
-          "build": {
-            "executor": "nx:run-commands",
-            "outputs": [
-              "{workspaceRoot}/apps/services/catalog-service/target"
-            ],
-            "options": {
-              "command": "mvn clean package -DskipTests",
-              "cwd": "apps/services/catalog-service"
-            },
-            "configurations": {},
-            "parallelism": true,
-            "dependsOn": [
-              "^build"
-            ],
-            "inputs": [
-              "production",
-              "^production"
-            ]
-          },
-          "test": {
-            "executor": "nx:run-commands",
-            "options": {
-              "command": "mvn test",
-              "cwd": "apps/services/catalog-service"
-            },
-            "configurations": {},
-            "parallelism": true,
-            "inputs": [
-              "default",
-              "^production",
-              "{workspaceRoot}/jest.preset.js"
-            ]
-          },
-          "serve": {
-            "executor": "nx:run-commands",
-            "options": {
-              "command": "mvn spring-boot:run",
-              "cwd": "apps/services/catalog-service"
-            },
-            "configurations": {},
-            "parallelism": true
-          },
-          "lint": {
-            "executor": "nx:run-commands",
-            "options": {
-              "command": "mvn checkstyle:check",
-              "cwd": "apps/services/catalog-service"
-            },
-            "configurations": {},
-            "parallelism": true,
-            "inputs": [
-              "default",
-              "{workspaceRoot}/.eslintrc.json",
-              "{workspaceRoot}/.eslintignore"
-            ]
-          }
-        },
-        "implicitDependencies": []
-      }
-    },
-    "admin-react-e2e": {
-      "name": "admin-react-e2e",
-      "type": "e2e",
-      "data": {
-        "root": "apps/clients/admin-react-e2e",
-        "name": "admin-react-e2e",
-        "$schema": "../node_modules/nx/schemas/project-schema.json",
-        "projectType": "application",
-        "sourceRoot": "apps/clients/admin-react-e2e/src",
-        "tags": [],
-        "implicitDependencies": [
-          "admin-react"
-        ],
-        "targets": {}
-      }
-    },
-    "orders-service": {
-      "name": "orders-service",
-      "type": "app",
-      "data": {
-        "root": "apps/services/orders-service",
-        "name": "orders-service",
-        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "apps/services/orders-service/src",
-        "projectType": "application",
-        "tags": [
-          "type:service",
-          "domain:orders"
-        ],
-        "targets": {
-          "build": {
-            "executor": "nx:run-commands",
-            "outputs": [
-              "{workspaceRoot}/apps/services/orders-service/target"
-            ],
-            "options": {
-              "command": "mvn clean package -DskipTests",
-              "cwd": "apps/services/orders-service"
-            },
-            "configurations": {},
-            "parallelism": true,
-            "dependsOn": [
-              "^build"
-            ],
-            "inputs": [
-              "production",
-              "^production"
-            ]
-          },
-          "test": {
-            "executor": "nx:run-commands",
-            "options": {
-              "command": "mvn test",
-              "cwd": "apps/services/orders-service"
-            },
-            "configurations": {},
-            "parallelism": true,
-            "inputs": [
-              "default",
-              "^production",
-              "{workspaceRoot}/jest.preset.js"
-            ]
-          },
-          "serve": {
-            "executor": "nx:run-commands",
-            "options": {
-              "command": "mvn spring-boot:run",
-              "cwd": "apps/services/orders-service"
-            },
-            "configurations": {},
-            "parallelism": true
-          },
-          "lint": {
-            "executor": "nx:run-commands",
-            "options": {
-              "command": "mvn checkstyle:check",
-              "cwd": "apps/services/orders-service"
-            },
-            "configurations": {},
-            "parallelism": true,
-            "inputs": [
-              "default",
-              "{workspaceRoot}/.eslintrc.json",
-              "{workspaceRoot}/.eslintignore"
-            ]
-          }
-        },
-        "implicitDependencies": []
-      }
-    },
-    "users-service": {
-      "name": "users-service",
-      "type": "app",
-      "data": {
-        "root": "apps/services/users-service",
-        "name": "users-service",
-        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "apps/services/users-service/src",
-        "projectType": "application",
-        "tags": [
-          "type:service",
-          "domain:users"
-        ],
-        "targets": {
-          "build": {
-            "executor": "nx:run-commands",
-            "outputs": [
-              "{workspaceRoot}/apps/services/users-service/target"
-            ],
-            "options": {
-              "command": "mvn clean package -DskipTests",
-              "cwd": "apps/services/users-service"
-            },
-            "configurations": {},
-            "parallelism": true,
-            "dependsOn": [
-              "^build"
-            ],
-            "inputs": [
-              "production",
-              "^production"
-            ]
-          },
-          "test": {
-            "executor": "nx:run-commands",
-            "options": {
-              "command": "mvn test",
-              "cwd": "apps/services/users-service"
-            },
-            "configurations": {},
-            "parallelism": true,
-            "inputs": [
-              "default",
-              "^production",
-              "{workspaceRoot}/jest.preset.js"
-            ]
-          },
-          "serve": {
-            "executor": "nx:run-commands",
-            "options": {
-              "command": "mvn spring-boot:run",
-              "cwd": "apps/services/users-service"
-            },
-            "configurations": {},
-            "parallelism": true
-          },
-          "lint": {
-            "executor": "nx:run-commands",
-            "options": {
-              "command": "mvn checkstyle:check",
-              "cwd": "apps/services/users-service"
-            },
-            "configurations": {},
-            "parallelism": true,
-            "inputs": [
-              "default",
-              "{workspaceRoot}/.eslintrc.json",
-              "{workspaceRoot}/.eslintignore"
-            ]
-          }
-        },
-        "implicitDependencies": []
-      }
-    },
-    "store-angular": {
-      "name": "store-angular",
-      "type": "app",
-      "data": {
-        "root": "apps/clients/store-angular",
-        "name": "store-angular",
-        "$schema": "../node_modules/nx/schemas/project-schema.json",
-        "projectType": "application",
-        "prefix": "retail",
-        "sourceRoot": "apps/clients/store-angular/src",
-        "tags": [],
-        "targets": {
-          "build": {
-            "executor": "@angular-devkit/build-angular:browser",
-            "outputs": [
-              "{options.outputPath}"
-            ],
-            "options": {
-              "outputPath": "dist/storefront",
-              "index": "storefront/src/index.html",
-              "main": "storefront/src/main.ts",
-              "polyfills": [
-                "zone.js"
-              ],
-              "tsConfig": "storefront/tsconfig.app.json",
-              "assets": [
-                {
-                  "glob": "**/*",
-                  "input": "storefront/public"
-                }
-              ],
-              "styles": [
-                "storefront/src/styles.css"
-              ]
-            },
-            "configurations": {
-              "production": {
-                "budgets": [
-                  {
-                    "type": "initial",
-                    "maximumWarning": "500kb",
-                    "maximumError": "1mb"
-                  },
-                  {
-                    "type": "anyComponentStyle",
-                    "maximumWarning": "4kb",
-                    "maximumError": "8kb"
-                  }
-                ],
-                "outputHashing": "all"
-              },
-              "development": {
-                "buildOptimizer": false,
-                "optimization": false,
-                "vendorChunk": true,
-                "extractLicenses": false,
-                "sourceMap": true,
-                "namedChunks": true
-              }
-            },
-            "defaultConfiguration": "production",
-            "parallelism": true,
-            "cache": true,
-            "dependsOn": [
-              "^build"
-            ],
-            "inputs": [
-              "production",
-              "^production"
-            ]
-          },
-          "serve": {
-            "continuous": true,
-            "executor": "@angular-devkit/build-angular:dev-server",
-            "configurations": {
-              "production": {
-                "buildTarget": "storefront:build:production"
-              },
-              "development": {
-                "buildTarget": "storefront:build:development"
-              }
-            },
-            "defaultConfiguration": "development",
-            "options": {},
-            "parallelism": true
-          },
-          "extract-i18n": {
-            "executor": "@angular-devkit/build-angular:extract-i18n",
-            "options": {
-              "buildTarget": "storefront:build"
-            },
-            "configurations": {},
-            "parallelism": true
-          },
-          "lint": {
-            "executor": "@nx/eslint:lint",
-            "configurations": {},
-            "options": {},
-            "parallelism": true,
-            "inputs": [
-              "default",
-              "{workspaceRoot}/.eslintrc.json",
-              "{workspaceRoot}/.eslintignore"
-            ]
-          },
-          "test": {
-            "executor": "@nx/jest:jest",
-            "outputs": [
-              "{workspaceRoot}/coverage/{projectRoot}"
-            ],
-            "options": {
-              "jestConfig": "storefront/jest.config.ts",
-              "tsConfig": "storefront/tsconfig.spec.json",
-              "passWithNoTests": true
-            },
-            "configurations": {
-              "ci": {
-                "ci": true,
-                "codeCoverage": true
-              }
-            },
-            "parallelism": true,
-            "cache": true,
-            "inputs": [
-              "default",
-              "^production",
-              "{workspaceRoot}/jest.preset.js"
-            ]
-          },
-          "serve-static": {
-            "continuous": true,
-            "executor": "@nx/web:file-server",
-            "options": {
-              "buildTarget": "storefront:build",
-              "port": 4200,
-              "spa": true
-            },
-            "configurations": {},
-            "parallelism": true
-          }
-        },
-        "implicitDependencies": []
-      }
-    },
-    "admin-react": {
-      "name": "admin-react",
-      "type": "app",
-      "data": {
-        "root": "apps/clients/admin-react",
-        "name": "admin-react",
-        "$schema": "../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "apps/clients/admin-react/src",
-        "projectType": "application",
-        "tags": [],
-        "targets": {
-          "test": {
-            "executor": "@nx/jest:jest",
-            "outputs": [
-              "{workspaceRoot}/coverage/{projectRoot}"
-            ],
-            "options": {
-              "jestConfig": "admin/jest.config.ts",
-              "passWithNoTests": true
-            },
-            "configurations": {
-              "ci": {
-                "ci": true,
-                "codeCoverage": true
-              }
-            },
-            "parallelism": true,
-            "cache": true,
-            "inputs": [
-              "default",
-              "^production",
-              "{workspaceRoot}/jest.preset.js"
-            ]
-          }
-        },
-        "implicitDependencies": []
-      }
-    },
-    "shared-models": {
-      "name": "shared-models",
+    "undefined": {
+      "name": "undefined",
       "type": "lib",
       "data": {
-        "root": "libs/shared/models",
+        "root": "storefront-e2e",
         "targets": {
           "lint": {
             "cache": true,
+            "options": {
+              "cwd": "storefront-e2e",
+              "command": "eslint ."
+            },
             "inputs": [
               "default",
               "{workspaceRoot}/.eslintrc.json",
@@ -454,7 +22,6 @@
             ],
             "metadata": {
               "technologies": [
-                "eslint",
                 "eslint"
               ],
               "description": "Runs ESLint on project",
@@ -468,98 +35,12 @@
               }
             },
             "executor": "nx:run-commands",
-            "options": {
-              "cwd": "libs/shared/models",
-              "command": "eslint ."
-            },
             "configurations": {},
             "parallelism": true
-          },
-          "nx-release-publish": {
-            "executor": "@nx/js:release-publish",
-            "dependsOn": [
-              "^nx-release-publish"
-            ],
-            "options": {
-              "packageRoot": "dist/libs/shared/models"
-            },
-            "configurations": {},
-            "parallelism": true
-          },
-          "build": {
-            "executor": "@nx/js:tsc",
-            "outputs": [
-              "{options.outputPath}"
-            ],
-            "options": {
-              "outputPath": "dist/shared-models",
-              "main": "shared-models/src/index.ts",
-              "tsConfig": "shared-models/tsconfig.lib.json",
-              "assets": [
-                "shared-models/*.md"
-              ]
-            },
-            "configurations": {},
-            "parallelism": true,
-            "cache": true,
-            "dependsOn": [
-              "^build"
-            ],
-            "inputs": [
-              "production",
-              "^production"
-            ]
-          },
-          "test": {
-            "executor": "@nx/jest:jest",
-            "outputs": [
-              "{workspaceRoot}/coverage/{projectRoot}"
-            ],
-            "options": {
-              "jestConfig": "shared-models/jest.config.ts",
-              "passWithNoTests": true
-            },
-            "configurations": {
-              "ci": {
-                "ci": true,
-                "codeCoverage": true
-              }
-            },
-            "parallelism": true,
-            "cache": true,
-            "inputs": [
-              "default",
-              "^production",
-              "{workspaceRoot}/jest.preset.js"
-            ]
           }
         },
-        "name": "shared-models",
-        "tags": [
-          "npm:public"
-        ],
-        "metadata": {
-          "targetGroups": {},
-          "js": {
-            "packageName": "@retailedge/shared-models",
-            "packageVersion": "0.0.1",
-            "packageMain": "./src/index.js",
-            "isInPackageManagerWorkspaces": false
-          }
-        },
-        "$schema": "../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "libs/shared/models/src",
-        "projectType": "library",
-        "release": {
-          "version": {
-            "manifestRootsToUpdate": [
-              "dist/{projectRoot}"
-            ],
-            "currentVersionResolver": "git-tag",
-            "fallbackCurrentVersionResolver": "disk"
-          }
-        },
-        "implicitDependencies": []
+        "implicitDependencies": [],
+        "tags": []
       }
     },
     "retailedge": {
@@ -20183,37 +19664,7 @@
     }
   },
   "dependencies": {
-    "store-angular-e2e": [
-      {
-        "source": "store-angular-e2e",
-        "target": "store-angular",
-        "type": "implicit"
-      }
-    ],
-    "catalog-service": [],
-    "admin-react-e2e": [
-      {
-        "source": "admin-react-e2e",
-        "target": "admin-react",
-        "type": "implicit"
-      }
-    ],
-    "orders-service": [],
-    "users-service": [],
-    "store-angular": [],
-    "admin-react": [],
-    "shared-models": [
-      {
-        "source": "shared-models",
-        "target": "npm:jsonc-eslint-parser",
-        "type": "static"
-      },
-      {
-        "source": "shared-models",
-        "target": "npm:tslib",
-        "type": "static"
-      }
-    ],
+    "undefined": [],
     "retailedge": [
       {
         "source": "retailedge",
@@ -49718,6 +49169,262 @@
     ]
   },
   "version": "6.0",
-  "errors": [],
-  "computedAt": 1760990698344
+  "errors": [
+    {
+      "stack": " - admin/project.json: Error: ENOENT: no such file or directory, open 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\admin\\project.json'\n    at readFileSync (node:fs:449:20)\n    at t.readFileSync (node:electron/js2c/node_init:2:10175)\n    at readJsonFile (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\utils\\fileutils.js:27:48)\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\project-json\\build-nodes\\project-json.js:16:59\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:10:33\n    at Array.map (<anonymous>)\n    at createNodesFromFiles (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:8:35)\n    at exports.ProjectJsonProjectsPlugin.createNodesV2 (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\project-json\\build-nodes\\project-json.js:15:55)\n    at LoadedNxPlugin.createNodes (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:22:65)\n    at LoadedNxPlugin.createNodes.<computed> (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:32:34)\n - admin-e2e/project.json: Error: ENOENT: no such file or directory, open 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\admin-e2e\\project.json'\n    at readFileSync (node:fs:449:20)\n    at t.readFileSync (node:electron/js2c/node_init:2:10175)\n    at readJsonFile (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\utils\\fileutils.js:27:48)\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\project-json\\build-nodes\\project-json.js:16:59\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:10:33\n    at Array.map (<anonymous>)\n    at createNodesFromFiles (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:8:35)\n    at exports.ProjectJsonProjectsPlugin.createNodesV2 (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\project-json\\build-nodes\\project-json.js:15:55)\n    at LoadedNxPlugin.createNodes (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:22:65)\n    at LoadedNxPlugin.createNodes.<computed> (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:32:34)\n - shared-models/project.json: Error: ENOENT: no such file or directory, open 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\shared-models\\project.json'\n    at readFileSync (node:fs:449:20)\n    at t.readFileSync (node:electron/js2c/node_init:2:10175)\n    at readJsonFile (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\utils\\fileutils.js:27:48)\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\project-json\\build-nodes\\project-json.js:16:59\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:10:33\n    at Array.map (<anonymous>)\n    at createNodesFromFiles (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:8:35)\n    at exports.ProjectJsonProjectsPlugin.createNodesV2 (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\project-json\\build-nodes\\project-json.js:15:55)\n    at LoadedNxPlugin.createNodes (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:22:65)\n    at LoadedNxPlugin.createNodes.<computed> (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:32:34)\n - storefront/project.json: Error: ENOENT: no such file or directory, open 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\storefront\\project.json'\n    at readFileSync (node:fs:449:20)\n    at t.readFileSync (node:electron/js2c/node_init:2:10175)\n    at readJsonFile (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\utils\\fileutils.js:27:48)\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\project-json\\build-nodes\\project-json.js:16:59\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:10:33\n    at Array.map (<anonymous>)\n    at createNodesFromFiles (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:8:35)\n    at exports.ProjectJsonProjectsPlugin.createNodesV2 (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\project-json\\build-nodes\\project-json.js:15:55)\n    at LoadedNxPlugin.createNodes (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:22:65)\n    at LoadedNxPlugin.createNodes.<computed> (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:32:34)\n - storefront-e2e/project.json: Error: ENOENT: no such file or directory, open 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\storefront-e2e\\project.json'\n    at readFileSync (node:fs:449:20)\n    at t.readFileSync (node:electron/js2c/node_init:2:10175)\n    at readJsonFile (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\utils\\fileutils.js:27:48)\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\project-json\\build-nodes\\project-json.js:16:59\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:10:33\n    at Array.map (<anonymous>)\n    at createNodesFromFiles (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:8:35)\n    at exports.ProjectJsonProjectsPlugin.createNodesV2 (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\project-json\\build-nodes\\project-json.js:15:55)\n    at LoadedNxPlugin.createNodes (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:22:65)\n    at LoadedNxPlugin.createNodes.<computed> (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:32:34)",
+      "message": "5 errors occurred while processing files for the nx/core/project-json plugin\n.\n  - admin/project.json: ENOENT: no such file or directory, open 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\admin\\project.json'\n  - admin-e2e/project.json: ENOENT: no such file or directory, open 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\admin-e2e\\project.json'\n  - shared-models/project.json: ENOENT: no such file or directory, open 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\shared-models\\project.json'\n  - storefront/project.json: ENOENT: no such file or directory, open 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\storefront\\project.json'\n  - storefront-e2e/project.json: ENOENT: no such file or directory, open 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\storefront-e2e\\project.json'",
+      "errors": [
+        [
+          "admin/project.json",
+          {
+            "stack": "Error: ENOENT: no such file or directory, open 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\admin\\project.json'\n    at readFileSync (node:fs:449:20)\n    at t.readFileSync (node:electron/js2c/node_init:2:10175)\n    at readJsonFile (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\utils\\fileutils.js:27:48)\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\project-json\\build-nodes\\project-json.js:16:59\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:10:33\n    at Array.map (<anonymous>)\n    at createNodesFromFiles (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:8:35)\n    at exports.ProjectJsonProjectsPlugin.createNodesV2 (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\project-json\\build-nodes\\project-json.js:15:55)\n    at LoadedNxPlugin.createNodes (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:22:65)\n    at LoadedNxPlugin.createNodes.<computed> (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:32:34)",
+            "message": "ENOENT: no such file or directory, open 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\admin\\project.json'",
+            "errno": -4058,
+            "code": "ENOENT",
+            "syscall": "open",
+            "path": "c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\admin\\project.json"
+          }
+        ],
+        [
+          "admin-e2e/project.json",
+          {
+            "stack": "Error: ENOENT: no such file or directory, open 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\admin-e2e\\project.json'\n    at readFileSync (node:fs:449:20)\n    at t.readFileSync (node:electron/js2c/node_init:2:10175)\n    at readJsonFile (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\utils\\fileutils.js:27:48)\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\project-json\\build-nodes\\project-json.js:16:59\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:10:33\n    at Array.map (<anonymous>)\n    at createNodesFromFiles (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:8:35)\n    at exports.ProjectJsonProjectsPlugin.createNodesV2 (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\project-json\\build-nodes\\project-json.js:15:55)\n    at LoadedNxPlugin.createNodes (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:22:65)\n    at LoadedNxPlugin.createNodes.<computed> (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:32:34)",
+            "message": "ENOENT: no such file or directory, open 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\admin-e2e\\project.json'",
+            "errno": -4058,
+            "code": "ENOENT",
+            "syscall": "open",
+            "path": "c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\admin-e2e\\project.json"
+          }
+        ],
+        [
+          "shared-models/project.json",
+          {
+            "stack": "Error: ENOENT: no such file or directory, open 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\shared-models\\project.json'\n    at readFileSync (node:fs:449:20)\n    at t.readFileSync (node:electron/js2c/node_init:2:10175)\n    at readJsonFile (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\utils\\fileutils.js:27:48)\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\project-json\\build-nodes\\project-json.js:16:59\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:10:33\n    at Array.map (<anonymous>)\n    at createNodesFromFiles (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:8:35)\n    at exports.ProjectJsonProjectsPlugin.createNodesV2 (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\project-json\\build-nodes\\project-json.js:15:55)\n    at LoadedNxPlugin.createNodes (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:22:65)\n    at LoadedNxPlugin.createNodes.<computed> (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:32:34)",
+            "message": "ENOENT: no such file or directory, open 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\shared-models\\project.json'",
+            "errno": -4058,
+            "code": "ENOENT",
+            "syscall": "open",
+            "path": "c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\shared-models\\project.json"
+          }
+        ],
+        [
+          "storefront/project.json",
+          {
+            "stack": "Error: ENOENT: no such file or directory, open 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\storefront\\project.json'\n    at readFileSync (node:fs:449:20)\n    at t.readFileSync (node:electron/js2c/node_init:2:10175)\n    at readJsonFile (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\utils\\fileutils.js:27:48)\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\project-json\\build-nodes\\project-json.js:16:59\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:10:33\n    at Array.map (<anonymous>)\n    at createNodesFromFiles (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:8:35)\n    at exports.ProjectJsonProjectsPlugin.createNodesV2 (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\project-json\\build-nodes\\project-json.js:15:55)\n    at LoadedNxPlugin.createNodes (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:22:65)\n    at LoadedNxPlugin.createNodes.<computed> (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:32:34)",
+            "message": "ENOENT: no such file or directory, open 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\storefront\\project.json'",
+            "errno": -4058,
+            "code": "ENOENT",
+            "syscall": "open",
+            "path": "c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\storefront\\project.json"
+          }
+        ],
+        [
+          "storefront-e2e/project.json",
+          {
+            "stack": "Error: ENOENT: no such file or directory, open 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\storefront-e2e\\project.json'\n    at readFileSync (node:fs:449:20)\n    at t.readFileSync (node:electron/js2c/node_init:2:10175)\n    at readJsonFile (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\utils\\fileutils.js:27:48)\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\project-json\\build-nodes\\project-json.js:16:59\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:10:33\n    at Array.map (<anonymous>)\n    at createNodesFromFiles (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:8:35)\n    at exports.ProjectJsonProjectsPlugin.createNodesV2 (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\project-json\\build-nodes\\project-json.js:15:55)\n    at LoadedNxPlugin.createNodes (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:22:65)\n    at LoadedNxPlugin.createNodes.<computed> (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:32:34)",
+            "message": "ENOENT: no such file or directory, open 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\storefront-e2e\\project.json'",
+            "errno": -4058,
+            "code": "ENOENT",
+            "syscall": "open",
+            "path": "c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\storefront-e2e\\project.json"
+          }
+        ]
+      ],
+      "partialResults": [
+        [
+          "project.json",
+          {
+            "projects": {
+              ".": {
+                "name": "retailedge",
+                "root": ".",
+                "$schema": "node_modules/nx/schemas/project-schema.json",
+                "targets": {
+                  "local-registry": {
+                    "executor": "@nx/js:verdaccio",
+                    "options": {
+                      "port": 4873,
+                      "config": ".verdaccio/config.yml",
+                      "storage": "tmp/local-registry/storage"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "name": "AggregateCreateNodesError"
+    },
+    {
+      "stack": " - shared-models/package.json: Error: ENOENT: no such file or directory, open 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\shared-models\\package.json'\n    at readFileSync (node:fs:449:20)\n    at t.readFileSync (node:electron/js2c/node_init:2:10175)\n    at readJsonFile (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\utils\\fileutils.js:27:48)\n    at createNodeFromPackageJson (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\package-json\\create-nodes.js:87:47)\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\package-json\\create-nodes.js:44:20\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:10:33\n    at Array.map (<anonymous>)\n    at createNodesFromFiles (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:8:35)\n    at exports.createNodesV2 (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\package-json\\create-nodes.js:37:51)\n    at LoadedNxPlugin.createNodes (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:22:65)",
+      "message": "An error occurred while processing files for the nx/core/package-json plugin\n.\n  - shared-models/package.json: ENOENT: no such file or directory, open 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\shared-models\\package.json'",
+      "errors": [
+        [
+          "shared-models/package.json",
+          {
+            "stack": "Error: ENOENT: no such file or directory, open 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\shared-models\\package.json'\n    at readFileSync (node:fs:449:20)\n    at t.readFileSync (node:electron/js2c/node_init:2:10175)\n    at readJsonFile (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\utils\\fileutils.js:27:48)\n    at createNodeFromPackageJson (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\package-json\\create-nodes.js:87:47)\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\package-json\\create-nodes.js:44:20\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:10:33\n    at Array.map (<anonymous>)\n    at createNodesFromFiles (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:8:35)\n    at exports.createNodesV2 (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\plugins\\package-json\\create-nodes.js:37:51)\n    at LoadedNxPlugin.createNodes (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:22:65)",
+            "message": "ENOENT: no such file or directory, open 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\shared-models\\package.json'",
+            "errno": -4058,
+            "code": "ENOENT",
+            "syscall": "open",
+            "path": "c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\shared-models\\package.json"
+          }
+        ]
+      ],
+      "partialResults": [
+        [
+          "package.json",
+          {
+            "projects": {
+              ".": {
+                "root": ".",
+                "name": "retailedge",
+                "includedScripts": [],
+                "targets": {
+                  "nx-release-publish": {
+                    "executor": "@nx/js:release-publish",
+                    "dependsOn": [
+                      "^nx-release-publish"
+                    ],
+                    "options": {}
+                  }
+                },
+                "tags": [
+                  "npm:public",
+                  "npm:nx",
+                  "npm:monorepo",
+                  "npm:spring-boot",
+                  "npm:angular",
+                  "npm:react"
+                ],
+                "metadata": {
+                  "targetGroups": {},
+                  "description": "RetailEdge Nx Monorepo with Spring Boot services and Angular/React clients",
+                  "js": {
+                    "packageName": "retailedge",
+                    "packageVersion": "1.0.0",
+                    "packageMain": "index.js",
+                    "isInPackageManagerWorkspaces": true
+                  }
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "name": "AggregateCreateNodesError"
+    },
+    {
+      "stack": " - admin-e2e/cypress.config.ts: Error: ENOENT: no such file or directory, scandir 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\admin-e2e'\n    at readdirSync (node:fs:1507:26)\n    at t.readdirSync (node:electron/js2c/node_init:2:13703)\n    at createNodesInternal (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\@nx\\cypress\\src\\plugins\\plugin.js:69:47)\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\@nx\\cypress\\src\\plugins\\plugin.js:47:95\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:10:33\n    at Array.map (<anonymous>)\n    at createNodesFromFiles (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:8:35)\n    at exports.createNodesV2 (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\@nx\\cypress\\src\\plugins\\plugin.js:47:60)\n    at LoadedNxPlugin.createNodes (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:22:65)\n    at LoadedNxPlugin.createNodes.<computed> (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:32:34)\n - storefront-e2e/cypress.config.ts: Error: ENOENT: no such file or directory, scandir 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\storefront-e2e'\n    at readdirSync (node:fs:1507:26)\n    at t.readdirSync (node:electron/js2c/node_init:2:13703)\n    at createNodesInternal (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\@nx\\cypress\\src\\plugins\\plugin.js:69:47)\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\@nx\\cypress\\src\\plugins\\plugin.js:47:95\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:10:33\n    at Array.map (<anonymous>)\n    at createNodesFromFiles (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:8:35)\n    at exports.createNodesV2 (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\@nx\\cypress\\src\\plugins\\plugin.js:47:60)\n    at LoadedNxPlugin.createNodes (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:22:65)\n    at LoadedNxPlugin.createNodes.<computed> (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:32:34)",
+      "message": "2 errors occurred while processing files for the @nx/cypress/plugin plugin\n.\n  - admin-e2e/cypress.config.ts: ENOENT: no such file or directory, scandir 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\admin-e2e'\n  - storefront-e2e/cypress.config.ts: ENOENT: no such file or directory, scandir 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\storefront-e2e'",
+      "errors": [
+        [
+          "admin-e2e/cypress.config.ts",
+          {
+            "stack": "Error: ENOENT: no such file or directory, scandir 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\admin-e2e'\n    at readdirSync (node:fs:1507:26)\n    at t.readdirSync (node:electron/js2c/node_init:2:13703)\n    at createNodesInternal (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\@nx\\cypress\\src\\plugins\\plugin.js:69:47)\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\@nx\\cypress\\src\\plugins\\plugin.js:47:95\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:10:33\n    at Array.map (<anonymous>)\n    at createNodesFromFiles (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:8:35)\n    at exports.createNodesV2 (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\@nx\\cypress\\src\\plugins\\plugin.js:47:60)\n    at LoadedNxPlugin.createNodes (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:22:65)\n    at LoadedNxPlugin.createNodes.<computed> (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:32:34)",
+            "message": "ENOENT: no such file or directory, scandir 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\admin-e2e'",
+            "errno": -4058,
+            "code": "ENOENT",
+            "syscall": "scandir",
+            "path": "c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\admin-e2e"
+          }
+        ],
+        [
+          "storefront-e2e/cypress.config.ts",
+          {
+            "stack": "Error: ENOENT: no such file or directory, scandir 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\storefront-e2e'\n    at readdirSync (node:fs:1507:26)\n    at t.readdirSync (node:electron/js2c/node_init:2:13703)\n    at createNodesInternal (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\@nx\\cypress\\src\\plugins\\plugin.js:69:47)\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\@nx\\cypress\\src\\plugins\\plugin.js:47:95\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:10:33\n    at Array.map (<anonymous>)\n    at createNodesFromFiles (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:8:35)\n    at exports.createNodesV2 (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\@nx\\cypress\\src\\plugins\\plugin.js:47:60)\n    at LoadedNxPlugin.createNodes (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:22:65)\n    at LoadedNxPlugin.createNodes.<computed> (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:32:34)",
+            "message": "ENOENT: no such file or directory, scandir 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\storefront-e2e'",
+            "errno": -4058,
+            "code": "ENOENT",
+            "syscall": "scandir",
+            "path": "c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\storefront-e2e"
+          }
+        ]
+      ],
+      "partialResults": [],
+      "name": "AggregateCreateNodesError",
+      "pluginIndex": 0
+    },
+    {
+      "stack": " - admin/webpack.config.js: Error: ENOENT: no such file or directory, scandir 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\admin'\n    at readdirSync (node:fs:1507:26)\n    at t.readdirSync (node:electron/js2c/node_init:2:13703)\n    at createNodesInternal (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\@nx\\webpack\\src\\plugins\\plugin.js:58:47)\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\@nx\\webpack\\src\\plugins\\plugin.js:40:95\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:10:33\n    at Array.map (<anonymous>)\n    at createNodesFromFiles (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:8:35)\n    at exports.createNodesV2 (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\@nx\\webpack\\src\\plugins\\plugin.js:40:60)\n    at LoadedNxPlugin.createNodes (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:22:65)\n    at LoadedNxPlugin.createNodes.<computed> (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:32:34)",
+      "message": "An error occurred while processing files for the @nx/webpack/plugin plugin (Defined at nx.json#plugins[2])\n.\n  - admin/webpack.config.js: ENOENT: no such file or directory, scandir 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\admin'",
+      "errors": [
+        [
+          "admin/webpack.config.js",
+          {
+            "stack": "Error: ENOENT: no such file or directory, scandir 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\admin'\n    at readdirSync (node:fs:1507:26)\n    at t.readdirSync (node:electron/js2c/node_init:2:13703)\n    at createNodesInternal (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\@nx\\webpack\\src\\plugins\\plugin.js:58:47)\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\@nx\\webpack\\src\\plugins\\plugin.js:40:95\n    at c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:10:33\n    at Array.map (<anonymous>)\n    at createNodesFromFiles (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:8:35)\n    at exports.createNodesV2 (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\@nx\\webpack\\src\\plugins\\plugin.js:40:60)\n    at LoadedNxPlugin.createNodes (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:22:65)\n    at LoadedNxPlugin.createNodes.<computed> (c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\node_modules\\nx\\src\\project-graph\\plugins\\loaded-nx-plugin.js:32:34)",
+            "message": "ENOENT: no such file or directory, scandir 'c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\admin'",
+            "errno": -4058,
+            "code": "ENOENT",
+            "syscall": "scandir",
+            "path": "c:\\Users\\paco_\\Documents\\GitHub\\retailedge\\admin"
+          }
+        ]
+      ],
+      "partialResults": [],
+      "name": "AggregateCreateNodesError",
+      "pluginIndex": 2
+    },
+    {
+      "projectRoots": [
+        "admin",
+        "admin-e2e",
+        "shared-models",
+        "storefront",
+        "storefront-e2e"
+      ],
+      "projects": {
+        "retailedge": {
+          "root": ".",
+          "name": "retailedge",
+          "includedScripts": [],
+          "tags": [
+            "npm:public",
+            "npm:nx",
+            "npm:monorepo",
+            "npm:spring-boot",
+            "npm:angular",
+            "npm:react"
+          ],
+          "metadata": {
+            "targetGroups": {},
+            "description": "RetailEdge Nx Monorepo with Spring Boot services and Angular/React clients",
+            "js": {
+              "packageName": "retailedge",
+              "packageVersion": "1.0.0",
+              "packageMain": "index.js",
+              "isInPackageManagerWorkspaces": true
+            }
+          },
+          "targets": {
+            "nx-release-publish": {
+              "executor": "@nx/js:release-publish",
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "options": {},
+              "configurations": {},
+              "parallelism": true
+            },
+            "local-registry": {
+              "executor": "@nx/js:verdaccio",
+              "options": {
+                "port": 4873,
+                "config": ".verdaccio/config.yml",
+                "storage": "tmp/local-registry/storage"
+              },
+              "configurations": {},
+              "parallelism": true,
+              "continuous": true
+            }
+          },
+          "$schema": "node_modules/nx/schemas/project-schema.json",
+          "implicitDependencies": []
+        }
+      },
+      "name": "ProjectsWithNoNameError"
+    }
+  ],
+  "computedAt": 1760990440974
 }
