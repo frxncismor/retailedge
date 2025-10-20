@@ -126,12 +126,20 @@
       ],
       "catalog-service": [
         {
+          "file": "apps/services/catalog-service/.dockerignore",
+          "hash": "15072028561194197264"
+        },
+        {
           "file": "apps/services/catalog-service/.mvn/wrapper/MavenWrapperDownloader.java",
           "hash": "9951560507754787165"
         },
         {
           "file": "apps/services/catalog-service/.mvn/wrapper/maven-wrapper.properties",
           "hash": "17347536771632203265"
+        },
+        {
+          "file": "apps/services/catalog-service/Dockerfile",
+          "hash": "4621022899393965406"
         },
         {
           "file": "apps/services/catalog-service/README.md",
@@ -147,7 +155,7 @@
         },
         {
           "file": "apps/services/catalog-service/pom.xml",
-          "hash": "7962186202609205230"
+          "hash": "9484517185440954007"
         },
         {
           "file": "apps/services/catalog-service/project.json",
@@ -196,12 +204,20 @@
       ],
       "users-service": [
         {
+          "file": "apps/services/users-service/.dockerignore",
+          "hash": "15072028561194197264"
+        },
+        {
+          "file": "apps/services/users-service/Dockerfile",
+          "hash": "5085744276756634531"
+        },
+        {
           "file": "apps/services/users-service/README.md",
           "hash": "13938584206147429573"
         },
         {
           "file": "apps/services/users-service/pom.xml",
-          "hash": "14447193772381421197"
+          "hash": "9692863756799364324"
         },
         {
           "file": "apps/services/users-service/project.json",
@@ -318,8 +334,16 @@
           "hash": "300035921567345902"
         },
         {
+          "file": "Makefile",
+          "hash": "5436737249245380989"
+        },
+        {
           "file": "README.md",
           "hash": "2778733012140569245"
+        },
+        {
+          "file": "docker-compose.yml",
+          "hash": "5102777954979748998"
         },
         {
           "file": "docs/adrs/0001-monorepo-architecture.md",
@@ -354,6 +378,10 @@
           "hash": "15119896434180549834"
         },
         {
+          "file": "infra/docker/init-db.sql",
+          "hash": "15705606660808064776"
+        },
+        {
           "file": "jest.config.ts",
           "hash": "6870352021923392442",
           "deps": [
@@ -378,7 +406,7 @@
         },
         {
           "file": "package.json",
-          "hash": "12727328178980246703",
+          "hash": "8646923722047464988",
           "deps": [
             "npm:@angular-devkit/build-angular",
             "npm:@angular-devkit/core",
@@ -475,12 +503,20 @@
       ],
       "orders-service": [
         {
+          "file": "apps/services/orders-service/.dockerignore",
+          "hash": "15072028561194197264"
+        },
+        {
+          "file": "apps/services/orders-service/Dockerfile",
+          "hash": "8246203936322798916"
+        },
+        {
           "file": "apps/services/orders-service/README.md",
           "hash": "4850864629771658629"
         },
         {
           "file": "apps/services/orders-service/pom.xml",
-          "hash": "24905256077863124"
+          "hash": "12950361434393153166"
         },
         {
           "file": "apps/services/orders-service/project.json",

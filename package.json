@@ -35,6 +35,14 @@
     "serve:catalog-service": "nx serve catalog-service",
     "serve:orders-service": "nx serve orders-service",
     "serve:users-service": "nx serve users-service",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "docker:restart": "docker-compose restart",
+    "docker:status": "docker-compose ps",
+    "docker:clean": "docker-compose down -v --remove-orphans",
+    "docker:test": "curl -s http://localhost/api/catalog/actuator/health && curl -s http://localhost/api/orders/actuator/health && curl -s http://localhost/api/users/actuator/health",
     "prepare": "husky install"
   },
   "keywords": [

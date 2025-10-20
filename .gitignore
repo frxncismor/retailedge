@@ -172,3 +172,11 @@ ehthumbs.db
 Desktop.ini
 
 .angular
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+backup_*.sql
+
+# Nx
+.nx/
