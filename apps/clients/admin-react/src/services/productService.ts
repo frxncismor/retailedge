@@ -1,4 +1,4 @@
-import { Product } from '../types/Product';
+import { Product } from '@retailedge/api-types';
 
 const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost';
 

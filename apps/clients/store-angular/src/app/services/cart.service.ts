@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { Product, CartItem } from './product.service';
+import { BehaviorSubject } from 'rxjs';
+import { Product } from '@retailedge/api-types';
+import { CartItem } from './product.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
-  private cartItems = new BehaviorSubject<CartItem[]>([]);
+  private readonly cartItems = new BehaviorSubject<CartItem[]>([]);
   public cartItems$ = this.cartItems.asObservable();
 
   constructor() {

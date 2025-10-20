@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Product } from '../types/Product';
+import { Product } from '@retailedge/api-types';
 import { productService } from '../services/productService';
 import ProductForm from './ProductForm';
 
@@ -34,7 +34,7 @@ const ProductList: React.FC = () => {
   };
 
   const handleDelete = async (id: string) => {
-    if (window.confirm('Are you sure you want to delete this product?')) {
+    if (globalThis.confirm('Are you sure you want to delete this product?')) {
       try {
         await productService.deleteProduct(id);
         await loadProducts();

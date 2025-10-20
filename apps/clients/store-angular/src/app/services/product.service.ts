@@ -2,17 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
-
-export interface Product {
-  id: string;
-  sku: string;
-  name: string;
-  description: string;
-  price: number;
-  stock: number;
-  created_at: string;
-  updated_at: string;
-}
+import {
+  Product,
+  CatalogApiResponse,
+  CatalogPaginatedResponse,
+} from '@retailedge/api-types';
 
 export interface CartItem {
   product: Product;
@@ -23,9 +17,9 @@ export interface CartItem {
   providedIn: 'root',
 })
 export class ProductService {
-  private apiUrl = `${environment.apiBaseUrl}/api/catalog`;
+  private readonly apiUrl = `${environment.apiBaseUrl}/api/catalog`;
 
-  constructor(private http: HttpClient) {}
+  constructor(private readonly http: HttpClient) {}
 
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(`${this.apiUrl}/products`);

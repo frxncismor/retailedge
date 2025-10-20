@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Product, ProductFormData } from '../types/Product';
+import { Product } from '@retailedge/api-types';
+
+interface ProductFormData {
+  sku: string;
+  name: string;
+  description: string;
+  price: number;
+  stock: number;
+}
 
 interface ProductFormProps {
   product?: Product | null;
@@ -39,7 +47,9 @@ const ProductForm: React.FC<ProductFormProps> = ({
     setFormData((prev) => ({
       ...prev,
       [name]:
-        name === 'price' || name === 'stock' ? parseFloat(value) || 0 : value,
+        name === 'price' || name === 'stock'
+          ? Number.parseFloat(value) || 0
+          : value,
     }));
   };
 
