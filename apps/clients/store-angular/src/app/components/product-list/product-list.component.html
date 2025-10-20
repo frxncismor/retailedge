@@ -1,0 +1,56 @@
+<div class="product-list">
+  <div class="header">
+    <h1>Our Products</h1>
+    <div class="search-bar">
+      <input
+        type="text"
+        placeholder="Search products..."
+        [(ngModel)]="searchQuery"
+        (input)="onSearch()"
+        class="search-input"
+      />
+    </div>
+  </div>
+
+  <div class="products-grid" *ngIf="products.length > 0; else noProducts">
+    <div class="product-card" *ngFor="let product of filteredProducts">
+      <div class="product-image">
+        <img
+          [src]="'https://via.placeholder.com/300x200?text=' + product.name"
+          [alt]="product.name"
+        />
+      </div>
+      <div class="product-info">
+        <h3>{{ product.name }}</h3>
+        <p class="product-description">{{ product.description }}</p>
+        <div class="product-price">
+          {{ product.price | currency: 'USD' : 'symbol' : '1.2-2' }}
+        </div>
+        <div class="product-stock" [class.low-stock]="product.stock < 10">
+          {{ product.stock }} in stock
+        </div>
+        <div class="product-actions">
+          <button
+            (click)="addToCart(product)"
+            [disabled]="product.stock === 0"
+            class="add-to-cart-btn"
+          >
+            {{ product.stock === 0 ? 'Out of Stock' : 'Add to Cart' }}
+          </button>
+          <button
+            [routerLink]="['/product', product.id]"
+            class="view-details-btn"
+          >
+            View Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noProducts>
+    <div class="no-products">
+      <p>No products found.</p>
+    </div>
+  </ng-template>
+</div>

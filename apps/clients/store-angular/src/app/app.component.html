@@ -1,0 +1,31 @@
+<div class="app">
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">
+        <a routerLink="/">RetailEdge</a>
+      </h1>
+      <nav class="nav">
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Products
+        </a>
+        <a routerLink="/cart" routerLinkActive="active">
+          Cart ({{ cartItemCount$ | async }})
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 RetailEdge. All rights reserved.</p>
+    </div>
+  </footer>
+</div>

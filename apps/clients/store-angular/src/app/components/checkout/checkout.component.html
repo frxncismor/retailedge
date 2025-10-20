@@ -1,0 +1,186 @@
+<div class="checkout">
+  <h1>Checkout</h1>
+
+  <div *ngIf="cartItems.length > 0; else emptyCart">
+    <form (ngSubmit)="onSubmit()" #checkoutForm="ngForm">
+      <div class="checkout-container">
+        <div class="checkout-form">
+          <h2>Shipping Information</h2>
+
+          <div class="form-group">
+            <label for="firstName">First Name *</label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              [(ngModel)]="shippingInfo.firstName"
+              required
+              class="form-control"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="lastName">Last Name *</label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              [(ngModel)]="shippingInfo.lastName"
+              required
+              class="form-control"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              [(ngModel)]="shippingInfo.email"
+              required
+              class="form-control"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="address">Address *</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              [(ngModel)]="shippingInfo.address"
+              required
+              class="form-control"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="city">City *</label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              [(ngModel)]="shippingInfo.city"
+              required
+              class="form-control"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="zipCode">ZIP Code *</label>
+            <input
+              type="text"
+              id="zipCode"
+              name="zipCode"
+              [(ngModel)]="shippingInfo.zipCode"
+              required
+              class="form-control"
+            />
+          </div>
+
+          <h2>Payment Information</h2>
+
+          <div class="form-group">
+            <label for="cardNumber">Card Number *</label>
+            <input
+              type="text"
+              id="cardNumber"
+              name="cardNumber"
+              [(ngModel)]="paymentInfo.cardNumber"
+              required
+              placeholder="1234 5678 9012 3456"
+              class="form-control"
+            />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="expiryDate">Expiry Date *</label>
+              <input
+                type="text"
+                id="expiryDate"
+                name="expiryDate"
+                [(ngModel)]="paymentInfo.expiryDate"
+                required
+                placeholder="MM/YY"
+                class="form-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="cvv">CVV *</label>
+              <input
+                type="text"
+                id="cvv"
+                name="cvv"
+                [(ngModel)]="paymentInfo.cvv"
+                required
+                placeholder="123"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="order-summary">
+          <h2>Order Summary</h2>
+
+          <div class="order-items">
+            <div class="order-item" *ngFor="let item of cartItems">
+              <div class="item-info">
+                <span class="item-name">{{ item.product.name }}</span>
+                <span class="item-quantity">Qty: {{ item.quantity }}</span>
+              </div>
+              <div class="item-price">
+                {{
+                  item.product.price * item.quantity
+                    | currency: 'USD' : 'symbol' : '1.2-2'
+                }}
+              </div>
+            </div>
+          </div>
+
+          <div class="order-totals">
+            <div class="total-row">
+              <span>Subtotal:</span>
+              <span>{{
+                getSubtotal() | currency: 'USD' : 'symbol' : '1.2-2'
+              }}</span>
+            </div>
+            <div class="total-row">
+              <span>Tax (8%):</span>
+              <span>{{
+                getTax() | currency: 'USD' : 'symbol' : '1.2-2'
+              }}</span>
+            </div>
+            <div class="total-row final">
+              <span>Total:</span>
+              <span>{{
+                getTotal() | currency: 'USD' : 'symbol' : '1.2-2'
+              }}</span>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            [disabled]="!checkoutForm.valid || isProcessing"
+            class="place-order-btn"
+          >
+            {{ isProcessing ? 'Processing...' : 'Place Order' }}
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <ng-template #emptyCart>
+    <div class="empty-cart">
+      <h2>Your cart is empty</h2>
+      <p>Add some products to get started!</p>
+      <button [routerLink]="['/']" class="shop-btn">
+        Continue Shopping
+      </button>
+    </div>
+  </ng-template>
+</div>

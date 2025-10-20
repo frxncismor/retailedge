@@ -10,18 +10,18 @@
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/storefront",
-        "index": "storefront/src/index.html",
-        "main": "storefront/src/main.ts",
+        "outputPath": "dist/store-angular",
+        "index": "apps/clients/store-angular/src/index.html",
+        "main": "apps/clients/store-angular/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "storefront/tsconfig.app.json",
+        "tsConfig": "apps/clients/store-angular/tsconfig.app.json",
         "assets": [
           {
             "glob": "**/*",
-            "input": "storefront/public"
+            "input": "apps/clients/store-angular/public"
           }
         ],
-        "styles": ["storefront/src/styles.css"]
+        "styles": ["apps/clients/store-angular/src/styles.css"]
       },
       "configurations": {
         "production": {
@@ -55,10 +55,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "storefront:build:production"
+          "buildTarget": "store-angular:build:production"
         },
         "development": {
-          "buildTarget": "storefront:build:development"
+          "buildTarget": "store-angular:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -66,7 +66,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "storefront:build"
+        "buildTarget": "store-angular:build"
       }
     },
     "lint": {
@@ -76,15 +76,15 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "storefront/jest.config.ts",
-        "tsConfig": "storefront/tsconfig.spec.json"
+        "jestConfig": "apps/clients/store-angular/jest.config.ts",
+        "tsConfig": "apps/clients/store-angular/tsconfig.spec.json"
       }
     },
     "serve-static": {
       "continuous": true,
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "storefront:build",
+        "buildTarget": "store-angular:build",
         "port": 4200,
         "spa": true
       }
