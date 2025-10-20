@@ -63,8 +63,10 @@ graph TB
 
 ### Infrastructure
 
-- **Docker** - Service containerization
-- **Traefik** - Reverse proxy and load balancer
+- **Docker** - Service containerization with multi-stage builds
+- **Docker Compose** - Complete stack orchestration
+- **Traefik** - Reverse proxy with automatic service discovery
+- **PostgreSQL** - Primary database for all services
 - **CI/CD** - GitHub Actions for automation
 
 ## 🚀 Available Commands
@@ -109,6 +111,14 @@ npm run serve:admin-react    # React app on port 3000
 npm run serve:catalog-service # Spring Boot on port 8081
 npm run serve:orders-service  # Spring Boot on port 8082
 npm run serve:users-service   # Spring Boot on port 8083
+
+# Docker commands
+npm run docker:build    # Build all Docker images
+npm run docker:up       # Start all services with Docker
+npm run docker:down     # Stop all services
+npm run docker:logs     # View logs
+npm run docker:test     # Test all endpoints
+npm run docker:status   # Check service status
 ```
 
 ## 📁 Project Structure
@@ -143,12 +153,10 @@ retailedge/
 │           ├── pom.xml
 │           └── src/main/java/...
 ├── infra/
-│   ├── docker/
-│   │   ├── docker-compose.yml
-│   │   ├── Dockerfile.catalog
-│   │   ├── Dockerfile.orders
-│   │   └── Dockerfile.users
-│   └── k8s/                        # Kubernetes configs
+│   └── docker/
+│       └── init-db.sql             # Database initialization
+├── docker-compose.yml              # Complete stack orchestration
+├── Makefile                        # Docker management commands
 ├── libs/
 │   └── shared/
 │       └── models/                 # Shared TypeScript types
@@ -174,7 +182,10 @@ retailedge/
 - **ESLint** - Code linting
 - **Prettier** - Code formatting
 - **pnpm** - Package management
-- **Docker** - Containerization
+- **Docker** - Containerization with multi-stage builds
+- **Docker Compose** - Stack orchestration
+- **Traefik** - Reverse proxy and load balancing
+- **PostgreSQL** - Database
 
 ## 🚀 Quick Start
 
@@ -182,7 +193,9 @@ retailedge/
 - Node.js 18+
 - Java 17+
 - Maven 3.6+
-- Docker (optional)
+- Docker 20.10+
+- Docker Compose 2.0+
+- Make (optional, for Makefile commands)
 
 ### Installation
 ```bash
@@ -209,15 +222,32 @@ npm run serve:orders-service  # http://localhost:8082
 npm run serve:users-service   # http://localhost:8083
 ```
 
-### Docker
+### Docker (Recommended)
 ```bash
-# Start all services with Docker
-cd infra/docker
-docker-compose up
+# Using Make (recommended)
+make up          # Start all services
+make logs        # View logs
+make test        # Test endpoints
+make down        # Stop services
 
-# Or build and run individual services
-docker-compose up catalog-service orders-service users-service
+# Using npm scripts
+npm run docker:build    # Build images
+npm run docker:up       # Start services
+npm run docker:test     # Test endpoints
+npm run docker:down     # Stop services
+
+# Using Docker Compose directly
+docker-compose up -d    # Start all services
+docker-compose logs -f  # View logs
+docker-compose down     # Stop services
 ```
+
+### Service Endpoints
+- **Traefik Dashboard**: http://localhost:8080
+- **Catalog API**: http://localhost/api/catalog
+- **Orders API**: http://localhost/api/orders
+- **Users API**: http://localhost/api/users
+- **API Documentation**: http://localhost/api/{service}/swagger-ui.html
 
 ## 📚 Documentation
 
@@ -229,6 +259,7 @@ Each application and service has its own README with detailed instructions:
 - [Orders Service](./apps/services/orders-service/README.md) - Order processing
 - [Users Service](./apps/services/users-service/README.md) - User management
 - [Shared Models](./libs/shared/models/README.md) - Shared TypeScript types
+- [Docker Setup](./DOCKER.md) - Complete Docker and containerization guide
 
 ## 📋 Architecture Decision Records
 
