@@ -48,8 +48,7 @@ graph TB
     end
 
     subgraph "Data Layer"
-        G[PostgreSQL<br/>Port 5432<br/>Primary Database]
-        H[Supabase<br/>Managed PostgreSQL<br/>Production Database]
+        G[Supabase<br/>Managed PostgreSQL<br/>Primary Database]
     end
 
     subgraph "Infrastructure"
@@ -66,9 +65,6 @@ graph TB
     D --> G
     E --> G
     F --> G
-    D --> H
-    E --> H
-    F --> H
     I --> A
     I --> B
     I --> D
@@ -105,6 +101,10 @@ git clone https://github.com/paco_/retailedge.git
 cd retailedge
 pnpm install
 
+# Configure Supabase (required)
+cp env.example .env
+# Edit .env with your Supabase credentials
+
 # Start all services with Docker
 make up
 # or
@@ -115,6 +115,12 @@ make test
 # or
 curl http://localhost/api/catalog/actuator/health
 ```
+
+**Note**: This project uses Supabase as the managed PostgreSQL provider. You'll need to:
+
+1. Create a Supabase project at [supabase.com](https://supabase.com)
+2. Copy `env.example` to `.env` and configure your Supabase credentials
+3. Run the database migrations using the Supabase MCP tools
 
 ### Individual Services
 
@@ -131,12 +137,12 @@ pnpm run serve:users-service   # http://localhost:8083
 
 ### Environment Variables
 
-| Variable                 | Description                  | Default                                       | Required |
-| ------------------------ | ---------------------------- | --------------------------------------------- | -------- |
-| `DATABASE_URL`           | PostgreSQL connection string | `jdbc:postgresql://localhost:5432/retailedge` | Yes      |
-| `API_BASE_URL`           | Frontend API base URL        | `http://localhost`                            | Yes      |
-| `JWT_SECRET`             | JWT signing secret           | `your-secret-key`                             | Yes      |
-| `SPRING_PROFILES_ACTIVE` | Spring profile               | `dev`                                         | No       |
+| Variable                 | Description                           | Default                                                              | Required |
+| ------------------------ | ------------------------------------- | -------------------------------------------------------------------- | -------- |
+| `DATABASE_URL`           | Supabase PostgreSQL connection string | `jdbc:postgresql://db.xxx.supabase.co:5432/postgres?sslmode=require` | Yes      |
+| `API_BASE_URL`           | Frontend API base URL                 | `http://localhost`                                                   | Yes      |
+| `JWT_SECRET`             | JWT signing secret                    | `your-secret-key`                                                    | Yes      |
+| `SPRING_PROFILES_ACTIVE` | Spring profile                        | `dev`                                                                | No       |
 
 ## Deploy cheaply
 
