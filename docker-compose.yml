@@ -52,14 +52,11 @@ services:
       context: ./apps/services/catalog-service
       dockerfile: Dockerfile
     container_name: retailedge-catalog
+    env_file:
+      - docker.env
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/retailedge
-      SPRING_DATASOURCE_USERNAME: retailedge
-      SPRING_DATASOURCE_PASSWORD: retailedge123
-      SPRING_DATASOURCE_DRIVER: org.postgresql.Driver
-      SPRING_JPA_HIBERNATE_DDL_AUTO: update
-      SPRING_JPA_SHOW_SQL: false
       SERVER_PORT: 8081
+      SPRING_APPLICATION_NAME: catalog-service
     networks:
       - retailedge-network
     depends_on:
@@ -79,14 +76,11 @@ services:
       context: ./apps/services/orders-service
       dockerfile: Dockerfile
     container_name: retailedge-orders
+    env_file:
+      - docker.env
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/retailedge
-      SPRING_DATASOURCE_USERNAME: retailedge
-      SPRING_DATASOURCE_PASSWORD: retailedge123
-      SPRING_DATASOURCE_DRIVER: org.postgresql.Driver
-      SPRING_JPA_HIBERNATE_DDL_AUTO: update
-      SPRING_JPA_SHOW_SQL: false
       SERVER_PORT: 8082
+      SPRING_APPLICATION_NAME: orders-service
     networks:
       - retailedge-network
     depends_on:
@@ -106,14 +100,11 @@ services:
       context: ./apps/services/users-service
       dockerfile: Dockerfile
     container_name: retailedge-users
+    env_file:
+      - docker.env
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/retailedge
-      SPRING_DATASOURCE_USERNAME: retailedge
-      SPRING_DATASOURCE_PASSWORD: retailedge123
-      SPRING_DATASOURCE_DRIVER: org.postgresql.Driver
-      SPRING_JPA_HIBERNATE_DDL_AUTO: update
-      SPRING_JPA_SHOW_SQL: false
       SERVER_PORT: 8083
+      SPRING_APPLICATION_NAME: users-service
     networks:
       - retailedge-network
     depends_on:
