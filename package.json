@@ -7,6 +7,7 @@
     "build:store-angular": "nx build store-angular",
     "build:admin-react": "nx build admin-react",
     "build:shared-models": "nx build shared-models",
+    "build:api-types": "nx build api-types",
     "build:catalog-service": "nx build catalog-service",
     "build:orders-service": "nx build orders-service",
     "build:users-service": "nx build users-service",
@@ -43,6 +44,10 @@
     "docker:status": "docker-compose ps",
     "docker:clean": "docker-compose down -v --remove-orphans",
     "docker:test": "curl -s http://localhost/api/catalog/actuator/health && curl -s http://localhost/api/orders/actuator/health && curl -s http://localhost/api/users/actuator/health",
+    "generate:api-types": "npm run generate:api-types:catalog && npm run generate:api-types:orders && npm run generate:api-types:users",
+    "generate:api-types:catalog": "openapi-typescript http://localhost:8081/v3/api-docs --output libs/shared/api-types/catalog.ts",
+    "generate:api-types:orders": "openapi-typescript http://localhost:8082/v3/api-docs --output libs/shared/api-types/orders.ts",
+    "generate:api-types:users": "openapi-typescript http://localhost:8083/v3/api-docs --output libs/shared/api-types/users.ts",
     "prepare": "husky install"
   },
   "keywords": [
@@ -105,6 +110,7 @@
     "jsonc-eslint-parser": "^2.1.0",
     "lint-staged": "^16.2.5",
     "nx": "^21.6.5",
+    "openapi-typescript": "^7.10.1",
     "pnpm": "^10.18.3",
     "prettier": "^3.6.2",
     "react-refresh": "^0.10.0",

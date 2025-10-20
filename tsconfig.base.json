@@ -16,7 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@retailedge/shared-models": ["libs/shared/models/src/index.ts"],
-      "@retailedge/shared-models/*": ["libs/shared/models/src/lib/*"]
+      "@retailedge/shared-models/*": ["libs/shared/models/src/lib/*"],
+      "@retailedge/api-types": ["libs/shared/api-types/index.ts"],
+      "@retailedge/api-types/*": ["libs/shared/api-types/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

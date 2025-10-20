@@ -8,6 +8,7 @@
     "catalog-service": "apps/services/catalog-service",
     "orders-service": "apps/services/orders-service",
     "users-service": "apps/services/users-service",
-    "shared-models": "libs/shared/models"
+    "shared-models": "libs/shared/models",
+    "api-types": "libs/shared/api-types"
   }
 }

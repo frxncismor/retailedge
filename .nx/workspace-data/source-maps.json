@@ -1,23 +1,299 @@
 {
-  "admin": {
+  "apps/clients/admin-react-e2e": {
     "root": [
-      "admin/eslint.config.cjs",
-      "@nx/eslint/plugin"
+      "apps/clients/admin-react-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "apps/clients/admin-react-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "metadata.targetGroups": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "metadata.targetGroups.E2E (CI)": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "metadata.targetGroups.E2E (CI).0": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "metadata.targetGroups.E2E (CI).1": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
     ],
     "targets": [
-      "admin/eslint.config.cjs",
-      "@nx/eslint/plugin"
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.options": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.cache": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.inputs": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.outputs": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.metadata": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.dependsOn": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.configurations": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.executor": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.options.cwd": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.options.env": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.options.command": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.configurations.production": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.configurations.production.command": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.metadata.technologies": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.metadata.technologies.0": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.metadata.description": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.metadata.help": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.metadata.help.command": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.metadata.help.example": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.outputs": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.inputs": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.cache": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.options": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.metadata": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.dependsOn": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.executor": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.options.cwd": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.options.env": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.options.command": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.metadata.technologies": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.metadata.technologies.0": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.metadata.description": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.metadata.help": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.metadata.help.command": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.metadata.help.example": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.executor": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.cache": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.inputs": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.outputs": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.dependsOn": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.metadata": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.metadata.technologies": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.metadata.technologies.0": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.metadata.description": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.metadata.nonAtomizedTarget": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.metadata.help": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.metadata.help.command": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.metadata.help.example": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress.options": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress.metadata": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress.executor": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress.options.cwd": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress.options.env": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress.options.command": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress.metadata.technologies": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress.metadata.technologies.0": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress.metadata.description": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress.metadata.help": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress.metadata.help.command": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress.metadata.help.example": [
+      "apps/clients/admin-react-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
     ],
     "targets.lint": [
-      "admin/eslint.config.cjs",
+      "apps/clients/admin-react-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.cache": [
-      "admin/eslint.config.cjs",
+      "apps/clients/admin-react-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.options": [
-      "admin/eslint.config.cjs",
+      "apps/clients/admin-react-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.inputs": [
@@ -25,73 +301,377 @@
       "nx/target-defaults"
     ],
     "targets.lint.outputs": [
-      "admin/eslint.config.cjs",
+      "apps/clients/admin-react-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata": [
-      "admin/eslint.config.cjs",
+      "apps/clients/admin-react-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.executor": [
-      "admin/eslint.config.cjs",
+      "apps/clients/admin-react-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.options.cwd": [
-      "admin/eslint.config.cjs",
+      "apps/clients/admin-react-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.options.command": [
-      "admin/eslint.config.cjs",
+      "apps/clients/admin-react-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata.technologies": [
-      "admin/eslint.config.cjs",
+      "apps/clients/admin-react-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata.technologies.0": [
-      "admin/eslint.config.cjs",
+      "apps/clients/admin-react-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata.description": [
-      "admin/eslint.config.cjs",
+      "apps/clients/admin-react-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata.help": [
-      "admin/eslint.config.cjs",
+      "apps/clients/admin-react-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata.help.command": [
-      "admin/eslint.config.cjs",
+      "apps/clients/admin-react-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata.help.example": [
-      "admin/eslint.config.cjs",
+      "apps/clients/admin-react-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
+    ],
+    "name": [
+      "apps/clients/admin-react-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "apps/clients/admin-react-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "apps/clients/admin-react-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "// targets": [
+      "apps/clients/admin-react-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "apps/clients/admin-react-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "implicitDependencies": [
+      "apps/clients/admin-react-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "implicitDependencies.admin-react": [
+      "apps/clients/admin-react-e2e/project.json",
+      "nx/core/project-json"
     ],
     "targets.lint.parallelism": [
       "nx.json",
       "nx/target-defaults"
     ]
   },
-  "admin-e2e": {
+  "apps/clients/store-angular-e2e": {
     "root": [
-      "admin-e2e/eslint.config.cjs",
-      "@nx/eslint/plugin"
+      "apps/clients/store-angular-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "apps/clients/store-angular-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "metadata.targetGroups": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "metadata.targetGroups.E2E (CI)": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "metadata.targetGroups.E2E (CI).0": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "metadata.targetGroups.E2E (CI).1": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
     ],
     "targets": [
-      "admin-e2e/eslint.config.cjs",
-      "@nx/eslint/plugin"
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.options": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.cache": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.inputs": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.outputs": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.metadata": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.dependsOn": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.configurations": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.executor": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.options.cwd": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.options.env": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.options.command": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.configurations.production": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.configurations.production.command": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.metadata.technologies": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.metadata.technologies.0": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.metadata.description": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.metadata.help": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.metadata.help.command": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e.metadata.help.example": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.outputs": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.inputs": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.cache": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.options": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.metadata": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.dependsOn": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.executor": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.options.cwd": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.options.env": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.options.command": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.metadata.technologies": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.metadata.technologies.0": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.metadata.description": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.metadata.help": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.metadata.help.command": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/app.cy.ts.metadata.help.example": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.executor": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.cache": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.inputs": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.outputs": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.dependsOn": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.metadata": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.metadata.technologies": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.metadata.technologies.0": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.metadata.description": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.metadata.nonAtomizedTarget": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.metadata.help": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.metadata.help.command": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci.metadata.help.example": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress.options": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress.metadata": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress.executor": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress.options.cwd": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress.options.env": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress.options.command": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress.metadata.technologies": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress.metadata.technologies.0": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress.metadata.description": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress.metadata.help": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress.metadata.help.command": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.open-cypress.metadata.help.example": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
     ],
     "targets.lint": [
-      "admin-e2e/eslint.config.cjs",
+      "apps/clients/store-angular-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.cache": [
-      "admin-e2e/eslint.config.cjs",
+      "apps/clients/store-angular-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.options": [
-      "admin-e2e/eslint.config.cjs",
+      "apps/clients/store-angular-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.inputs": [
@@ -99,73 +679,101 @@
       "nx/target-defaults"
     ],
     "targets.lint.outputs": [
-      "admin-e2e/eslint.config.cjs",
+      "apps/clients/store-angular-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata": [
-      "admin-e2e/eslint.config.cjs",
+      "apps/clients/store-angular-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.executor": [
-      "admin-e2e/eslint.config.cjs",
+      "apps/clients/store-angular-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.options.cwd": [
-      "admin-e2e/eslint.config.cjs",
+      "apps/clients/store-angular-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.options.command": [
-      "admin-e2e/eslint.config.cjs",
+      "apps/clients/store-angular-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata.technologies": [
-      "admin-e2e/eslint.config.cjs",
+      "apps/clients/store-angular-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata.technologies.0": [
-      "admin-e2e/eslint.config.cjs",
+      "apps/clients/store-angular-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata.description": [
-      "admin-e2e/eslint.config.cjs",
+      "apps/clients/store-angular-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata.help": [
-      "admin-e2e/eslint.config.cjs",
+      "apps/clients/store-angular-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata.help.command": [
-      "admin-e2e/eslint.config.cjs",
+      "apps/clients/store-angular-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata.help.example": [
-      "admin-e2e/eslint.config.cjs",
+      "apps/clients/store-angular-e2e/eslint.config.cjs",
       "@nx/eslint/plugin"
+    ],
+    "name": [
+      "apps/clients/store-angular-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "apps/clients/store-angular-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "apps/clients/store-angular-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "// targets": [
+      "apps/clients/store-angular-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "apps/clients/store-angular-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "implicitDependencies": [
+      "apps/clients/store-angular-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "implicitDependencies.store-angular": [
+      "apps/clients/store-angular-e2e/project.json",
+      "nx/core/project-json"
     ],
     "targets.lint.parallelism": [
       "nx.json",
       "nx/target-defaults"
     ]
   },
-  "shared-models": {
+  "apps/clients/admin-react": {
     "root": [
-      "shared-models/eslint.config.cjs",
-      "@nx/eslint/plugin"
+      "apps/clients/admin-react/project.json",
+      "nx/core/project-json"
     ],
     "targets": [
-      "shared-models/eslint.config.cjs",
+      "apps/clients/admin-react/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint": [
-      "shared-models/eslint.config.cjs",
+      "apps/clients/admin-react/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.cache": [
-      "shared-models/eslint.config.cjs",
+      "apps/clients/admin-react/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.options": [
-      "shared-models/eslint.config.cjs",
+      "apps/clients/admin-react/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.inputs": [
@@ -173,147 +781,675 @@
       "nx/target-defaults"
     ],
     "targets.lint.outputs": [
-      "shared-models/eslint.config.cjs",
+      "apps/clients/admin-react/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata": [
-      "shared-models/eslint.config.cjs",
+      "apps/clients/admin-react/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.executor": [
-      "shared-models/eslint.config.cjs",
+      "apps/clients/admin-react/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.options.cwd": [
-      "shared-models/eslint.config.cjs",
+      "apps/clients/admin-react/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.options.command": [
-      "shared-models/eslint.config.cjs",
+      "apps/clients/admin-react/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata.technologies": [
-      "shared-models/eslint.config.cjs",
+      "apps/clients/admin-react/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata.technologies.0": [
-      "shared-models/eslint.config.cjs",
+      "apps/clients/admin-react/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata.description": [
-      "shared-models/eslint.config.cjs",
+      "apps/clients/admin-react/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata.help": [
-      "shared-models/eslint.config.cjs",
+      "apps/clients/admin-react/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata.help.command": [
-      "shared-models/eslint.config.cjs",
+      "apps/clients/admin-react/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata.help.example": [
-      "shared-models/eslint.config.cjs",
+      "apps/clients/admin-react/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
+    "projectType": [
+      "apps/clients/admin-react/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.options": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.cache": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.outputs": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.metadata": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.executor": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.options.cwd": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.options.args": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.options.command": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.metadata.technologies": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.metadata.technologies.0": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.metadata.description": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.metadata.help": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.metadata.help.command": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.metadata.help.example": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.continuous": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.options": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.metadata": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.executor": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.options.cwd": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.options.args": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.options.command": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.metadata.technologies": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.metadata.technologies.0": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.metadata.description": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.metadata.help": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.metadata.help.command": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.metadata.help.example": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.continuous": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.options": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.metadata": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.executor": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.options.cwd": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.options.args": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.options.command": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.metadata.technologies": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.metadata.technologies.0": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.metadata.description": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.metadata.help": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.metadata.help.command": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.metadata.help.example": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve-static": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve-static.continuous": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve-static.dependsOn": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve-static.executor": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve-static.options": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve-static.options.buildTarget": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve-static.options.spa": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build-deps": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build-deps.dependsOn": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.watch-deps": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.watch-deps.continuous": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.watch-deps.dependsOn": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.watch-deps.executor": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.watch-deps.options": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.watch-deps.options.command": [
+      "apps/clients/admin-react/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "name": [
+      "apps/clients/admin-react/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "apps/clients/admin-react/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "apps/clients/admin-react/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "apps/clients/admin-react/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test": [
+      "apps/clients/admin-react/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.executor": [
+      "apps/clients/admin-react/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.outputs": [
+      "apps/clients/admin-react/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options": [
+      "apps/clients/admin-react/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.jestConfig": [
+      "apps/clients/admin-react/project.json",
+      "nx/core/project-json"
+    ],
     "targets.lint.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.cache": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.options.passWithNoTests": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.configurations.ci": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.configurations.ci.ci": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.configurations.ci.codeCoverage": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.parallelism": [
       "nx.json",
       "nx/target-defaults"
     ]
   },
-  "storefront": {
+  "apps/clients/store-angular": {
     "root": [
-      "storefront/eslint.config.cjs",
-      "@nx/eslint/plugin"
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
     ],
     "targets": [
-      "storefront/eslint.config.cjs",
+      "apps/clients/store-angular/eslint.config.cjs",
       "@nx/eslint/plugin"
+    ],
+    "name": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "prefix": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.outputs": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.defaultConfiguration": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.outputPath": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.index": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.main": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.polyfills": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.tsConfig": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.assets": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.styles": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.production": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.production.budgets": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.production.outputHashing": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development.buildOptimizer": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development.optimization": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development.vendorChunk": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development.extractLicenses": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development.sourceMap": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development.namedChunks": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.continuous": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.executor": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.defaultConfiguration": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production.buildTarget": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development.buildTarget": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.extract-i18n": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.extract-i18n.executor": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.extract-i18n.options": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.extract-i18n.options.buildTarget": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
     ],
     "targets.lint": [
-      "storefront/eslint.config.cjs",
-      "@nx/eslint/plugin"
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
     ],
-    "targets.lint.cache": [
-      "storefront/eslint.config.cjs",
-      "@nx/eslint/plugin"
+    "targets.lint.executor": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
     ],
-    "targets.lint.options": [
-      "storefront/eslint.config.cjs",
-      "@nx/eslint/plugin"
+    "targets.test": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.executor": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.outputs": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.jestConfig": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.tsConfig": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-static": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-static.continuous": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-static.executor": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-static.options": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-static.options.buildTarget": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-static.options.port": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-static.options.spa": [
+      "apps/clients/store-angular/project.json",
+      "nx/core/project-json"
     ],
     "targets.lint.inputs": [
       "nx.json",
       "nx/target-defaults"
     ],
-    "targets.lint.outputs": [
-      "storefront/eslint.config.cjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata": [
-      "storefront/eslint.config.cjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.executor": [
-      "storefront/eslint.config.cjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.options.cwd": [
-      "storefront/eslint.config.cjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.options.command": [
-      "storefront/eslint.config.cjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.technologies": [
-      "storefront/eslint.config.cjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.technologies.0": [
-      "storefront/eslint.config.cjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.description": [
-      "storefront/eslint.config.cjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.help": [
-      "storefront/eslint.config.cjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.help.command": [
-      "storefront/eslint.config.cjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.help.example": [
-      "storefront/eslint.config.cjs",
-      "@nx/eslint/plugin"
-    ],
     "targets.lint.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.cache": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.cache": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.options.passWithNoTests": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.configurations.ci": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.configurations.ci.ci": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.configurations.ci.codeCoverage": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.parallelism": [
       "nx.json",
       "nx/target-defaults"
     ]
   },
-  "storefront-e2e": {
+  "libs/shared/models": {
     "root": [
-      "storefront-e2e/eslint.config.cjs",
-      "@nx/eslint/plugin"
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
     ],
     "targets": [
-      "storefront-e2e/eslint.config.cjs",
+      "libs/shared/models/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint": [
-      "storefront-e2e/eslint.config.cjs",
+      "libs/shared/models/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.cache": [
-      "storefront-e2e/eslint.config.cjs",
+      "libs/shared/models/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.options": [
-      "storefront-e2e/eslint.config.cjs",
+      "libs/shared/models/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.inputs": [
@@ -321,50 +1457,218 @@
       "nx/target-defaults"
     ],
     "targets.lint.outputs": [
-      "storefront-e2e/eslint.config.cjs",
+      "libs/shared/models/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata": [
-      "storefront-e2e/eslint.config.cjs",
+      "libs/shared/models/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.executor": [
-      "storefront-e2e/eslint.config.cjs",
+      "libs/shared/models/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.options.cwd": [
-      "storefront-e2e/eslint.config.cjs",
+      "libs/shared/models/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.options.command": [
-      "storefront-e2e/eslint.config.cjs",
+      "libs/shared/models/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata.technologies": [
-      "storefront-e2e/eslint.config.cjs",
+      "libs/shared/models/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata.technologies.0": [
-      "storefront-e2e/eslint.config.cjs",
+      "libs/shared/models/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata.description": [
-      "storefront-e2e/eslint.config.cjs",
+      "libs/shared/models/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata.help": [
-      "storefront-e2e/eslint.config.cjs",
+      "libs/shared/models/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata.help.command": [
-      "storefront-e2e/eslint.config.cjs",
+      "libs/shared/models/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
     "targets.lint.metadata.help.example": [
-      "storefront-e2e/eslint.config.cjs",
+      "libs/shared/models/eslint.config.cjs",
       "@nx/eslint/plugin"
     ],
+    "name": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "libs/shared/models/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:public": [
+      "libs/shared/models/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "libs/shared/models/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "libs/shared/models/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "libs/shared/models/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageVersion": [
+      "libs/shared/models/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageMain": [
+      "libs/shared/models/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "libs/shared/models/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.nx-release-publish.executor": [
+      "libs/shared/models/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish.dependsOn": [
+      "libs/shared/models/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish.options": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "release": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.outputs": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.outputPath": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.main": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.tsConfig": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.assets": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.nx-release-publish.options.packageRoot": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.executor": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.outputs": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.jestConfig": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
     "targets.lint.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.cache": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.cache": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.options.passWithNoTests": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.configurations.ci": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.configurations.ci.ci": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.configurations.ci.codeCoverage": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.parallelism": [
       "nx.json",
       "nx/target-defaults"
     ]
@@ -485,6 +1789,606 @@
     "targets.local-registry.options.storage": [
       "project.json",
       "nx/core/project-json"
+    ]
+  },
+  "apps/services/catalog-service": {
+    "root": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "tags.type:service": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "tags.domain:catalog": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.outputs": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.command": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.cwd": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.executor": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.command": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.cwd": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.executor": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.command": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.cwd": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.executor": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.options": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.options.command": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.options.cwd": [
+      "apps/services/catalog-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.lint.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  },
+  "apps/services/orders-service": {
+    "root": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "tags.type:service": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "tags.domain:orders": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.outputs": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.command": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.cwd": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.executor": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.command": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.cwd": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.executor": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.command": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.cwd": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.executor": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.options": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.options.command": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.options.cwd": [
+      "apps/services/orders-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.lint.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  },
+  "apps/services/users-service": {
+    "root": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "tags.type:service": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "tags.domain:users": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.outputs": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.command": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.cwd": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.executor": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.command": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.cwd": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.executor": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.command": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.cwd": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.executor": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.options": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.options.command": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.options.cwd": [
+      "apps/services/users-service/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.lint.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  },
+  "libs/shared/api-types": {
+    "root": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "tags.scope:shared": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "tags.type:types": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.outputs": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.outputPath": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.main": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.tsConfig": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.assets": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.executor": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.executor": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.outputs": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.jestConfig": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.passWithNoTests": [
+      "libs/shared/api-types/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.cache": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.lint.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.cache": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.configurations.ci": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.configurations.ci.ci": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.configurations.ci.codeCoverage": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
     ]
   }
 }

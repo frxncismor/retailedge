@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { Product, ProductService } from '../../services/product.service';
+import { Product } from '@retailedge/api-types';
+import { ProductService } from '../../services/product.service';
 import { CartService } from '../../services/cart.service';
 
 @Component({

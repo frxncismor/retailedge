@@ -4,7 +4,7 @@ alwaysApply: false
 ---
 FRONTEND STANDARDS
 - Language: TypeScript. Avoid 'any'. Enable strict mode.
-- Angular: Prefer standalone components. Use HttpClient for APIs. Keep services stateless.
+- Angular: Prefer standalone components. Use HttpClient for APIs. Keep services stateless. Use different files such as html templates, css/scss design and typescript logic
 - React: Functional components + hooks. Use React Router. Keep state local; avoid global state unless necessary.
 - Accessibility: Provide labels/aria-* for interactive controls; ensure keyboard navigation.
 - Performance: Code-split routes; lazy-load heavy features.
