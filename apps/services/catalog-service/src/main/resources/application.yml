@@ -5,10 +5,16 @@ spring:
   application:
     name: ${SPRING_APPLICATION_NAME:catalog-service}
   datasource:
-    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://db.vltlsiukzjmutgkeffxt.supabase.co:5432/postgres?sslmode=require}
+    url: ${SPRING_DATASOURCE_URL}
     driver-class-name: ${SPRING_DATASOURCE_DRIVER:org.postgresql.Driver}
-    username: ${SPRING_DATASOURCE_USERNAME:postgres}
-    password: ${SPRING_DATASOURCE_PASSWORD:retailedge123}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 1
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
   jpa:
     hibernate:
       ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:update}

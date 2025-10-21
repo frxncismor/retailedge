@@ -47,8 +47,8 @@ class ProductControllerIntegrationTest {
     @Test
     void testGetAllProducts() throws Exception {
         // Given
-        Product product1 = createTestProduct("Test Product 1", "Description 1", new BigDecimal("29.99"), 10);
-        Product product2 = createTestProduct("Test Product 2", "Description 2", new BigDecimal("39.99"), 5);
+        Product product1 = createTestProduct("Test Product 1", "Description 1", new BigDecimal("29.99"), "Electronics");
+        Product product2 = createTestProduct("Test Product 2", "Description 2", new BigDecimal("39.99"), "Electronics");
         productRepository.saveAll(Arrays.asList(product1, product2));
 
         // When & Then
@@ -67,7 +67,7 @@ class ProductControllerIntegrationTest {
     @Test
     void testGetProductById() throws Exception {
         // Given
-        Product product = createTestProduct("Test Product", "Description", new BigDecimal("29.99"), 10);
+        Product product = createTestProduct("Test Product", "Description", new BigDecimal("29.99"), "Electronics");
         Product savedProduct = productRepository.save(product);
 
         // When & Then
@@ -135,7 +135,7 @@ class ProductControllerIntegrationTest {
     @Test
     void testUpdateProduct() throws Exception {
         // Given
-        Product product = createTestProduct("Test Product", "Description", new BigDecimal("29.99"), 10);
+        Product product = createTestProduct("Test Product", "Description", new BigDecimal("29.99"), "Electronics");
         Product savedProduct = productRepository.save(product);
 
         String updatedProductJson = """
@@ -182,7 +182,7 @@ class ProductControllerIntegrationTest {
     @Test
     void testDeleteProduct() throws Exception {
         // Given
-        Product product = createTestProduct("Test Product", "Description", new BigDecimal("29.99"), 10);
+        Product product = createTestProduct("Test Product", "Description", new BigDecimal("29.99"), "Electronics");
         Product savedProduct = productRepository.save(product);
 
         // When & Then
@@ -204,9 +204,9 @@ class ProductControllerIntegrationTest {
     @Test
     void testSearchProducts() throws Exception {
         // Given
-        Product product1 = createTestProduct("Test Product 1", "Description 1", new BigDecimal("29.99"), 10);
-        Product product2 = createTestProduct("Test Product 2", "Description 2", new BigDecimal("39.99"), 5);
-        Product product3 = createTestProduct("Other Product", "Description 3", new BigDecimal("19.99"), 8);
+        Product product1 = createTestProduct("Test Product 1", "Description 1", new BigDecimal("29.99"), "Electronics");
+        Product product2 = createTestProduct("Test Product 2", "Description 2", new BigDecimal("39.99"), "Electronics");
+        Product product3 = createTestProduct("Other Product", "Description 3", new BigDecimal("19.99"), "Electronics");
         productRepository.saveAll(Arrays.asList(product1, product2, product3));
 
         // When & Then
@@ -228,12 +228,13 @@ class ProductControllerIntegrationTest {
                 .andExpect(jsonPath("$", hasSize(0)));
     }
 
-    private Product createTestProduct(String name, String description, BigDecimal price, Integer stock) {
+    private Product createTestProduct(String name, String description, BigDecimal price, String category) {
         Product product = new Product();
         product.setName(name);
         product.setDescription(description);
         product.setPrice(price);
-        product.setStock(stock);
+        product.setCategory(category);
+        product.setInStock(true);
         product.setCreatedAt(LocalDateTime.now());
         product.setUpdatedAt(LocalDateTime.now());
         return product;

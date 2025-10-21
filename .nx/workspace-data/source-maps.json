@@ -402,6 +402,10 @@
       "apps/clients/store-angular-e2e/cypress.config.ts",
       "@nx/cypress/plugin"
     ],
+    "metadata.targetGroups.E2E (CI).2": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
     "targets": [
       "apps/clients/store-angular-e2e/cypress.config.ts",
       "@nx/cypress/plugin"
@@ -551,6 +555,74 @@
       "@nx/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/app.cy.ts.metadata.help.example": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/cart-checkout.cy.ts": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/cart-checkout.cy.ts.outputs": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/cart-checkout.cy.ts.inputs": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/cart-checkout.cy.ts.cache": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/cart-checkout.cy.ts.options": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/cart-checkout.cy.ts.metadata": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/cart-checkout.cy.ts.dependsOn": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/cart-checkout.cy.ts.executor": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/cart-checkout.cy.ts.options.cwd": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/cart-checkout.cy.ts.options.env": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/cart-checkout.cy.ts.options.command": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/cart-checkout.cy.ts.metadata.technologies": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/cart-checkout.cy.ts.metadata.technologies.0": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/cart-checkout.cy.ts.metadata.description": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/cart-checkout.cy.ts.metadata.help": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/cart-checkout.cy.ts.metadata.help.command": [
+      "apps/clients/store-angular-e2e/cypress.config.ts",
+      "@nx/cypress/plugin"
+    ],
+    "targets.e2e-ci--src/e2e/cart-checkout.cy.ts.metadata.help.example": [
       "apps/clients/store-angular-e2e/cypress.config.ts",
       "@nx/cypress/plugin"
     ],

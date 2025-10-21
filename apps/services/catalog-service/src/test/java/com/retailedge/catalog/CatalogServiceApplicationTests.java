@@ -1,5 +1,7 @@
 package com.retailedge.catalog;
 
+import com.retailedge.catalog.dto.ProductRequest;
+import com.retailedge.catalog.dto.ProductResponse;
 import com.retailedge.catalog.entity.Product;
 import com.retailedge.catalog.repository.ProductRepository;
 import com.retailedge.catalog.service.ProductService;
@@ -45,7 +47,7 @@ class CatalogServiceApplicationTests {
         when(productRepository.findAll()).thenReturn(products);
 
         // When
-        List<Product> result = productService.getAllProducts();
+        List<ProductResponse> result = productService.getAllProducts();
 
         // Then
         assertNotNull(result);
@@ -64,7 +66,7 @@ class CatalogServiceApplicationTests {
         when(productRepository.findById(productId)).thenReturn(Optional.of(product));
 
         // When
-        Optional<Product> result = productService.getProductById(productId);
+        Optional<ProductResponse> result = productService.getProductById(productId);
 
         // Then
         assertTrue(result.isPresent());
@@ -79,7 +81,7 @@ class CatalogServiceApplicationTests {
         when(productRepository.findById(productId)).thenReturn(Optional.empty());
 
         // When
-        Optional<Product> result = productService.getProductById(productId);
+        Optional<ProductResponse> result = productService.getProductById(productId);
 
         // Then
         assertFalse(result.isPresent());
@@ -89,13 +91,15 @@ class CatalogServiceApplicationTests {
     @Test
     void testCreateProduct() {
         // Given
-        Product product = createTestProduct(null, "New Product", "New Description", new BigDecimal("49.99"), "Electronics");
+        ProductRequest productRequest = new ProductRequest("New Product", "New Description", new BigDecimal("49.99"), "Electronics");
+        productRequest.setInStock(true);
+        productRequest.setImageUrl("http://example.com/image.jpg");
         Product savedProduct = createTestProduct(1L, "New Product", "New Description", new BigDecimal("49.99"), "Electronics");
         
         when(productRepository.save(any(Product.class))).thenReturn(savedProduct);
 
         // When
-        Product result = productService.createProduct(product);
+        ProductResponse result = productService.createProduct(productRequest);
 
         // Then
         assertNotNull(result);
@@ -109,13 +113,16 @@ class CatalogServiceApplicationTests {
         // Given
         Long productId = 1L;
         Product existingProduct = createTestProduct(productId, "Test Product", "Description", new BigDecimal("29.99"), "Electronics");
+        ProductRequest updatedProductRequest = new ProductRequest("Updated Product", "Updated Description", new BigDecimal("39.99"), "Electronics");
+        updatedProductRequest.setInStock(true);
+        updatedProductRequest.setImageUrl("http://example.com/image.jpg");
         Product updatedProduct = createTestProduct(productId, "Updated Product", "Updated Description", new BigDecimal("39.99"), "Electronics");
         
         when(productRepository.findById(productId)).thenReturn(Optional.of(existingProduct));
         when(productRepository.save(any(Product.class))).thenReturn(updatedProduct);
 
         // When
-        Optional<Product> result = productService.updateProduct(productId, updatedProduct);
+        Optional<ProductResponse> result = productService.updateProduct(productId, updatedProductRequest);
 
         // Then
         assertTrue(result.isPresent());
@@ -130,12 +137,14 @@ class CatalogServiceApplicationTests {
     void testUpdateProductNotFound() {
         // Given
         Long productId = 999L;
-        Product product = createTestProduct(productId, "Test Product", "Description", new BigDecimal("29.99"), "Electronics");
+        ProductRequest productRequest = new ProductRequest("Test Product", "Description", new BigDecimal("29.99"), "Electronics");
+        productRequest.setInStock(true);
+        productRequest.setImageUrl("http://example.com/image.jpg");
         
         when(productRepository.findById(productId)).thenReturn(Optional.empty());
 
         // When
-        Optional<Product> result = productService.updateProduct(productId, product);
+        Optional<ProductResponse> result = productService.updateProduct(productId, productRequest);
 
         // Then
         assertFalse(result.isPresent());
@@ -187,7 +196,7 @@ class CatalogServiceApplicationTests {
         when(productRepository.findByNameContainingIgnoreCase(searchQuery)).thenReturn(products);
 
         // When
-        List<Product> result = productService.searchProducts(searchQuery);
+        List<ProductResponse> result = productService.searchProducts(searchQuery);
 
         // Then
         assertNotNull(result);
@@ -204,7 +213,7 @@ class CatalogServiceApplicationTests {
         when(productRepository.findByNameContainingIgnoreCase(searchQuery)).thenReturn(Arrays.asList());
 
         // When
-        List<Product> result = productService.searchProducts(searchQuery);
+        List<ProductResponse> result = productService.searchProducts(searchQuery);
 
         // Then
         assertNotNull(result);

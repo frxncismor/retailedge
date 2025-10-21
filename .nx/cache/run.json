@@ -1,18 +1,18 @@
 {
   "run": {
-    "command": "nx e2e store-angular-e2e",
-    "startTime": "2025-10-20T21:49:01.919Z",
-    "endTime": "2025-10-20T21:49:10.160Z",
+    "command": "nx serve catalog-service",
+    "startTime": "2025-10-21T22:33:00.890Z",
+    "endTime": "2025-10-21T22:33:09.998Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "store-angular-e2e:e2e",
-      "target": "e2e",
-      "projectName": "store-angular-e2e",
-      "hash": "10906172716321776766",
-      "startTime": "2025-10-20T21:49:01.948Z",
-      "endTime": "2025-10-20T21:49:10.159Z",
+      "taskId": "catalog-service:serve",
+      "target": "serve",
+      "projectName": "catalog-service",
+      "hash": "10064884601159848974",
+      "startTime": "2025-10-21T22:33:00.910Z",
+      "endTime": "2025-10-21T22:33:09.997Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 1
